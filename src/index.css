@@ -1,0 +1,315 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@font-face {
+  font-family: 'Helvetica';
+  src: url('/fonts/Helvetica.ttf') format('truetype');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@layer base {
+  :root {
+    --font-size-hero: clamp(3rem, 8vw, 6rem);
+    --spacing-section: 8rem;
+    --border-radius: 1px;
+    --transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  }
+  
+  body {
+    @apply bg-white text-black;
+    font-feature-settings: "rlig" 1, "calt" 1;
+    font-family: 'Helvetica', 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+    font-weight: 400;
+    line-height: 1.6;
+  }
+  
+  html {
+    scroll-behavior: smooth;
+    overflow-x: hidden;
+  }
+  
+  body {
+    overflow-x: hidden;
+  }
+  
+  /* Prevent horizontal scrolling without affecting navbar */
+  html, body, #root {
+    width: 100%;
+    overflow-x: hidden;
+  }
+  
+  /* Ensure content elements don't overflow */
+  section, div, main {
+    max-width: 100%;
+    box-sizing: border-box;
+  }
+
+  /* Navbar positioning and functionality - consistent across all devices */
+  nav {
+    position: fixed !important;
+    top: 0 !important;
+    left: 0 !important;
+    right: 0 !important;
+    width: 100% !important;
+    z-index: 50 !important;
+    overflow: visible !important;
+    transform: translateZ(0) !important; /* Force hardware acceleration */
+    -webkit-transform: translateZ(0) !important;
+    will-change: transform !important;
+    backface-visibility: hidden !important;
+    -webkit-backface-visibility: hidden !important;
+    transition: background-color 0.3s ease, box-shadow 0.3s ease !important;
+  }
+  
+  /* Prevent layout shifts on mobile */
+  @media (max-width: 768px) {
+    nav {
+      /* Ensure consistent behavior on mobile */
+      -webkit-overflow-scrolling: touch;
+      overscroll-behavior: contain;
+    }
+  }
+  
+  /* Ensure mobile hero container is hidden on desktop */
+  @media (min-width: 769px) {
+    .hero-mobile-container {
+      display: none !important;
+    }
+  }
+    
+  /* Responsive mobile hero layout for all devices */
+  @media (max-width: 768px) {
+    .hero-mobile-container {
+      height: calc(100vh - 80px) !important;
+      min-height: 500px !important;
+      max-height: 800px !important;
+      display: flex !important;
+      flex-direction: column !important;
+      justify-content: space-between !important;
+    }
+  }
+    
+    /* Small phones (iPhone SE, etc.) */
+    @media (max-width: 375px) {
+      .hero-mobile-container {
+        min-height: 450px !important;
+      }
+      
+      h1 {
+        font-size: 1.5rem !important; /* 24px */
+        line-height: 1.1 !important;
+      }
+      
+      .container-custom {
+        padding: 0 0.75rem;
+      }
+    }
+    
+    /* Medium phones (iPhone 14, most Android) */
+    @media (min-width: 376px) and (max-width: 428px) {
+      .hero-mobile-container {
+        min-height: 600px !important;
+      }
+      
+      h1 {
+        font-size: 1.875rem !important; /* 30px */
+        line-height: 1.1 !important;
+      }
+    }
+    
+    /* Large phones (iPhone 14 Plus, large Android) */
+    @media (min-width: 429px) and (max-width: 768px) {
+      .hero-mobile-container {
+        min-height: 700px !important;
+      }
+      
+      h1 {
+        font-size: 2.25rem !important; /* 36px */
+        line-height: 1.1 !important;
+      }
+      
+      .container-custom {
+        padding: 0 1.5rem;
+      }
+    }
+  }
+
+  /* Typography hierarchy */
+  h1 {
+    font-size: var(--font-size-hero);
+    font-weight: 300;
+    line-height: 1.1;
+    letter-spacing: -0.02em;
+  }
+
+  h2 {
+    font-size: clamp(1.5rem, 4vw, 2.5rem);
+    font-weight: 400;
+    line-height: 1.2;
+  }
+
+  h3, h4, h5, h6 {
+    font-weight: 400;
+    line-height: 1.2;
+  }
+
+  p {
+    font-size: 1rem;
+    font-weight: 400;
+    line-height: 1.6;
+  }
+
+  .caption {
+    font-size: 0.875rem;
+    font-weight: 300;
+    opacity: 0.8;
+  }
+
+@layer components {
+  .container-custom {
+    max-width: 1440px;
+    margin: 0 auto;
+    padding: 0 2rem;
+  }
+
+}
+
+@layer utilities {
+  .scrollbar-hide {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+  }
+  
+  .scrollbar-hide::-webkit-scrollbar {
+    display: none;
+  }
+  
+  .animation-delay-200 {
+    animation-delay: 200ms;
+  }
+  
+  .animation-delay-400 {
+    animation-delay: 400ms;
+  }
+  
+  
+
+  .partners-logo {
+    filter: grayscale(1) brightness(0.92);
+    opacity: 0.6;
+    transition: filter 0.3s, opacity 0.3s;
+  }
+  .partners-logo:hover {
+    filter: grayscale(1) brightness(0.85);
+    opacity: 0.9;
+  }
+  /* Partners logo styling */
+  .partners-logo {
+    filter: grayscale(1) brightness(0.92);
+    opacity: 0.6;
+    transition: filter 0.3s, opacity 0.3s;
+  }
+  .partners-logo:hover {
+    filter: grayscale(1) brightness(0.85);
+    opacity: 0.9;
+  }
+}
+
+/* Custom focus styles for accessibility */
+@layer base {
+  button:focus-visible,
+  a:focus-visible,
+  input:focus-visible,
+  textarea:focus-visible,
+  select:focus-visible {
+    @apply outline-none ring-2 ring-black ring-offset-2 ring-offset-white;
+  }
+}
+
+
+/* Custom scrollbar for webkit browsers */
+@layer base {
+  ::-webkit-scrollbar {
+    width: 8px;
+    height: 8px;
+  }
+  
+  ::-webkit-scrollbar-track {
+    @apply bg-gray-100;
+  }
+  
+  ::-webkit-scrollbar-thumb {
+    @apply bg-gray-400 rounded-full;
+  }
+  
+  ::-webkit-scrollbar-thumb:hover {
+    @apply bg-gray-600;
+  }
+}
+
+/* Reduced motion preferences */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+/* Enhanced animations */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes slideUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+
+.animate-slide-up {
+  animation: slideUp 0.6s cubic-bezier(0.4, 0, 0.2, 1) forwards;
+}
+
+/* Testimonials infinite scroll animation */
+@keyframes scroll {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+.animate-scroll {
+  animation: scroll 40s linear infinite;
+}
+
+.pause-animation {
+  animation-play-state: paused !important;
+}
+
+.hover\:pause-animation:hover {
+  animation-play-state: paused !important;
+}

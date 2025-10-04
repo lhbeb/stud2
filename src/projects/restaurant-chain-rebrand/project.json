@@ -1,0 +1,50 @@
+{
+  "slug": "restaurant-chain-rebrand",
+  "title": "Restaurant Chain Rebrand",
+  "year": "2022",
+  "category": "Brand Identity",
+  "client": "Taste of Arabia",
+  "tags": ["Food & Beverage", "Packaging", "Rebrand"],
+  "featured": false,
+  "intro": {
+    "photo": "/projects/restaurant-chain-rebrand/intro.jpg",
+    "text": "Complete rebranding for a popular restaurant chain, including new visual identity and packaging design. This project showcases our ability to modernize traditional brands while preserving their authentic heritage."
+  },
+  "content": [
+    {
+      "type": "text",
+      "content": "Taste of Arabia needed a fresh brand identity to compete in the evolving food delivery market. The challenge was modernizing the brand while preserving the authentic Middle Eastern heritage that customers loved."
+    },
+    {
+      "type": "image",
+      "url": "/projects/restaurant-chain-rebrand/image1.jpg",
+      "alt": "Restaurant interior design",
+      "caption": "The new brand identity reflects the warm, authentic atmosphere of traditional Middle Eastern dining"
+    },
+    {
+      "type": "text",
+      "content": "We created a vibrant visual identity with contemporary Arabic typography and appetizing food photography. The new logo combines traditional calligraphy with modern design elements, creating a bridge between heritage and innovation."
+    },
+    {
+      "type": "image",
+      "url": "/projects/restaurant-chain-rebrand/image2.jpg",
+      "alt": "Food packaging design",
+      "caption": "New packaging design emphasizes freshness and authenticity while maintaining brand consistency"
+    },
+    {
+      "type": "image",
+      "url": "/projects/restaurant-chain-rebrand/image3.jpg",
+      "alt": "Restaurant signage",
+      "caption": "Updated signage and storefront design attracts new customers while maintaining brand recognition"
+    },
+    {
+      "type": "text",
+      "content": "The rebrand resulted in a 35% increase in brand recognition, 50% boost in delivery orders, and successful expansion to 5 new cities. The new identity successfully balances tradition with modern appeal."
+    }
+  ],
+  "testimonial": {
+    "quote": "The rebrand captured our essence perfectly. We've seen incredible growth since launching the new identity.",
+    "author": "Fatima Al-Zahra",
+    "position": "Marketing Director, Taste of Arabia"
+  }
+}
