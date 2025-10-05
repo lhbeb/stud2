@@ -130,7 +130,7 @@ const CreativeProcessGrid: React.FC = () => {
                   <img
                     src={img}
                     alt="Creative Process"
-                    className="w-full h-full object-cover object-center"
+                    className="w-full h-full object-cover object-center grayscale"
                     draggable={false}
                     loading="lazy"
                     onError={handleImgError}

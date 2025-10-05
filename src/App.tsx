@@ -3,7 +3,6 @@ import Navigation from './components/Navigation';
 import Hero from './components/Hero';
 import FeaturedWork from './components/FeaturedWork';
 import WorksCaseStudies from './components/WorksCaseStudies';
-import LocationFocus from './components/LocationFocus';
 import Services from './components/Services';
 import Testimonials from './components/Testimonials';
 import Team from './components/Team';
@@ -27,7 +26,6 @@ function App() {
         <PartnersSection />
         <WorksCaseStudies />
         <FeaturedWork />
-        <LocationFocus />
         <Services />
         <Testimonials />
         <Team />

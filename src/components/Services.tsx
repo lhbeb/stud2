@@ -7,23 +7,33 @@ const Services: React.FC = () => {
   const services = [
     {
       title: 'Brand Identity',
-      description: 'Logo Design, Visual Systems, and comprehensive Brand Guidelines that define your unique presence in the market.',
-      details: ['Logo Design & Visual Identity', 'Brand Guidelines & Standards', 'Visual Systems & Applications']
+      description: 'Complete visual identity systems that define your unique market presence.',
+      details: ['Logo Design', 'Brand Guidelines', 'Visual Systems']
     },
     {
       title: 'UI/UX Design',
-      description: 'Website & App Interfaces, Wireframes & Prototypes that deliver exceptional user experiences across all platforms.',
-      details: ['Website & Mobile App Design', 'User Experience Research', 'Wireframes & Interactive Prototypes']
+      description: 'Exceptional user experiences across all digital platforms.',
+      details: ['Website Design', 'Mobile Apps', 'User Research']
     },
     {
       title: 'Full-Stack Development',
-      description: 'Frontend + Backend development for scalable custom platforms that grow with your business needs.',
-      details: ['Frontend & Backend Development', 'Custom Platform Solutions', 'API Integration & Database Design']
+      description: 'Scalable custom platforms that grow with your business.',
+      details: ['Frontend Development', 'Backend Solutions', 'API Integration']
     },
     {
       title: 'Design Strategy',
-      description: 'Strategic design thinking and market positioning that sets your brand apart in competitive landscapes.',
-      details: ['Strategic Design Consulting', 'Market Positioning & Analysis', 'Brand Architecture & Planning']
+      description: 'Strategic positioning that sets your brand apart.',
+      details: ['Design Consulting', 'Market Analysis', 'Brand Planning']
+    },
+    {
+      title: 'Digital Marketing',
+      description: 'Strategic digital campaigns that drive engagement and growth.',
+      details: ['Social Media', 'Content Strategy', 'SEO & Analytics']
+    },
+    {
+      title: 'E-commerce Solutions',
+      description: 'Complete online store solutions for modern retail businesses.',
+      details: ['Shopify Development', 'Custom Platforms', 'Payment Integration']
     },
   ];
 
@@ -42,13 +52,12 @@ const Services: React.FC = () => {
             Our Expertise
           </h2>
           <p className="text-lg md:text-xl text-gray-600 font-light max-w-4xl leading-relaxed">
-            With over 10 years of experience and more than 400 successful projects delivered, 
-            StudioEyn specializes in brand and digital design that speaks clearly and performs effortlessly across the Middle East and Gulf region.
+            Strategic brand and digital design solutions for the Middle East and Gulf region.
           </p>
         </div>
 
         {/* Services Grid */}
-        <div className={`grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-12 stagger-children ${
+        <div className={`grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 md:gap-12 stagger-children ${
           isVisible ? 'visible' : ''
         }`}>
           {services.map((service, index) => (
@@ -74,14 +83,14 @@ const Services: React.FC = () => {
                     {service.description}
                   </p>
                   
-                  {/* Details List */}
-                  <div className="space-y-3 mb-8">
+                  {/* Tags */}
+                  <div className="flex flex-wrap gap-3 mb-8">
                     {service.details.map((detail, detailIndex) => (
-                      <div key={detailIndex} className="flex items-start group/item">
-                        <div className="flex-shrink-0 w-6 h-6 border border-gray-300 rounded-sm flex items-center justify-center mr-4 mt-0.5 group-hover/item:border-black group-hover/item:bg-black transition-all duration-300">
-                          <div className="w-1.5 h-1.5 bg-transparent group-hover/item:bg-white rounded-sm transition-colors duration-300"></div>
-                        </div>
-                        <span className="font-light text-gray-500 group-hover/item:text-gray-800 transition-colors duration-300 leading-relaxed">{detail}</span>
+                      <div 
+                        key={detailIndex} 
+                        className="px-4 py-2 border border-gray-300 rounded-sm text-sm font-light text-gray-600 hover:border-black hover:text-black transition-all duration-300"
+                      >
+                        {detail}
                       </div>
                     ))}
                   </div>
@@ -111,7 +120,7 @@ const Services: React.FC = () => {
             <a
               href="/book-call"
               className="inline-flex items-center px-8 py-4 bg-white text-black font-normal hover:bg-gray-100 transition-all duration-300 uppercase tracking-wide"
-              style={{ borderRadius: '7px' }}
+              style={{ borderRadius: '2px' }}
             >
               <span>Start Your Project</span>
               <ArrowRight className="h-5 w-5 ml-3" />

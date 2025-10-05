@@ -73,28 +73,32 @@ export function Testimonials() {
               key={index}
               className="flex-shrink-0 w-full sm:w-80 md:w-96 mx-4 bg-white border border-gray-100 rounded-sm p-8 shadow-sm hover:shadow-md transition-shadow duration-300"
             >
-              {/* Avatar */}
-              <div className="flex justify-center mb-6">
-                <div className="w-16 h-16 rounded-full overflow-hidden bg-gray-100">
+              {/* Header with Avatar and Name */}
+              <div className="flex items-center mb-6">
+                {/* Circular Avatar */}
+                <div className="w-12 h-12 rounded-full overflow-hidden bg-gray-100 flex-shrink-0 mr-4">
                   <img
                     src={testimonial.avatar}
                     alt={testimonial.name}
                     className="w-full h-full object-cover"
                   />
                 </div>
+                
+                {/* Name and Title */}
+                <div className="flex-1">
+                  <p className="font-normal text-black text-sm mb-1">
+                    {testimonial.name}
+                  </p>
+                  <p className="text-gray-500 text-xs font-light">
+                    {testimonial.title}
+                  </p>
+                </div>
               </div>
               
-              <div className="mb-6">
-                <p className="text-gray-700 font-light leading-relaxed text-base text-center">
+              {/* Testimonial Quote */}
+              <div>
+                <p className="text-gray-700 font-light leading-relaxed text-base">
                   "{testimonial.quote}"
-                </p>
-              </div>
-              <div className="border-t border-gray-100 pt-4 text-center">
-                <p className="font-normal text-black text-sm mb-1">
-                  {testimonial.name}
-                </p>
-                <p className="text-gray-500 text-sm font-light">
-                  {testimonial.title}
                 </p>
               </div>
             </div>

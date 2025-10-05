@@ -109,7 +109,7 @@ const Contact: React.FC = () => {
               <a
               href="mailto:hello@studioeyn.com"
               className="inline-block px-8 py-4 bg-white text-black text-base font-semibold hover:bg-gray-100 transition-colors duration-200 whitespace-nowrap"
-              style={{ borderRadius: '7px' }}
+              style={{ borderRadius: '2px' }}
             >
                 Book Free Call
               </a>
@@ -210,7 +210,7 @@ const Contact: React.FC = () => {
                            disabled:opacity-50 disabled:cursor-not-allowed
                            flex items-center justify-center space-x-2
                            hover:bg-gray-900 transition-colors duration-200 whitespace-nowrap"
-                  style={{ borderRadius: '7px' }}
+                  style={{ borderRadius: '2px' }}
                 >
                   {isSubmitting ? (
                     <div className="w-5 h-5 border-2 border-white border-t-transparent rounded-full animate-spin" />

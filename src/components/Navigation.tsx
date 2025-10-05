@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { Menu, X, Mail } from 'lucide-react';
+import { Link } from 'react-router-dom';
 
 const Navigation: React.FC = () => {
   const [isScrolled, setIsScrolled] = useState(false);
@@ -44,28 +45,30 @@ const Navigation: React.FC = () => {
           <div className="flex items-center justify-between h-26 md:h-24 lg:h-26">
             {/* Logo */}
             <div className="flex-shrink-0 relative">
-              <div className="relative overflow-hidden">
-                {/* Default Logo */}
-                <img
-                  src="/logostudio.svg"
-                  alt="StudioEyn Logo"
-                  className={`h-12 w-auto transition-all duration-300 ease-in-out ${
-                    isScrolled 
-                      ? 'opacity-0 rotate-2' 
-                      : 'opacity-100 rotate-0'
-                  }`}
-                />
-                {/* Inverted Logo */}
-                <img
-                  src="/logostudio-inverted.svg"
-                  alt="StudioEyn Logo"
-                  className={`absolute top-0 left-0 h-12 w-auto transition-all duration-300 ease-in-out ${
-                    isScrolled 
-                      ? 'opacity-100 rotate-0' 
-                      : 'opacity-0 -rotate-2'
-                  }`}
-                />
-              </div>
+              <Link to="/" className="block">
+                <div className="relative overflow-hidden">
+                  {/* Default Logo */}
+                  <img
+                    src="/logostudio.svg"
+                    alt="StudioEyn Logo"
+                    className={`h-12 w-auto transition-all duration-300 ease-in-out ${
+                      isScrolled 
+                        ? 'opacity-0 rotate-2' 
+                        : 'opacity-100 rotate-0'
+                    }`}
+                  />
+                  {/* Inverted Logo */}
+                  <img
+                    src="/logostudio-inverted.svg"
+                    alt="StudioEyn Logo"
+                    className={`absolute top-0 left-0 h-12 w-auto transition-all duration-300 ease-in-out ${
+                      isScrolled 
+                        ? 'opacity-100 rotate-0' 
+                        : 'opacity-0 -rotate-2'
+                    }`}
+                  />
+                </div>
+              </Link>
             </div>
 
             {/* Desktop Navigation */}
@@ -92,7 +95,7 @@ const Navigation: React.FC = () => {
                       ? 'border-white text-white hover:bg-white hover:text-black' 
                       : 'border-black text-black hover:bg-black hover:text-white'
                   }`}
-                  style={{ borderRadius: '7px' }}
+                  style={{ borderRadius: '2px' }}
                 >
                   <Mail className="h-4 w-4" />
                   <span>Send a message</span>
@@ -109,7 +112,7 @@ const Navigation: React.FC = () => {
                   ? 'text-white hover:text-gray-300 hover:bg-white/10' 
                   : 'text-black hover:text-gray-600 hover:bg-black/10'
               }`}
-              style={{ borderRadius: '7px' }}
+              style={{ borderRadius: '2px' }}
               aria-label="Toggle mobile menu"
             >
                 {isMobileMenuOpen ? <X className="h-6 w-6" /> : <Menu className="h-6 w-6" />}
@@ -149,7 +152,7 @@ const Navigation: React.FC = () => {
                   ? 'border-white text-white hover:bg-white hover:text-black' 
                   : 'border-black text-black hover:bg-black hover:text-white'
               }`}
-              style={{ borderRadius: '7px' }}
+              style={{ borderRadius: '2px' }}
               onClick={() => setIsMobileMenuOpen(false)}
             >
               <Mail className="h-5 w-5" />

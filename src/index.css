@@ -177,14 +177,14 @@
     padding: 0 2rem;
   }
 
-  /* Global button styles */
-  button,
-  .btn,
-  a[role="button"],
-  input[type="button"],
-  input[type="submit"] {
-    border-radius: 7px !important;
-  }
+          /* Global button styles */
+          button,
+          .btn,
+          a[role="button"],
+          input[type="button"],
+          input[type="submit"] {
+            border-radius: 2px !important;
+          }
 }
 
 @layer utilities {

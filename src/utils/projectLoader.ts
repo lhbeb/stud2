@@ -106,6 +106,7 @@ export const loadAllProjects = async (): Promise<Project[]> => {
       'charger-coffee',
       'dairum-cosmetics',
       'emond-fashion',
+      'binayat-realestate',
       'restaurant-chain-rebrand',
       'luxury-hotel-brand-identity',
       'fintech-mobile-app',

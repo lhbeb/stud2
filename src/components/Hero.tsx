@@ -83,7 +83,7 @@ const Hero: React.FC = () => {
           <a
             href="/book-call"
             className="inline-flex items-center px-8 py-4 bg-black text-white text-base font-light uppercase tracking-wide hover:bg-gray-900 transition-colors duration-300 animate-slide-up animation-delay-400"
-            style={{ borderRadius: '7px' }}
+            style={{ borderRadius: '2px' }}
           >
             <img src="/arrow.svg" alt="" className="h-4 w-4 mr-3" />
             <span>Book a call</span>
@@ -114,7 +114,7 @@ const Hero: React.FC = () => {
                 <a
                 href="/book-call"
                 className="inline-flex items-center px-8 py-4 bg-black text-white font-normal hover:bg-gray-900 transition-all duration-300 animate-slide-up animation-delay-200 uppercase mb-12"
-                style={{ borderRadius: '7px' }}
+                style={{ borderRadius: '2px' }}
                >
                   <img src="/arrow.svg" alt="" className="h-4 w-4 mr-3" />
                   <span>Book a call</span>

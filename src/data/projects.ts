@@ -125,6 +125,31 @@ export const projectsData: Project[] = [
         'https://images.pexels.com/photos/1640777/pexels-photo-1640777.jpeg?auto=compress&cs=tinysrgb&w=1200'
       ]
     }
+  },
+  {
+    id: 'binayat-realestate',
+    slug: 'binayat-realestate',
+    title: 'Binayat Real Estate Brand Identity',
+    category: 'Brand Identity',
+    client: 'Binayat Real Estate',
+    year: '2024',
+    description: 'Complete brand identity design for a premium real estate company specializing in luxury properties and development projects across the Middle East.',
+    shortDescription: 'Complete brand identity design for a premium real estate company specializing in luxury properties and development projects across the Middle East.',
+    thumbnailImage: '/projects/binayat-realestate/thumbnail.png',
+    coverImage: 'https://images.pexels.com/photos/1267320/pexels-photo-1267320.jpeg?auto=compress&cs=tinysrgb&w=1200',
+    tags: ['Real Estate', 'Branding', 'Property'],
+    budget: '$2,800 - $5,500',
+    featured: true,
+    caseStudy: {
+      overview: 'Binayat Real Estate approached us to create a sophisticated brand identity that would position them as a trusted, premium real estate company in the competitive Middle Eastern property market.',
+      challenge: 'The challenge was to create a brand that conveys trust, reliability, and luxury while appealing to high-end property buyers and investors in the region.',
+      solution: 'We developed a professional brand system that combines architectural design elements with modern luxury aesthetics, creating a brand that truly embodies premium real estate excellence.',
+      results: ['Increased brand recognition', 'Improved market positioning', 'Successful expansion'],
+      images: [
+        'https://images.pexels.com/photos/1267320/pexels-photo-1267320.jpeg?auto=compress&cs=tinysrgb&w=1200',
+        'https://images.pexels.com/photos/1640777/pexels-photo-1640777.jpeg?auto=compress&cs=tinysrgb&w=1200'
+      ]
+    }
   }
 
 // API simulation functions
