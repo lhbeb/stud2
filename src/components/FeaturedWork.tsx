@@ -23,7 +23,7 @@ const FeaturedWork: React.FC = () => {
                   target="_blank"
                   rel="noopener noreferrer"
                   className="inline-flex items-center space-x-2 px-8 py-4 bg-black text-white text-base font-normal uppercase shadow hover:bg-gray-900 transition-colors duration-200 whitespace-nowrap"
-                  style={{ borderRadius: '1px' }}
+                  style={{ borderRadius: '7px' }}
                 >
                   <span>VIEW ALL</span>
                   <ArrowUpRight className="h-5 w-5" />

@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 
 const HERO_VIDEO_URL =
-  "https://player.vimeo.com/video/1124037830?h=db47faa2ec&autoplay=1&loop=1&muted=1&controls=0&title=0&byline=0&portrait=0&playsinline=1&autopause=0&badge=0&app_id=58479";
+  "https://player.vimeo.com/video/1124503796?h=d2b31f0ecd&autoplay=1&loop=1&muted=1&controls=0&title=0&byline=0&portrait=0&playsinline=1&autopause=0&badge=0&app_id=58479";
 
 const words = ["EYN", "EYE"];
 
@@ -36,7 +36,7 @@ const Hero: React.FC = () => {
   }, [charIndex, deleting, wordIndex]);
 
   return (
-    <section className="relative w-full bg-white overflow-hidden pt-28 md:pt-20">
+    <section className="relative w-full bg-white overflow-hidden pt-28 md:pt-14">
       {/* Mobile: Refactored layout with bigger video and optimized spacing */}
       <div className="block md:hidden hero-mobile-container w-full max-w-full" style={{
         height: 'calc(100vh - 112px)', // Available height minus navbar (h-26 = 104px + 8px buffer)
@@ -81,9 +81,9 @@ const Hero: React.FC = () => {
         {/* Bottom: CTA button - LEFT ALIGNED WITH LOGO */}
         <div className="flex-shrink-0 px-8 pt-4">
           <a
-            href="#contact"
+            href="/book-call"
             className="inline-flex items-center px-8 py-4 bg-black text-white text-base font-light uppercase tracking-wide hover:bg-gray-900 transition-colors duration-300 animate-slide-up animation-delay-400"
-            style={{ borderRadius: '1px' }}
+            style={{ borderRadius: '7px' }}
           >
             <img src="/arrow.svg" alt="" className="h-4 w-4 mr-3" />
             <span>Book a call</span>
@@ -96,48 +96,36 @@ const Hero: React.FC = () => {
         <div className="container-custom h-full">
           <div className="flex items-center h-full">
             {/* Left Column: Text Content */}
-            <div className="w-1/2 pr-16 relative">
+            <div className="w-1/3 pr-8 relative">
               {/* Main Content */}
               <div className="relative z-10">
-                <h1 className="text-4xl lg:text-5xl font-normal text-black leading-tight mb-6 animate-slide-up uppercase tracking-tight" style={{ fontWeight: 400 }}>
+                <h1 className="text-4xl lg:text-5xl font-normal text-black leading-tight mb-8 animate-slide-up uppercase tracking-tight" style={{ fontWeight: 400 }}>
                   <span
                     className="inline-block text-black font-mono align-middle w-full whitespace-nowrap"
                     style={{ minWidth: '3ch', display: 'block' }}
                   >
                     {displayed}&nbsp;
                   </span>
-                  <span className="block w-full whitespace-nowrap">DON'T JUST SEE BRANDS.</span>
+                  <span className="block w-full whitespace-nowrap">DON'T JUST</span>
+                  <span className="block w-full whitespace-nowrap">SEE BRANDS.</span>
                   <span className="block w-full whitespace-nowrap">WE SHAPE THEM</span>
                 </h1>
                 
-                <p className="text-base text-gray-600 leading-relaxed mb-8 animate-slide-up animation-delay-200">
-                  Creating products with a strong identity.<br />
-                  We provide brilliant ideas and adding the<br />
-                  world called success brand.
-                </p>
-                
                 <a
-                href="#contact"
-                className="inline-flex items-center px-8 py-4 bg-black text-white font-normal hover:bg-gray-900 transition-all duration-300 animate-slide-up animation-delay-400 uppercase"
-                style={{ borderRadius: '1px' }}
+                href="/book-call"
+                className="inline-flex items-center px-8 py-4 bg-black text-white font-normal hover:bg-gray-900 transition-all duration-300 animate-slide-up animation-delay-200 uppercase mb-12"
+                style={{ borderRadius: '7px' }}
                >
                   <img src="/arrow.svg" alt="" className="h-4 w-4 mr-3" />
                   <span>Book a call</span>
                 </a>
               </div>
-              
-              {/* Pagination Indicators */}
-              <div className="absolute bottom-0 left-0 flex items-center space-x-2 text-sm font-medium text-gray-600">
-                <span className="text-black">01</span>
-                <div className="w-8 h-px bg-gray-300"></div>
-                <span>03</span>
-              </div>
             </div>
             
             {/* Right Column: Video/Image */}
-            <div className="w-1/2 pl-8 flex justify-end">
-              <div className="relative w-[500px] h-[500px] rounded-sm overflow-hidden">
-                {/* Video with 1:1 aspect ratio */}
+            <div className="w-2/3 pl-8 flex justify-end">
+              <div className="relative w-[840px] h-[672px] rounded-sm overflow-hidden">
+                {/* Video with new aspect ratio */}
                 <iframe
                   src={HERO_VIDEO_URL}
                   frameBorder="0"
@@ -146,7 +134,7 @@ const Hero: React.FC = () => {
                   allowFullScreen
                   title="STUDIOEYN"
                   className="absolute inset-0 w-full h-full object-cover pointer-events-none"
-                  style={{ zIndex: 1, aspectRatio: '1/1' }}
+                  style={{ zIndex: 1 }}
                 ></iframe>
                 
                 {/* Fallback image (hidden when video loads) */}

@@ -1,0 +1,41 @@
+{
+  "thumbnail": "/projects/origin-roasters/thumbnail.png",
+  "slug": "origin-roasters",
+  "title": "Origin Roasters Brand Identity",
+  "year": "2024",
+  "category": "Brand Identity",
+  "client": "Origin Roasters",
+  "tags": ["Coffee", "Branding", "Artisan"],
+  "budget": "$1,800 - $4,200",
+  "featured": true,
+  "intro": {
+    "photo": "https://images.pexels.com/photos/1267320/pexels-photo-1267320.jpeg?auto=compress&cs=tinysrgb&w=1200",
+    "text": "Complete brand identity design for an artisanal coffee roastery specializing in premium Middle Eastern coffee blends."
+  },
+  "content": [
+    {
+      "type": "text",
+      "content": "Origin Roasters needed a distinctive brand identity that would position them as a premium artisanal coffee roastery in the competitive Middle Eastern market."
+    },
+    {
+      "type": "text", 
+      "content": "The challenge was to create a brand that honors traditional coffee culture while appealing to modern coffee enthusiasts and specialty coffee consumers."
+    },
+    {
+      "type": "text",
+      "content": "We developed a warm, authentic brand system that celebrates the rich heritage of Middle Eastern coffee culture with contemporary design elements."
+    },
+    {
+      "type": "image",
+      "url": "https://images.pexels.com/photos/1267320/pexels-photo-1267320.jpeg?auto=compress&cs=tinysrgb&w=1200",
+      "alt": "Origin Roasters Brand Identity",
+      "caption": "Main brand identity application"
+    },
+    {
+      "type": "image",
+      "url": "https://images.pexels.com/photos/1640777/pexels-photo-1640777.jpeg?auto=compress&cs=tinysrgb&w=1200",
+      "alt": "Coffee Roastery Interior",
+      "caption": "Brand application in roastery and retail spaces"
+    }
+  ]
+}

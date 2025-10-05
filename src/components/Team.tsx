@@ -91,7 +91,7 @@ const Team: React.FC = () => {
                     <a
                       href={member.social.linkedin}
                       className="p-2 bg-white/90 backdrop-blur-sm hover:bg-white transition-colors duration-200"
-                      style={{ borderRadius: '1px' }}
+                      style={{ borderRadius: '7px' }}
                       aria-label={`${member.name} LinkedIn`}
                     >
                       <Linkedin className="h-4 w-4 text-black" />
@@ -99,7 +99,7 @@ const Team: React.FC = () => {
                     <a
                         href={member.social.twitter}
                         className="p-2 bg-white/90 backdrop-blur-sm hover:bg-white transition-colors duration-200"
-                        style={{ borderRadius: '1px' }}
+                        style={{ borderRadius: '7px' }}
                         aria-label={`${member.name} Twitter`}
                       >
                       <Twitter className="h-4 w-4 text-black" />
@@ -107,7 +107,7 @@ const Team: React.FC = () => {
                     <a
                         href={member.social.github}
                         className="p-2 bg-white/90 backdrop-blur-sm hover:bg-white transition-colors duration-200"
-                        style={{ borderRadius: '1px' }}
+                        style={{ borderRadius: '7px' }}
                         aria-label={`${member.name} GitHub`}
                       >
                       <Github className="h-4 w-4 text-black" />
@@ -144,7 +144,7 @@ const Team: React.FC = () => {
             <a
               href="#contact"
               className="inline-block px-8 py-4 bg-white text-black text-base font-semibold hover:bg-gray-100 transition-colors duration-200 whitespace-nowrap"
-              style={{ borderRadius: '1px' }}
+              style={{ borderRadius: '7px' }}
             >
               Get In Touch
             </a>

@@ -1,0 +1,41 @@
+{
+  "thumbnail": "/projects/eight-jewelery/thumbnail.png",
+  "slug": "eight-jewelery",
+  "title": "Eight Jewelry Brand Identity",
+  "year": "2024",
+  "category": "Brand Identity",
+  "client": "Eight Jewelry",
+  "tags": ["Jewelry", "Branding", "Luxury"],
+  "budget": "$2,500 - $5,000",
+  "featured": true,
+  "intro": {
+    "photo": "https://images.pexels.com/photos/1267320/pexels-photo-1267320.jpeg?auto=compress&cs=tinysrgb&w=1200",
+    "text": "Complete brand identity design for a luxury jewelry brand specializing in contemporary Middle Eastern designs."
+  },
+  "content": [
+    {
+      "type": "text",
+      "content": "Eight Jewelry approached us to create a sophisticated brand identity that would position them as a premium jewelry brand in the Middle Eastern market."
+    },
+    {
+      "type": "text", 
+      "content": "The challenge was to create a brand that appeals to both traditional Middle Eastern aesthetics and contemporary luxury consumers."
+    },
+    {
+      "type": "text",
+      "content": "We developed an elegant brand system that combines geometric patterns inspired by Islamic art with modern minimalist design principles."
+    },
+    {
+      "type": "image",
+      "url": "https://images.pexels.com/photos/1267320/pexels-photo-1267320.jpeg?auto=compress&cs=tinysrgb&w=1200",
+      "alt": "Eight Jewelry Brand Identity",
+      "caption": "Main brand identity application"
+    },
+    {
+      "type": "image",
+      "url": "https://images.pexels.com/photos/1640777/pexels-photo-1640777.jpeg?auto=compress&cs=tinysrgb&w=1200",
+      "alt": "Jewelry Store Interior",
+      "caption": "Brand application in retail spaces"
+    }
+  ]
+}

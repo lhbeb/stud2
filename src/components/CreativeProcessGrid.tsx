@@ -142,8 +142,8 @@ const CreativeProcessGrid: React.FC = () => {
           );
         })}
       </div>
-      {/* Optional: subtle overlay for branding */}
-      <div className="absolute inset-0 pointer-events-none z-10 bg-white/10" />
+      {/* 20% opacity white overlay */}
+      <div className="absolute inset-0 pointer-events-none z-10 bg-white/20" />
     </section>
   );
 };

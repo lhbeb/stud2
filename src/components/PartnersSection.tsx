@@ -102,7 +102,7 @@ const PartnersSection: React.FC = () => {
   }, []); // No dependencies - animation runs once and never stops
 
   return (
-    <section className="pt-16 pb-16 md:pt-20 md:pb-20 bg-white md:h-[25vh] md:flex md:items-center">
+    <section className="pt-8 pb-16 md:pt-12 md:pb-20 bg-white md:h-[25vh] md:flex md:items-center">
       <div className="container-custom text-center">
         <div className="relative w-full overflow-hidden">
           <div className="pointer-events-none absolute left-0 top-0 h-full w-8 md:w-16 z-10 bg-gradient-to-r from-white to-transparent" />
@@ -117,7 +117,7 @@ const PartnersSection: React.FC = () => {
                   key={`${logo}-${idx}`}
                   src={`/${logo}`}
                   alt={`Partner ${idx + 1}`}
-                  className="h-17 sm:h-30 md:h-24 partners-logo cursor-pointer flex-shrink-0 logo-item"
+                  className="h-12 sm:h-21 md:h-17 partners-logo cursor-pointer flex-shrink-0 logo-item"
                   loading="lazy"
                   draggable={false}
                   onError={e => { e.currentTarget.style.display = 'none'; }}
@@ -129,7 +129,7 @@ const PartnersSection: React.FC = () => {
                   key={`${logo}-duplicate-${idx}`}
                   src={`/${logo}`}
                   alt={`Partner ${idx + 1}`}
-                  className="h-17 sm:h-30 md:h-24 partners-logo cursor-pointer flex-shrink-0 logo-item"
+                  className="h-12 sm:h-21 md:h-17 partners-logo cursor-pointer flex-shrink-0 logo-item"
                   loading="lazy"
                   draggable={false}
                   onError={e => { e.currentTarget.style.display = 'none'; }}
@@ -137,12 +137,6 @@ const PartnersSection: React.FC = () => {
               ))}
             </div>
           </div>
-        </div>
-        <div className="flex flex-col items-center mt-4 md:mt-6">
-          <div className="w-24 h-px bg-gray-200 mb-4 md:mb-6" />
-          <p className="text-sm md:text-base text-gray-600 font-light tracking-wide max-w-xl mx-auto">
-            Partner brands crafted by us, +400 Partners & Projects delivered all across gulf region and middle east
-          </p>
         </div>
       </div>
     </section>

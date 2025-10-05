@@ -1,11 +1,13 @@
 import React, { useState, useEffect, useRef } from 'react';
 import { ChevronLeft, ChevronRight } from 'lucide-react';
+import { useNavigate } from 'react-router-dom';
 import { useScrollTrigger } from '../hooks/useScrollTrigger';
-import { getProjects } from '../data/projects';
+import { loadAllProjects } from '../utils/projectLoader';
 import { Project } from '../types/project';
 
 const WorksCaseStudies: React.FC = () => {
   const { elementRef, isVisible } = useScrollTrigger();
+  const navigate = useNavigate();
   const [projects, setProjects] = useState<Project[]>([]);
   const [currentPage, setCurrentPage] = useState(0);
   const [totalPages, setTotalPages] = useState(0);
@@ -24,9 +26,13 @@ const WorksCaseStudies: React.FC = () => {
     setIsTransitioning(true);
     
     try {
-      const response = await getProjects(page + 1, projectsPerPage);
-      setProjects(response.projects);
-      setTotalPages(Math.ceil(response.total / projectsPerPage));
+      const allProjects = await loadAllProjects();
+      const startIndex = page * projectsPerPage;
+      const endIndex = startIndex + projectsPerPage;
+      const paginatedProjects = allProjects.slice(startIndex, endIndex);
+      
+      setProjects(paginatedProjects);
+      setTotalPages(Math.ceil(allProjects.length / projectsPerPage));
       setCurrentPage(page);
     } catch (error) {
       console.error('Error loading projects:', error);
@@ -38,8 +44,7 @@ const WorksCaseStudies: React.FC = () => {
   };
 
   const handleProjectClick = (slug: string) => {
-    // Navigate to project detail page
-    window.location.href = `/project/${slug}`;
+    navigate(`/projects/${slug}`);
   };
 
   const nextPage = () => {
@@ -74,7 +79,7 @@ const WorksCaseStudies: React.FC = () => {
     >
       <div className="container-custom">
         {/* Header */}
-        <div className={`text-center mb-20 transition-all duration-1000 ${
+        <div className={`text-left mb-20 transition-all duration-1000 ${
           isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'
         }`}>
           <h2 className="text-4xl md:text-5xl lg:text-6xl font-normal text-white mb-8 uppercase tracking-tight">
@@ -106,7 +111,7 @@ const WorksCaseStudies: React.FC = () => {
                   {/* Project Image */}
                   <div className="relative aspect-[3/4] overflow-hidden mb-4">
                     <img
-                      src={project.coverImage}
+                      src={project.thumbnailImage}
                       alt={project.title}
                       className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
                       draggable={false}
@@ -139,7 +144,7 @@ const WorksCaseStudies: React.FC = () => {
                   {/* Project Image */}
                   <div className="relative aspect-[3/4] overflow-hidden mb-4">
                     <img
-                      src={project.coverImage}
+                      src={project.thumbnailImage}
                       alt={project.title}
                       className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
                       draggable={false}

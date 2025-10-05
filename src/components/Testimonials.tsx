@@ -5,31 +5,37 @@ const testimonials = [
     quote: "StudioEyn transformed our brand identity completely. Their strategic approach resulted in a visual identity that perfectly captures our luxury hospitality brand.",
     name: "Ahmed Al-Rashid",
     title: "CEO, Luxury Hotels Group",
+    avatar: "https://images.pexels.com/photos/220453/pexels-photo-220453.jpeg?auto=compress&cs=tinysrgb&w=150&h=150&fit=crop&crop=face"
   },
   {
     quote: "Working with StudioEyn on our fintech platform was exceptional. They delivered a user-friendly interface that our customers love, and their Gulf market understanding is impressive.",
     name: "Fatima Al-Zahra",
     title: "Product Manager, FinTech Startup",
+    avatar: "https://images.pexels.com/photos/415829/pexels-photo-415829.jpeg?auto=compress&cs=tinysrgb&w=150&h=150&fit=crop&crop=face"
   },
   {
     quote: "The e-commerce redesign by StudioEyn increased our conversion rates by 40%. Their UX expertise helped us stand out in the competitive Gulf retail market.",
     name: "Omar Benali",
     title: "Marketing Director, Retail Brand",
+    avatar: "https://images.pexels.com/photos/1040880/pexels-photo-1040880.jpeg?auto=compress&cs=tinysrgb&w=150&h=150&fit=crop&crop=face"
   },
   {
     quote: "StudioEyn's strategic brand positioning helped us secure Series A funding. Their comprehensive strategy positioned us perfectly for growth in Qatar's tech ecosystem.",
     name: "Layla Mansouri",
     title: "Founder, Tech Startup",
+    avatar: "https://images.pexels.com/photos/774909/pexels-photo-774909.jpeg?auto=compress&cs=tinysrgb&w=150&h=150&fit=crop&crop=face"
   },
   {
     quote: "The healthcare platform developed by StudioEyn streamlined our operations significantly. Their development expertise and healthcare workflow understanding is remarkable.",
     name: "Dr. Khalid Al-Mahmoud",
     title: "Director, Healthcare Group",
+    avatar: "https://images.pexels.com/photos/1040881/pexels-photo-1040881.jpeg?auto=compress&cs=tinysrgb&w=150&h=150&fit=crop&crop=face"
   },
   {
     quote: "StudioEyn delivered a complete digital transformation for our real estate portfolio. Their modern approach and attention to detail exceeded our expectations.",
     name: "Sarah Al-Mansoori",
     title: "CEO, Emirates Properties",
+    avatar: "https://images.pexels.com/photos/415829/pexels-photo-415829.jpeg?auto=compress&cs=tinysrgb&w=150&h=150&fit=crop&crop=face"
   },
 ];
 
@@ -67,12 +73,23 @@ export function Testimonials() {
               key={index}
               className="flex-shrink-0 w-full sm:w-80 md:w-96 mx-4 bg-white border border-gray-100 rounded-sm p-8 shadow-sm hover:shadow-md transition-shadow duration-300"
             >
+              {/* Avatar */}
+              <div className="flex justify-center mb-6">
+                <div className="w-16 h-16 rounded-full overflow-hidden bg-gray-100">
+                  <img
+                    src={testimonial.avatar}
+                    alt={testimonial.name}
+                    className="w-full h-full object-cover"
+                  />
+                </div>
+              </div>
+              
               <div className="mb-6">
-                <p className="text-gray-700 font-light leading-relaxed text-base">
+                <p className="text-gray-700 font-light leading-relaxed text-base text-center">
                   "{testimonial.quote}"
                 </p>
               </div>
-              <div className="border-t border-gray-100 pt-4">
+              <div className="border-t border-gray-100 pt-4 text-center">
                 <p className="font-normal text-black text-sm mb-1">
                   {testimonial.name}
                 </p>

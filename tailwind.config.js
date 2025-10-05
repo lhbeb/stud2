@@ -29,7 +29,9 @@ export default {
         'heading': 'clamp(1.5rem, 4vw, 2.5rem)',
       },
       height: {
+        '12': '3rem',   // 48px for mobile partners logos (30% reduction from 68px)
         '17': '4.25rem', // 68px for mobile partners logos (30% reduction from 96px)
+        '21': '5.25rem', // 84px for small screens partners logos (30% reduction from 120px)
         '26': '6.5rem', // 104px for mobile navbar
         '24': '6rem',   // 96px for tablet navbar
         '30': '7.5rem', // 120px for mobile partners logos

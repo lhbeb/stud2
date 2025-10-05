@@ -2,124 +2,24 @@ import { Project } from '../types/project';
 
 export const projectsData: Project[] = [
   {
-    id: '1',
-    slug: 'luxury-hotel-brand-identity',
-    title: 'Luxury Hotel Brand Identity',
+    id: 'origin-roasters',
+    slug: 'origin-roasters',
+    title: 'Origin Roasters Brand Identity',
     category: 'Brand Identity',
-    client: 'Al-Rashid Hotels',
+    client: 'Origin Roasters',
     year: '2024',
-    description: 'Complete brand overhaul for a luxury hotel chain across the Gulf region, including logo design, visual identity, and brand guidelines.',
-    shortDescription: 'Luxury hotel chain rebranding across Gulf region',
-    thumbnailImage: 'https://images.pexels.com/photos/258154/pexels-photo-258154.jpeg?auto=compress&cs=tinysrgb&w=800&h=1067',
-    coverImage: 'https://images.pexels.com/photos/258154/pexels-photo-258154.jpeg?auto=compress&cs=tinysrgb&w=1200',
-    tags: ['Branding', 'Hospitality', 'Luxury'],
-    featured: true,
-    caseStudy: {
-      overview: 'Al-Rashid Hotels approached us to modernize their brand identity while maintaining their heritage and luxury positioning in the competitive Gulf hospitality market.',
-      challenge: 'The existing brand felt outdated and failed to communicate the premium experience offered by the hotel chain.',
-      solution: 'We developed a sophisticated visual identity that blends traditional Arabic design elements with contemporary luxury aesthetics.',
-      results: ['40% increase in brand recognition', '25% boost in direct bookings', 'Successful rollout across 12 properties'],
-      images: [
-        'https://images.pexels.com/photos/258154/pexels-photo-258154.jpeg?auto=compress&cs=tinysrgb&w=1200',
-        'https://images.pexels.com/photos/271618/pexels-photo-271618.jpeg?auto=compress&cs=tinysrgb&w=1200'
-      ],
-      testimonial: {
-        quote: 'StudioEyn transformed our brand beyond our expectations. The new identity perfectly captures our luxury positioning.',
-        author: 'Ahmed Al-Rashid',
-        position: 'CEO, Al-Rashid Hotels'
-      }
-    }
-  },
-  {
-    id: '2',
-    slug: 'fintech-mobile-app',
-    title: 'FinTech Mobile App',
-    category: 'UI/UX Design',
-    client: 'PayFlow',
-    year: '2024',
-    description: 'User-centered design for a revolutionary fintech mobile application serving the Middle East market.',
-    shortDescription: 'Revolutionary fintech app for Middle East market',
-    thumbnailImage: 'https://images.pexels.com/photos/267350/pexels-photo-267350.jpeg?auto=compress&cs=tinysrgb&w=800&h=1067',
-    coverImage: 'https://images.pexels.com/photos/267350/pexels-photo-267350.jpeg?auto=compress&cs=tinysrgb&w=1200',
-    tags: ['Mobile', 'FinTech', 'UX/UI'],
-    featured: true,
-    caseStudy: {
-      overview: 'PayFlow needed a mobile app that would simplify financial transactions while ensuring security and compliance with regional regulations.',
-      challenge: 'Creating an intuitive interface for complex financial operations while maintaining the highest security standards.',
-      solution: 'We designed a clean, accessible interface with biometric authentication and smart transaction categorization.',
-      results: ['500K+ downloads in first quarter', '4.8/5 app store rating', '60% reduction in transaction time'],
-      images: [
-        'https://images.pexels.com/photos/267350/pexels-photo-267350.jpeg?auto=compress&cs=tinysrgb&w=1200',
-        'https://images.pexels.com/photos/4386321/pexels-photo-4386321.jpeg?auto=compress&cs=tinysrgb&w=1200'
-      ]
-    }
-  },
-  {
-    id: '3',
-    slug: 'ecommerce-platform',
-    title: 'E-commerce Platform',
-    category: 'Full-Stack Development',
-    client: 'Souq Al-Khaleej',
-    year: '2023',
-    description: 'Custom e-commerce platform built for a major retail brand with advanced inventory management and analytics.',
-    shortDescription: 'Custom e-commerce platform with advanced analytics',
-    thumbnailImage: 'https://images.pexels.com/photos/230544/pexels-photo-230544.jpeg?auto=compress&cs=tinysrgb&w=800&h=1067',
-    coverImage: 'https://images.pexels.com/photos/230544/pexels-photo-230544.jpeg?auto=compress&cs=tinysrgb&w=1200',
-    tags: ['E-commerce', 'Development', 'Analytics'],
-    featured: true,
-    caseStudy: {
-      overview: 'Souq Al-Khaleej required a scalable e-commerce solution to handle their growing online presence across multiple Gulf countries.',
-      challenge: 'Building a platform that could handle high traffic volumes while providing real-time inventory management across multiple warehouses.',
-      solution: 'We developed a microservices-based architecture with advanced caching and real-time synchronization capabilities.',
-      results: ['300% increase in online sales', '99.9% uptime achieved', 'Real-time inventory across 15 locations'],
-      images: [
-        'https://images.pexels.com/photos/230544/pexels-photo-230544.jpeg?auto=compress&cs=tinysrgb&w=1200',
-        'https://images.pexels.com/photos/3184292/pexels-photo-3184292.jpeg?auto=compress&cs=tinysrgb&w=1200'
-      ]
-    }
-  },
-  {
-    id: '4',
-    slug: 'healthcare-digital-transformation',
-    title: 'Healthcare Digital Transformation',
-    category: 'Design Strategy',
-    client: 'MedCare Group',
-    year: '2023',
-    description: 'Comprehensive digital strategy and platform design for a leading healthcare provider in the UAE.',
-    shortDescription: 'Digital transformation for leading UAE healthcare provider',
-    thumbnailImage: 'https://images.pexels.com/photos/263402/pexels-photo-263402.jpeg?auto=compress&cs=tinysrgb&w=800&h=1067',
-    coverImage: 'https://images.pexels.com/photos/263402/pexels-photo-263402.jpeg?auto=compress&cs=tinysrgb&w=1200',
-    tags: ['Healthcare', 'Strategy', 'Digital'],
-    featured: true,
-    caseStudy: {
-      overview: 'MedCare Group needed to digitize their patient experience while maintaining the personal touch of healthcare.',
-      challenge: 'Balancing digital efficiency with the human aspect of healthcare delivery.',
-      solution: 'We created a comprehensive digital ecosystem including patient portals, telemedicine capabilities, and staff management tools.',
-      results: ['50% reduction in wait times', '85% patient satisfaction increase', 'Streamlined operations across 20 clinics'],
-      images: [
-        'https://images.pexels.com/photos/263402/pexels-photo-263402.jpeg?auto=compress&cs=tinysrgb&w=1200',
-        'https://images.pexels.com/photos/4386467/pexels-photo-4386467.jpeg?auto=compress&cs=tinysrgb&w=1200'
-      ]
-    }
-  },
-  {
-    id: '5',
-    slug: 'restaurant-chain-rebrand',
-    title: 'Restaurant Chain Rebrand',
-    category: 'Brand Identity',
-    client: 'Saffron Kitchen',
-    year: '2024',
-    description: 'Complete visual identity redesign for a premium restaurant chain expanding across the Middle East.',
-    shortDescription: 'Premium restaurant chain visual identity redesign',
-    thumbnailImage: 'https://images.pexels.com/photos/1267320/pexels-photo-1267320.jpeg?auto=compress&cs=tinysrgb&w=800&h=1067',
+    description: 'Complete brand identity design for an artisanal coffee roastery specializing in premium Middle Eastern coffee blends.',
+    shortDescription: 'Complete brand identity design for an artisanal coffee roastery specializing in premium Middle Eastern coffee blends.',
+    thumbnailImage: '/projects/origin-roasters/thumbnail.png',
     coverImage: 'https://images.pexels.com/photos/1267320/pexels-photo-1267320.jpeg?auto=compress&cs=tinysrgb&w=1200',
-    tags: ['Restaurant', 'Branding', 'Hospitality'],
+    tags: ['Coffee', 'Branding', 'Artisan'],
+    budget: '$1,800 - $4,200',
     featured: true,
     caseStudy: {
-      overview: 'Saffron Kitchen needed a fresh visual identity to support their expansion across multiple Middle Eastern markets.',
-      challenge: 'Creating a brand that appeals to diverse cultural tastes while maintaining premium positioning.',
-      solution: 'We developed a sophisticated brand system that celebrates Middle Eastern culinary heritage with modern elegance.',
-      results: ['35% increase in brand recognition', 'Successful launch in 8 new markets', 'Premium positioning maintained'],
+      overview: 'Origin Roasters needed a distinctive brand identity that would position them as a premium artisanal coffee roastery in the competitive Middle Eastern market.',
+      challenge: 'The challenge was to create a brand that honors traditional coffee culture while appealing to modern coffee enthusiasts and specialty coffee consumers.',
+      solution: 'We developed a warm, authentic brand system that celebrates the rich heritage of Middle Eastern coffee culture with contemporary design elements.',
+      results: ['Increased brand recognition', 'Improved market positioning', 'Successful expansion'],
       images: [
         'https://images.pexels.com/photos/1267320/pexels-photo-1267320.jpeg?auto=compress&cs=tinysrgb&w=1200',
         'https://images.pexels.com/photos/1640777/pexels-photo-1640777.jpeg?auto=compress&cs=tinysrgb&w=1200'
@@ -127,30 +27,105 @@ export const projectsData: Project[] = [
     }
   },
   {
-    id: '6',
-    slug: 'fashion-ecommerce-platform',
-    title: 'Fashion E-commerce Platform',
-    category: 'Full-Stack Development',
-    client: 'StyleHub',
+    id: 'eight-jewelery',
+    slug: 'eight-jewelery',
+    title: 'Eight Jewelry Brand Identity',
+    category: 'Brand Identity',
+    client: 'Eight Jewelry',
     year: '2024',
-    description: 'Custom e-commerce platform for a luxury fashion retailer with advanced personalization features.',
-    shortDescription: 'Luxury fashion e-commerce with AI personalization',
-    thumbnailImage: 'https://images.pexels.com/photos/996329/pexels-photo-996329.jpeg?auto=compress&cs=tinysrgb&w=800&h=1067',
-    coverImage: 'https://images.pexels.com/photos/996329/pexels-photo-996329.jpeg?auto=compress&cs=tinysrgb&w=1200',
-    tags: ['E-commerce', 'Fashion', 'AI'],
+    description: 'Complete brand identity design for a luxury jewelry brand specializing in contemporary Middle Eastern designs.',
+    shortDescription: 'Complete brand identity design for a luxury jewelry brand specializing in contemporary Middle Eastern designs.',
+    thumbnailImage: '/projects/eight-jewelery/thumbnail.png',
+    coverImage: 'https://images.pexels.com/photos/1267320/pexels-photo-1267320.jpeg?auto=compress&cs=tinysrgb&w=1200',
+    tags: ['Jewelry', 'Branding', 'Luxury'],
+    budget: '$2,500 - $5,000',
     featured: true,
     caseStudy: {
-      overview: 'StyleHub required a sophisticated e-commerce platform that could handle luxury fashion sales with personalized recommendations.',
-      challenge: 'Building a platform that combines luxury aesthetics with advanced personalization technology.',
-      solution: 'We created a custom platform with AI-powered recommendations and seamless luxury shopping experience.',
-      results: ['200% increase in conversion rates', '85% customer satisfaction', 'AI recommendations driving 40% of sales'],
+      overview: 'Eight Jewelry approached us to create a sophisticated brand identity that would position them as a premium jewelry brand in the Middle Eastern market.',
+      challenge: 'The challenge was to create a brand that appeals to both traditional Middle Eastern aesthetics and contemporary luxury consumers.',
+      solution: 'We developed an elegant brand system that combines geometric patterns inspired by Islamic art with modern minimalist design principles.',
+      results: ['Increased brand recognition', 'Improved market positioning', 'Successful expansion'],
       images: [
-        'https://images.pexels.com/photos/996329/pexels-photo-996329.jpeg?auto=compress&cs=tinysrgb&w=1200',
-        'https://images.pexels.com/photos/1043474/pexels-photo-1043474.jpeg?auto=compress&cs=tinysrgb&w=1200'
+        'https://images.pexels.com/photos/1267320/pexels-photo-1267320.jpeg?auto=compress&cs=tinysrgb&w=1200',
+        'https://images.pexels.com/photos/1640777/pexels-photo-1640777.jpeg?auto=compress&cs=tinysrgb&w=1200'
+      ]
+    }
+  },
+  {
+    id: 'charger-coffee',
+    slug: 'charger-coffee',
+    title: 'Charger Coffee Brand Identity',
+    category: 'Brand Identity',
+    client: 'Charger Coffee',
+    year: '2024',
+    description: 'Complete brand identity design for a dynamic coffee brand targeting young professionals and energy-conscious consumers.',
+    shortDescription: 'Complete brand identity design for a dynamic coffee brand targeting young professionals and energy-conscious consumers.',
+    thumbnailImage: '/projects/charger-coffee/thumbnail.png',
+    coverImage: 'https://images.pexels.com/photos/1267320/pexels-photo-1267320.jpeg?auto=compress&cs=tinysrgb&w=1200',
+    tags: ['Coffee', 'Branding', 'Energy'],
+    budget: '$1,500 - $3,800',
+    featured: true,
+    caseStudy: {
+      overview: 'Charger Coffee approached us to create a bold, energetic brand identity that would appeal to busy professionals and coffee enthusiasts seeking premium quality and convenience.',
+      challenge: 'The challenge was to create a brand that conveys energy and vitality while maintaining the premium quality and sophistication expected in the competitive coffee market.',
+      solution: 'We developed a dynamic brand system that combines bold typography with energetic color palettes, creating a brand that truly embodies the \'charge\' concept.',
+      results: ['Increased brand recognition', 'Improved market positioning', 'Successful expansion'],
+      images: [
+        'https://images.pexels.com/photos/1267320/pexels-photo-1267320.jpeg?auto=compress&cs=tinysrgb&w=1200',
+        'https://images.pexels.com/photos/1640777/pexels-photo-1640777.jpeg?auto=compress&cs=tinysrgb&w=1200'
+      ]
+    }
+  },
+  {
+    id: 'dairum-cosmetics',
+    slug: 'dairum-cosmetics',
+    title: 'Dairum Cosmetics Brand Identity',
+    category: 'Brand Identity',
+    client: 'Dairum Cosmetics',
+    year: '2024',
+    description: 'Complete brand identity design for a premium cosmetics brand specializing in natural and sustainable beauty products.',
+    shortDescription: 'Complete brand identity design for a premium cosmetics brand specializing in natural and sustainable beauty products.',
+    thumbnailImage: '/projects/dairum-cosmetics/thumbnail.png',
+    coverImage: 'https://images.pexels.com/photos/1267320/pexels-photo-1267320.jpeg?auto=compress&cs=tinysrgb&w=1200',
+    tags: ['Cosmetics', 'Beauty', 'Branding'],
+    budget: '$2,200 - $4,800',
+    featured: true,
+    caseStudy: {
+      overview: 'Dairum Cosmetics approached us to create an elegant brand identity that would position them as a premium, natural cosmetics brand in the competitive beauty market.',
+      challenge: 'The challenge was to create a brand that appeals to conscious beauty consumers while maintaining luxury positioning and emphasizing natural, sustainable ingredients.',
+      solution: 'We developed a sophisticated brand system that combines organic design elements with modern luxury aesthetics, creating a brand that truly embodies natural beauty.',
+      results: ['Increased brand recognition', 'Improved market positioning', 'Successful expansion'],
+      images: [
+        'https://images.pexels.com/photos/1267320/pexels-photo-1267320.jpeg?auto=compress&cs=tinysrgb&w=1200',
+        'https://images.pexels.com/photos/1640777/pexels-photo-1640777.jpeg?auto=compress&cs=tinysrgb&w=1200'
+      ]
+    }
+  },
+  {
+    id: 'emond-fashion',
+    slug: 'emond-fashion',
+    title: 'Emond Fashion Brand Identity',
+    category: 'Brand Identity',
+    client: 'Emond Fashion',
+    year: '2024',
+    description: 'Complete brand identity design for a luxury fashion brand specializing in contemporary Middle Eastern fashion and ready-to-wear collections.',
+    shortDescription: 'Complete brand identity design for a luxury fashion brand specializing in contemporary Middle Eastern fashion and ready-to-wear collections.',
+    thumbnailImage: '/projects/emond-fashion/thumbnail.png',
+    coverImage: 'https://images.pexels.com/photos/1267320/pexels-photo-1267320.jpeg?auto=compress&cs=tinysrgb&w=1200',
+    tags: ['Fashion', 'Branding', 'Luxury'],
+    budget: '$3,000 - $6,500',
+    featured: true,
+    caseStudy: {
+      overview: 'Emond Fashion approached us to create a sophisticated brand identity that would position them as a premium fashion brand in the competitive Middle Eastern luxury market.',
+      challenge: 'The challenge was to create a brand that appeals to modern fashion-conscious consumers while maintaining luxury positioning and celebrating Middle Eastern design heritage.',
+      solution: 'We developed an elegant brand system that combines contemporary fashion aesthetics with subtle Middle Eastern design elements, creating a brand that truly embodies modern luxury fashion.',
+      results: ['Increased brand recognition', 'Improved market positioning', 'Successful expansion'],
+      images: [
+        'https://images.pexels.com/photos/1267320/pexels-photo-1267320.jpeg?auto=compress&cs=tinysrgb&w=1200',
+        'https://images.pexels.com/photos/1640777/pexels-photo-1640777.jpeg?auto=compress&cs=tinysrgb&w=1200'
       ]
     }
   }
-];
 
 // API simulation functions
 export const getProjects = (page: number = 1, limit: number = 4): Promise<{ projects: Project[], total: number, page: number, limit: number }> => {

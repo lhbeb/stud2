@@ -102,7 +102,7 @@ const Footer: React.FC = () => {
               />
               <button 
                   className="px-6 py-3 bg-white text-black font-semibold hover:bg-gray-100 transition-colors duration-200 whitespace-nowrap"
-                  style={{ borderRadius: '1px' }}
+                  style={{ borderRadius: '7px' }}
                 >
                   Subscribe
                 </button>
@@ -127,7 +127,7 @@ const Footer: React.FC = () => {
                     key={index}
                     href={social.href}
                     className="p-2 text-gray-400 hover:text-white hover:bg-gray-800 transition-all duration-200"
-                    style={{ borderRadius: '1px' }}
+                    style={{ borderRadius: '7px' }}
                     aria-label={social.label}
                   >
                     <social.icon className="h-5 w-5" />
@@ -138,7 +138,7 @@ const Footer: React.FC = () => {
               <button
                 onClick={scrollToTop}
                 className="p-2 bg-gray-800 hover:bg-gray-700 transition-colors duration-200"
-                style={{ borderRadius: '1px' }}
+                style={{ borderRadius: '7px' }}
                 aria-label="Back to top"
               >
                 <ArrowUp className="h-5 w-5 text-white" />

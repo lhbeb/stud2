@@ -1,0 +1,41 @@
+{
+  "thumbnail": "/projects/dairum-cosmetics/thumbnail.png",
+  "slug": "dairum-cosmetics",
+  "title": "Dairum Cosmetics Brand Identity",
+  "year": "2024",
+  "category": "Brand Identity",
+  "client": "Dairum Cosmetics",
+  "tags": ["Cosmetics", "Beauty", "Branding"],
+  "budget": "$2,200 - $4,800",
+  "featured": true,
+  "intro": {
+    "photo": "https://images.pexels.com/photos/1267320/pexels-photo-1267320.jpeg?auto=compress&cs=tinysrgb&w=1200",
+    "text": "Complete brand identity design for a premium cosmetics brand specializing in natural and sustainable beauty products."
+  },
+  "content": [
+    {
+      "type": "text",
+      "content": "Dairum Cosmetics approached us to create an elegant brand identity that would position them as a premium, natural cosmetics brand in the competitive beauty market."
+    },
+    {
+      "type": "text", 
+      "content": "The challenge was to create a brand that appeals to conscious beauty consumers while maintaining luxury positioning and emphasizing natural, sustainable ingredients."
+    },
+    {
+      "type": "text",
+      "content": "We developed a sophisticated brand system that combines organic design elements with modern luxury aesthetics, creating a brand that truly embodies natural beauty."
+    },
+    {
+      "type": "image",
+      "url": "https://images.pexels.com/photos/1267320/pexels-photo-1267320.jpeg?auto=compress&cs=tinysrgb&w=1200",
+      "alt": "Dairum Cosmetics Brand Identity",
+      "caption": "Main brand identity application"
+    },
+    {
+      "type": "image",
+      "url": "https://images.pexels.com/photos/1640777/pexels-photo-1640777.jpeg?auto=compress&cs=tinysrgb&w=1200",
+      "alt": "Cosmetics Retail Display",
+      "caption": "Brand application in retail and packaging"
+    }
+  ]
+}

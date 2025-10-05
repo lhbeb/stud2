@@ -2,12 +2,14 @@ import { Project } from '../types/project';
 
 // Define the JSON structure for individual project files
 export interface ProjectJSON {
+  thumbnail: string;
   slug: string;
   title: string;
   year: string;
   category: string;
   client: string;
   tags: string[];
+  budget: string;
   featured: boolean;
   intro: {
     photo: string;
@@ -20,6 +22,7 @@ export interface ProjectJSON {
     alt?: string;
     caption?: string;
   }>;
+  results?: string[];
   testimonial?: {
     quote: string;
     author: string;
@@ -31,42 +34,48 @@ export interface ProjectJSON {
 const convertJSONToProject = (jsonProject: ProjectJSON): Project => {
   // Extract images from content
   const images = jsonProject.content
-    .filter(item => item.type === 'image')
-    .map(item => item.url!)
-    .filter(Boolean);
+    ? jsonProject.content
+        .filter(item => item.type === 'image' && item.url)
+        .map(item => item.url!)
+        .filter(Boolean)
+    : [];
 
   // Extract text content for case study
   const textContent = jsonProject.content
-    .filter(item => item.type === 'text')
-    .map(item => item.content!)
-    .filter(Boolean);
+    ? jsonProject.content
+        .filter(item => item.type === 'text' && item.content)
+        .map(item => item.content!)
+        .filter(Boolean)
+    : [];
 
-  // Create case study structure
+  // Create case study structure with fallbacks
   const caseStudy = {
     overview: textContent[0] || '',
     challenge: textContent[1] || '',
     solution: textContent[2] || '',
-    results: [
+    results: jsonProject.results || [
       'Increased user engagement',
       'Improved conversion rates',
       'Enhanced brand recognition'
     ],
     images: images,
-    testimonial: jsonProject.testimonial
+    testimonial: jsonProject.testimonial || undefined
   };
 
   return {
     id: jsonProject.slug,
     slug: jsonProject.slug,
-    title: jsonProject.title,
-    category: jsonProject.category,
-    client: jsonProject.client,
-    year: jsonProject.year,
-    description: jsonProject.intro.text,
-    shortDescription: jsonProject.intro.text.substring(0, 100) + '...',
-    thumbnailImage: jsonProject.intro.photo,
-    tags: jsonProject.tags,
-    featured: jsonProject.featured,
+    title: jsonProject.title || 'Untitled Project',
+    category: jsonProject.category || 'Design Strategy',
+    client: jsonProject.client || 'Unknown Client',
+    year: jsonProject.year || new Date().getFullYear().toString(),
+    description: jsonProject.intro?.text || '',
+    shortDescription: jsonProject.intro?.text ? jsonProject.intro.text.substring(0, 100) + '...' : '',
+    thumbnailImage: jsonProject.thumbnail || jsonProject.intro?.photo || '',
+    coverImage: jsonProject.intro?.photo || jsonProject.thumbnail || '',
+    tags: jsonProject.tags || [],
+    budget: jsonProject.budget || '',
+    featured: jsonProject.featured || false,
     caseStudy: caseStudy
   };
 };
@@ -86,22 +95,36 @@ export const loadProjectBySlug = async (slug: string): Promise<Project | null> =
   }
 };
 
-// Load all projects
+// Load all projects by dynamically discovering them
 export const loadAllProjects = async (): Promise<Project[]> => {
   try {
-    // For now, we'll use a predefined list of project slugs
-    // In a real application, you might want to fetch this from an API or file listing
-    const projectSlugs = [
+    // Try to load common project slugs and filter out failures
+    // This approach allows for dynamic project discovery
+    const potentialSlugs = [
+      'origin-roasters',
+      'eight-jewelery',
+      'charger-coffee',
+      'dairum-cosmetics',
+      'emond-fashion',
+      'restaurant-chain-rebrand',
       'luxury-hotel-brand-identity',
       'fintech-mobile-app',
       'ecommerce-platform',
-      'restaurant-chain-rebrand'
+      'healthcare-digital-transformation',
+      'fashion-ecommerce-platform'
     ];
 
-    const projects = await Promise.all(
-      projectSlugs.map(slug => loadProjectBySlug(slug))
-    );
+    const projectPromises = potentialSlugs.map(async (slug) => {
+      try {
+        const project = await loadProjectBySlug(slug);
+        return project;
+      } catch (error) {
+        // Project doesn't exist, return null
+        return null;
+      }
+    });
 
+    const projects = await Promise.all(projectPromises);
     return projects.filter((project): project is Project => project !== null);
   } catch (error) {
     console.error('Error loading projects:', error);

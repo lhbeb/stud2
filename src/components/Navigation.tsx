@@ -35,13 +35,13 @@ const Navigation: React.FC = () => {
 
   return (
     <>
-      <nav className={`fixed top-0 left-0 right-0 w-full z-50 transition-all duration-300 ease-in-out ${
+      <nav className={`fixed top-0 left-0 right-0 w-full z-50 transition-all duration-300 ease-in-out shadow-sm ${
         isScrolled 
           ? 'bg-black' 
           : 'bg-white'
       }`}>
         <div className="container-custom">
-          <div className="flex items-center justify-between h-26 md:h-24 lg:h-20">
+          <div className="flex items-center justify-between h-26 md:h-24 lg:h-26">
             {/* Logo */}
             <div className="flex-shrink-0 relative">
               <div className="relative overflow-hidden">
@@ -92,7 +92,7 @@ const Navigation: React.FC = () => {
                       ? 'border-white text-white hover:bg-white hover:text-black' 
                       : 'border-black text-black hover:bg-black hover:text-white'
                   }`}
-                  style={{ borderRadius: '1px' }}
+                  style={{ borderRadius: '7px' }}
                 >
                   <Mail className="h-4 w-4" />
                   <span>Send a message</span>
@@ -109,7 +109,7 @@ const Navigation: React.FC = () => {
                   ? 'text-white hover:text-gray-300 hover:bg-white/10' 
                   : 'text-black hover:text-gray-600 hover:bg-black/10'
               }`}
-              style={{ borderRadius: '1px' }}
+              style={{ borderRadius: '7px' }}
               aria-label="Toggle mobile menu"
             >
                 {isMobileMenuOpen ? <X className="h-6 w-6" /> : <Menu className="h-6 w-6" />}
@@ -149,7 +149,7 @@ const Navigation: React.FC = () => {
                   ? 'border-white text-white hover:bg-white hover:text-black' 
                   : 'border-black text-black hover:bg-black hover:text-white'
               }`}
-              style={{ borderRadius: '1px' }}
+              style={{ borderRadius: '7px' }}
               onClick={() => setIsMobileMenuOpen(false)}
             >
               <Mail className="h-5 w-5" />

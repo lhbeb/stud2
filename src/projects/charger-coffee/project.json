@@ -1,0 +1,41 @@
+{
+  "thumbnail": "/projects/charger-coffee/thumbnail.png",
+  "slug": "charger-coffee",
+  "title": "Charger Coffee Brand Identity",
+  "year": "2024",
+  "category": "Brand Identity",
+  "client": "Charger Coffee",
+  "tags": ["Coffee", "Branding", "Energy"],
+  "budget": "$1,500 - $3,800",
+  "featured": true,
+  "intro": {
+    "photo": "https://images.pexels.com/photos/1267320/pexels-photo-1267320.jpeg?auto=compress&cs=tinysrgb&w=1200",
+    "text": "Complete brand identity design for a dynamic coffee brand targeting young professionals and energy-conscious consumers."
+  },
+  "content": [
+    {
+      "type": "text",
+      "content": "Charger Coffee approached us to create a bold, energetic brand identity that would appeal to busy professionals and coffee enthusiasts seeking premium quality and convenience."
+    },
+    {
+      "type": "text", 
+      "content": "The challenge was to create a brand that conveys energy and vitality while maintaining the premium quality and sophistication expected in the competitive coffee market."
+    },
+    {
+      "type": "text",
+      "content": "We developed a dynamic brand system that combines bold typography with energetic color palettes, creating a brand that truly embodies the 'charge' concept."
+    },
+    {
+      "type": "image",
+      "url": "https://images.pexels.com/photos/1267320/pexels-photo-1267320.jpeg?auto=compress&cs=tinysrgb&w=1200",
+      "alt": "Charger Coffee Brand Identity",
+      "caption": "Main brand identity application"
+    },
+    {
+      "type": "image",
+      "url": "https://images.pexels.com/photos/1640777/pexels-photo-1640777.jpeg?auto=compress&cs=tinysrgb&w=1200",
+      "alt": "Coffee Shop Interior",
+      "caption": "Brand application in retail and cafe spaces"
+    }
+  ]
+}

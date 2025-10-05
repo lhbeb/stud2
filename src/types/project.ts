@@ -10,6 +10,7 @@ export interface Project {
   thumbnailImage: string;
   coverImage: string;
   tags: string[];
+  budget: string;
   featured: boolean;
   caseStudy: {
     overview: string;
@@ -22,6 +23,35 @@ export interface Project {
       author: string;
       position: string;
     };
+  };
+}
+
+export interface ProjectJSON {
+  thumbnail: string;
+  slug: string;
+  title: string;
+  year: string;
+  category: string;
+  client: string;
+  tags: string[];
+  budget: string;
+  featured: boolean;
+  intro: {
+    photo: string;
+    text: string;
+  };
+  content: Array<{
+    type: 'text' | 'image';
+    content?: string;
+    url?: string;
+    alt?: string;
+    caption?: string;
+  }>;
+  results?: string[];
+  testimonial?: {
+    quote: string;
+    author: string;
+    position: string;
   };
 }
 
