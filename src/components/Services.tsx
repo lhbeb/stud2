@@ -107,24 +107,36 @@ const Services: React.FC = () => {
         </div>
 
         {/* Bottom CTA Section */}
-        <div className={`mt-20 md:mt-28 text-center transition-all duration-700 ${
+        <div className={`mt-20 md:mt-28 transition-all duration-700 ${
           isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'
         }`}>
-          <div className="bg-black p-12 md:p-16">
-            <h3 className="text-3xl md:text-4xl font-normal text-white mb-6 uppercase tracking-tight">
-              Ready to Transform Your Brand?
-            </h3>
-            <p className="text-lg text-gray-300 font-light mb-8 max-w-2xl mx-auto">
-              Let's discuss how our expertise can elevate your project to new heights.
-            </p>
-            <a
-              href="/book-call"
-              className="inline-flex items-center px-8 py-4 bg-white text-black font-normal hover:bg-gray-100 transition-all duration-300 uppercase tracking-wide"
-              style={{ borderRadius: '2px' }}
-            >
-              <span>Start Your Project</span>
-              <ArrowRight className="h-5 w-5 ml-3" />
-            </a>
+          <div className="border-t border-gray-200 pt-12">
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-12 items-center">
+              <div>
+                <h3 className="text-3xl md:text-4xl font-normal text-black mb-4 uppercase tracking-tight">
+                  Start a project with StudioEyn
+                </h3>
+                <p className="text-gray-600 font-light max-w-xl">
+                  Tell us about your brand or product. We’ll propose a clear path forward in 24 hours.
+                </p>
+              </div>
+              <div className="flex md:justify-end gap-4">
+                <a
+                  href="/book-call"
+                  className="inline-flex items-center px-8 py-4 bg-black text-white font-normal hover:bg-gray-900 transition-all duration-300 uppercase tracking-wide whitespace-nowrap"
+                  style={{ borderRadius: '2px' }}
+                >
+                  <span>Book a Call</span>
+                </a>
+                <a
+                  href="mailto:hello@studioeyn.com"
+                  className="inline-flex items-center px-8 py-4 border border-black text-black font-normal hover:bg-black hover:text-white transition-all duration-300 uppercase tracking-wide whitespace-nowrap"
+                  style={{ borderRadius: '2px' }}
+                >
+                  <span>Email Us</span>
+                </a>
+              </div>
+            </div>
           </div>
         </div>
       </div>

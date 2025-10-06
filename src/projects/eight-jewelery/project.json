@@ -25,17 +25,24 @@
       "type": "text",
       "content": "We developed an elegant brand system that combines geometric patterns inspired by Islamic art with modern minimalist design principles."
     },
-    {
-      "type": "image",
-      "url": "https://images.pexels.com/photos/1267320/pexels-photo-1267320.jpeg?auto=compress&cs=tinysrgb&w=1200",
-      "alt": "Eight Jewelry Brand Identity",
-      "caption": "Main brand identity application"
-    },
-    {
-      "type": "image",
-      "url": "https://images.pexels.com/photos/1640777/pexels-photo-1640777.jpeg?auto=compress&cs=tinysrgb&w=1200",
-      "alt": "Jewelry Store Interior",
-      "caption": "Brand application in retail spaces"
-    }
+    { "type": "image", "url": "/projects/eight-jewelery/img1.png",  "alt": "Eight Jewelry Image 1" },
+    { "type": "image", "url": "/projects/eight-jewelery/img2.png",  "alt": "Eight Jewelry Image 2" },
+    { "type": "image", "url": "/projects/eight-jewelery/img3.png",  "alt": "Eight Jewelry Image 3" },
+    { "type": "image", "url": "/projects/eight-jewelery/img4.png",  "alt": "Eight Jewelry Image 4" },
+    { "type": "image", "url": "/projects/eight-jewelery/img5.png",  "alt": "Eight Jewelry Image 5" },
+    { "type": "image", "url": "/projects/eight-jewelery/img6.png",  "alt": "Eight Jewelry Image 6" },
+    { "type": "image", "url": "/projects/eight-jewelery/img7.png",  "alt": "Eight Jewelry Image 7" },
+    { "type": "image", "url": "/projects/eight-jewelery/img8.png",  "alt": "Eight Jewelry Image 8" },
+    { "type": "image", "url": "/projects/eight-jewelery/img9.png",  "alt": "Eight Jewelry Image 9" },
+    { "type": "image", "url": "/projects/eight-jewelery/img10.png", "alt": "Eight Jewelry Image 10" },
+    { "type": "image", "url": "/projects/eight-jewelery/img11.png", "alt": "Eight Jewelry Image 11" },
+    { "type": "image", "url": "/projects/eight-jewelery/img12.png", "alt": "Eight Jewelry Image 12" },
+    { "type": "image", "url": "/projects/eight-jewelery/img13.png", "alt": "Eight Jewelry Image 13" },
+    { "type": "image", "url": "/projects/eight-jewelery/img14.png", "alt": "Eight Jewelry Image 14" },
+    { "type": "image", "url": "/projects/eight-jewelery/img15.png", "alt": "Eight Jewelry Image 15" },
+    { "type": "image", "url": "/projects/eight-jewelery/img16.png", "alt": "Eight Jewelry Image 16" },
+    { "type": "image", "url": "/projects/eight-jewelery/img17.png", "alt": "Eight Jewelry Image 17" },
+    { "type": "image", "url": "/projects/eight-jewelery/img18.png", "alt": "Eight Jewelry Image 18" },
+    { "type": "image", "url": "/projects/eight-jewelery/img19.png", "alt": "Eight Jewelry Image 19" }
   ]
 }

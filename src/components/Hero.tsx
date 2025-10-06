@@ -1,7 +1,9 @@
 import React, { useEffect, useState } from "react";
 
 const HERO_VIDEO_URL =
-  "https://player.vimeo.com/video/1124503796?h=d2b31f0ecd&autoplay=1&loop=1&muted=1&controls=0&title=0&byline=0&portrait=0&playsinline=1&autopause=0&badge=0&app_id=58479";
+  "https://player.vimeo.com/video/1124906803?autoplay=1&loop=1&muted=1&controls=0&title=0&byline=0&portrait=0&playsinline=1&autopause=0&badge=0&app_id=58479";
+const DESKTOP_HERO_VIDEO_URL =
+  "https://player.vimeo.com/video/1124884284?autoplay=1&loop=1&muted=1&controls=0&title=0&byline=0&portrait=0&playsinline=1&autopause=0&badge=0&app_id=58479";
 
 const words = ["EYN", "EYE"];
 
@@ -127,7 +129,7 @@ const Hero: React.FC = () => {
               <div className="relative w-[840px] h-[672px] rounded-sm overflow-hidden">
                 {/* Video with new aspect ratio */}
                 <iframe
-                  src={HERO_VIDEO_URL}
+                  src={DESKTOP_HERO_VIDEO_URL}
                   frameBorder="0"
                   allow="autoplay; fullscreen; picture-in-picture; clipboard-write; encrypted-media; web-share"
                   referrerPolicy="strict-origin-when-cross-origin"
@@ -145,7 +147,7 @@ const Hero: React.FC = () => {
                   style={{ zIndex: 0 }}
                   onError={(e) => {
                     // Hide fallback if image doesn't exist
-                    e.currentTarget.style.display = 'none';
+                    (e.currentTarget as HTMLImageElement).style.display = 'none';
                   }}
                 />
               </div>

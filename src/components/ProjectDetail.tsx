@@ -9,7 +9,6 @@ const ProjectDetail: React.FC = () => {
   const navigate = useNavigate();
   const [project, setProject] = useState<Project | null>(null);
   const [isLoading, setIsLoading] = useState(true);
-  const [currentImageIndex, setCurrentImageIndex] = useState(0);
 
   useEffect(() => {
     if (slug) {
@@ -79,153 +78,74 @@ const ProjectDetail: React.FC = () => {
                 <h1 className="text-4xl md:text-6xl lg:text-7xl font-normal text-white leading-tight uppercase tracking-tight mb-4">
                   {project.title}
                 </h1>
-                <p className="text-lg md:text-xl text-gray-300 font-light max-w-3xl">
-                  {project.description}
-                </p>
-              </div>
-              
-              {/* Project Meta */}
-              <div className="flex flex-col space-y-4">
-                {project.year && (
-                  <div className="flex items-center space-x-3 text-sm text-gray-400">
-                    <Calendar className="h-4 w-4" />
-                    <span>{project.year}</span>
-                  </div>
-                )}
-                {project.client && (
-                  <div className="flex items-center space-x-3 text-sm text-gray-400">
-                    <User className="h-4 w-4" />
-                    <span>{project.client}</span>
-                  </div>
-                )}
-                {project.category && (
-                  <div className="flex items-center space-x-3 text-sm text-gray-400">
-                    <Tag className="h-4 w-4" />
-                    <span>{project.category}</span>
-                  </div>
-                )}
-                {project.budget && (
-                  <div className="flex items-center space-x-3 text-sm text-green-400">
-                    <span className="font-semibold">💰</span>
-                    <span>{project.budget}</span>
-                  </div>
+                {project.caseStudy.overview && (
+                  <p className="text-lg md:text-xl text-gray-300 font-light max-w-3xl">
+                    {project.caseStudy.overview}
+                  </p>
                 )}
               </div>
             </div>
 
-            {/* Tags */}
-            {project.tags && project.tags.length > 0 && (
-              <div className="flex flex-wrap gap-3">
-                {project.tags.map((tag, index) => (
-                  <span
-                    key={index}
-                    className="px-4 py-2 bg-gray-800 text-gray-300 text-sm font-light rounded-sm"
-                  >
-                    {tag}
-                  </span>
-                ))}
+            {/* Case Study Summary (above images) */}
+            <div className="mt-8">
+              <div className="mx-auto" style={{ maxWidth: '1400px' }}>
+                <div className="grid grid-cols-1 md:grid-cols-3 gap-10 md:gap-12">
+                  {project.caseStudy.challenge && (
+                    <div className="border-t border-gray-800 pt-6">
+                      <h3 className="text-sm text-gray-400 uppercase tracking-widest mb-3">Challenge</h3>
+                      <p className="text-gray-300 font-light leading-relaxed">
+                        {project.caseStudy.challenge}
+                      </p>
+                    </div>
+                  )}
+                  {project.caseStudy.solution && (
+                    <div className="border-t border-gray-800 pt-6">
+                      <h3 className="text-sm text-gray-400 uppercase tracking-widest mb-3">Solution</h3>
+                      <p className="text-gray-300 font-light leading-relaxed">
+                        {project.caseStudy.solution}
+                      </p>
+                    </div>
+                  )}
+                  {project.caseStudy.results && project.caseStudy.results.length > 0 && (
+                    <div className="border-t border-gray-800 pt-6">
+                      <h3 className="text-sm text-gray-400 uppercase tracking-widest mb-3">Results</h3>
+                      <ul className="space-y-2">
+                        {project.caseStudy.results.map((result, index) => (
+                          <li key={index} className="text-gray-300 font-light leading-relaxed">
+                            {result}
+                          </li>
+                        ))}
+                      </ul>
+                    </div>
+                  )}
+                </div>
               </div>
-            )}
+            </div>
           </div>
 
-          {/* Project Images */}
+          {/* Project Images - Long scroll stacked */}
           {project.caseStudy.images.length > 0 && (
-            <div className="space-y-8">
-              {/* Main Image */}
-              <div className="relative">
-                <img
-                  src={project.caseStudy.images[currentImageIndex]}
-                  alt={`${project.title} - Image ${currentImageIndex + 1}`}
-                  className="w-full h-auto object-cover"
-                />
+            <div className="mt-12">
+              <div className="mx-auto" style={{ maxWidth: '1400px' }}>
+                {project.caseStudy.images.map((image, index) => (
+                  <div key={index} className={slug === 'eight-jewelery' ? '' : 'mb-8'}>
+                    <img
+                      src={image}
+                      alt={`${project.title} - Image ${index + 1}`}
+                      className="w-full h-auto object-cover block"
+                      loading="lazy"
+                    />
+                  </div>
+                ))}
               </div>
-
-              {/* Image Thumbnails */}
-              {project.caseStudy.images.length > 1 && (
-                <div className="flex space-x-4 overflow-x-auto pb-4">
-                  {project.caseStudy.images.map((image, index) => (
-                    <button
-                      key={index}
-                      onClick={() => setCurrentImageIndex(index)}
-                      className={`flex-shrink-0 w-24 h-24 rounded-sm overflow-hidden transition-all duration-300 ${
-                        currentImageIndex === index
-                          ? 'ring-2 ring-white'
-                          : 'opacity-60 hover:opacity-80'
-                      }`}
-                    >
-                      <img
-                        src={image}
-                        alt={`Thumbnail ${index + 1}`}
-                        className="w-full h-full object-cover"
-                      />
-                    </button>
-                  ))}
-                </div>
-              )}
             </div>
           )}
 
-          {/* Case Study Content */}
-          <div className="mt-16 grid grid-cols-1 lg:grid-cols-2 gap-16">
-            {/* Overview */}
-            {project.caseStudy.overview && (
-              <div>
-                <h3 className="text-2xl md:text-3xl font-normal text-white mb-6 uppercase tracking-tight">
-                  Overview
-                </h3>
-                <p className="text-gray-300 font-light leading-relaxed">
-                  {project.caseStudy.overview}
-                </p>
-              </div>
-            )}
-
-            {/* Challenge */}
-            {project.caseStudy.challenge && (
-              <div>
-                <h3 className="text-2xl md:text-3xl font-normal text-white mb-6 uppercase tracking-tight">
-                  Challenge
-                </h3>
-                <p className="text-gray-300 font-light leading-relaxed">
-                  {project.caseStudy.challenge}
-                </p>
-              </div>
-            )}
-
-            {/* Solution */}
-            {project.caseStudy.solution && (
-              <div>
-                <h3 className="text-2xl md:text-3xl font-normal text-white mb-6 uppercase tracking-tight">
-                  Solution
-                </h3>
-                <p className="text-gray-300 font-light leading-relaxed">
-                  {project.caseStudy.solution}
-                </p>
-              </div>
-            )}
-
-            {/* Results */}
-            {project.caseStudy.results && project.caseStudy.results.length > 0 && (
-              <div>
-                <h3 className="text-2xl md:text-3xl font-normal text-white mb-6 uppercase tracking-tight">
-                  Results
-                </h3>
-                <ul className="space-y-3">
-                  {project.caseStudy.results.map((result, index) => (
-                    <li key={index} className="flex items-start space-x-3">
-                      <div className="w-2 h-2 bg-white rounded-full mt-2 flex-shrink-0"></div>
-                      <span className="text-gray-300 font-light">{result}</span>
-                    </li>
-                  ))}
-                </ul>
-              </div>
-            )}
-          </div>
-
           {/* Testimonial */}
           {project.caseStudy.testimonial && (
-            <div className="mt-16 pt-16 border-t border-gray-800">
-              <blockquote className="text-center">
-                <p className="text-xl md:text-2xl text-white font-light leading-relaxed mb-8 max-w-4xl mx-auto">
+            <div className="mt-16 pt-16 border-t border-gray-800 max-w-3xl">
+              <blockquote>
+                <p className="text-xl md:text-2xl text-white font-light leading-relaxed mb-6">
                   "{project.caseStudy.testimonial.quote}"
                 </p>
                 <div className="text-gray-400">

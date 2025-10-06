@@ -49,13 +49,13 @@ export function Testimonials() {
       ref={elementRef}
     >
       <div className="container-custom">
-        <div className={`text-center mb-16 md:mb-24 transition-all duration-700 ${
+        <div className={`mb-16 md:mb-24 transition-all duration-700 ${
           isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'
         }`}>
           <h2 className="text-4xl md:text-6xl lg:text-7xl font-normal text-black leading-tight uppercase tracking-tight mb-6">
             What Our Clients Say
           </h2>
-          <p className="text-lg md:text-xl text-gray-600 font-light max-w-2xl mx-auto">
+          <p className="text-lg md:text-xl text-gray-600 font-light max-w-2xl">
             Trusted by brands across the Middle East and Gulf region for strategic design and development solutions.
           </p>
         </div>

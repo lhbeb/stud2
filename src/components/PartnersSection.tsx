@@ -103,7 +103,7 @@ const PartnersSection: React.FC = () => {
 
   return (
     <section className="pt-8 pb-16 md:pt-12 md:pb-20 bg-white md:h-[25vh] md:flex md:items-center">
-      <div className="container-custom text-center">
+      <div className="container-custom">
         <div className="relative w-full overflow-hidden">
           <div className="pointer-events-none absolute left-0 top-0 h-full w-8 md:w-16 z-10 bg-gradient-to-r from-white to-transparent" />
           <div className="pointer-events-none absolute right-0 top-0 h-full w-8 md:w-16 z-10 bg-gradient-to-l from-white to-transparent" />
