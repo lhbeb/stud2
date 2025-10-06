@@ -54,17 +54,17 @@ const Team: React.FC = () => {
   return (
     <section 
       id="about" 
-      className="py-16 md:py-32 bg-gray-50"
+      className="py-16 md:py-32 bg-black"
       ref={elementRef}
     >
       <div className="container-custom">
         <div className={`mb-16 md:mb-24 transition-all duration-700 ${
           isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'
         }`}>
-          <h2 className="text-4xl md:text-6xl lg:text-7xl font-normal text-black leading-tight uppercase tracking-tight mb-6">
+          <h2 className="text-4xl md:text-6xl lg:text-7xl font-normal text-white leading-tight uppercase tracking-tight mb-6">
             Meet Our Team
           </h2>
-          <p className="text-lg md:text-xl text-gray-600 font-light max-w-3xl">
+          <p className="text-lg md:text-xl text-gray-300 font-light max-w-3xl">
             A passionate team of designers, developers, and strategists based in Casablanca, 
             dedicated to creating exceptional brand experiences for clients across the Middle East and Gulf region.
           </p>
@@ -134,16 +134,16 @@ const Team: React.FC = () => {
         <div className={`text-center mt-16 md:mt-24 transition-all duration-700 ${
           isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'
         }`}>
-          <div className="bg-black rounded-sm p-8 md:p-12 text-white">
+          <div className="bg-white rounded-sm p-8 md:p-12 text-black">
             <h3 className="text-2xl md:text-3xl font-normal mb-4">
               Want to join our team?
             </h3>
-            <p className="text-gray-300 font-light mb-8 max-w-2xl mx-auto">
+            <p className="text-gray-600 font-light mb-8 max-w-2xl mx-auto">
               We're always looking for talented designers and developers to join our growing team in Casablanca.
             </p>
             <a
               href="#contact"
-              className="inline-block px-8 py-4 bg-white text-black text-base font-semibold hover:bg-gray-100 transition-colors duration-200 whitespace-nowrap"
+              className="inline-block px-8 py-4 bg-black text-white text-base font-semibold hover:bg-gray-900 transition-colors duration-200 whitespace-nowrap"
               style={{ borderRadius: '2px' }}
             >
               Get In Touch

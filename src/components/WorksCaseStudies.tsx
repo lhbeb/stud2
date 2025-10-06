@@ -84,7 +84,7 @@ const WorksCaseStudies: React.FC = () => {
         }`}>
           <div className="text-left">
             <h3 className="text-xs text-gray-500 tracking-widest uppercase mb-2">Selected Works</h3>
-            <h2 className="text-4xl md:text-6xl lg:text-7xl font-normal text-black leading-tight uppercase tracking-tight">Our Works</h2>
+            <h2 className="text-4xl md:text-6xl lg:text-7xl font-normal text-white leading-tight uppercase tracking-tight">Our Works</h2>
           </div>
         </div>
 
