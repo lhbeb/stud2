@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { useParams, useNavigate } from 'react-router-dom';
-import { ArrowLeft, ExternalLink, Calendar, User, Tag } from 'lucide-react';
+import { ArrowLeft, ExternalLink } from 'lucide-react';
 import { loadProjectBySlug } from '../utils/projectLoader';
 import { Project } from '../types/project';
 
@@ -48,7 +48,7 @@ const ProjectDetail: React.FC = () => {
           <button
             onClick={handleBackClick}
             className="px-8 py-4 bg-white text-black font-normal hover:bg-gray-100 transition-colors duration-300 uppercase"
-            style={{ borderRadius: '7px' }}
+            style={{ borderRadius: '2px' }}
           >
             Back to Home
           </button>
@@ -57,15 +57,30 @@ const ProjectDetail: React.FC = () => {
     );
   }
 
+  // Dynamic styling based on background
+  const backgroundColor = project.background === 'white' ? 'bg-white text-black' : 'bg-black text-white';
+  const textColor = project.background === 'white' ? 'text-black' : 'text-white';
+  const secondaryTextColor = project.background === 'white' ? 'text-gray-600' : 'text-gray-300';
+  const mutedTextColor = project.background === 'white' ? 'text-gray-500' : 'text-gray-400';
+  const borderColor = project.background === 'white' ? 'border-gray-200' : 'border-gray-800';
+  const buttonStyle = project.background === 'white' 
+    ? 'border-black text-black hover:bg-black hover:text-white' 
+    : 'border-white text-white hover:bg-white hover:text-black';
+  const primaryButtonStyle = project.background === 'white'
+    ? 'bg-black text-white hover:bg-gray-900'
+    : 'bg-white text-black hover:bg-gray-100';
+
+  const isEightJewelery = project.slug === 'eight-jewelery';
+
   return (
-    <div className="min-h-screen bg-black text-white">
+    <div className={`min-h-screen ${backgroundColor}`}>
       {/* Header */}
       <div className="pt-32 pb-16 md:pt-40 md:pb-24">
-        <div className="container-custom">
+        <div className="container-custom max-w-[1400px] mx-auto px-4">
           {/* Back Button */}
           <button
             onClick={handleBackClick}
-            className="flex items-center space-x-2 text-white hover:text-gray-300 transition-colors duration-300 mb-12"
+            className={`flex items-center space-x-2 ${textColor} hover:opacity-70 transition-colors duration-300 mb-12`}
           >
             <ArrowLeft className="h-5 w-5" />
             <span className="text-sm font-normal uppercase tracking-wide">Back to Works</span>
@@ -73,82 +88,68 @@ const ProjectDetail: React.FC = () => {
 
           {/* Project Header */}
           <div className="mb-16">
-            <div className="flex flex-col md:flex-row md:items-end md:justify-between mb-8">
-              <div className="mb-6 md:mb-0">
-                <h1 className="text-4xl md:text-6xl lg:text-7xl font-normal text-white leading-tight uppercase tracking-tight mb-4">
-                  {project.title}
-                </h1>
-                {project.caseStudy.overview && (
-                  <p className="text-lg md:text-xl text-gray-300 font-light max-w-3xl">
-                    {project.caseStudy.overview}
-                  </p>
-                )}
-              </div>
-            </div>
+            <h1 className={`text-4xl md:text-6xl lg:text-7xl font-normal ${textColor} leading-tight uppercase tracking-tight mb-4`}>
+              {project.title}
+            </h1>
+            {project.caseStudy.overview && (
+              <p className={`text-lg md:text-xl ${secondaryTextColor} font-light max-w-3xl mb-12`}>
+                {project.caseStudy.overview}
+              </p>
+            )}
 
-            {/* Case Study Summary (above images) */}
-            <div className="mt-8">
-              <div className="mx-auto" style={{ maxWidth: '1400px' }}>
-                <div className="grid grid-cols-1 md:grid-cols-3 gap-10 md:gap-12">
-                  {project.caseStudy.challenge && (
-                    <div className="border-t border-gray-800 pt-6">
-                      <h3 className="text-sm text-gray-400 uppercase tracking-widest mb-3">Challenge</h3>
-                      <p className="text-gray-300 font-light leading-relaxed">
-                        {project.caseStudy.challenge}
-                      </p>
-                    </div>
-                  )}
-                  {project.caseStudy.solution && (
-                    <div className="border-t border-gray-800 pt-6">
-                      <h3 className="text-sm text-gray-400 uppercase tracking-widest mb-3">Solution</h3>
-                      <p className="text-gray-300 font-light leading-relaxed">
-                        {project.caseStudy.solution}
-                      </p>
-                    </div>
-                  )}
-                  {project.caseStudy.results && project.caseStudy.results.length > 0 && (
-                    <div className="border-t border-gray-800 pt-6">
-                      <h3 className="text-sm text-gray-400 uppercase tracking-widest mb-3">Results</h3>
-                      <ul className="space-y-2">
-                        {project.caseStudy.results.map((result, index) => (
-                          <li key={index} className="text-gray-300 font-light leading-relaxed">
-                            {result}
-                          </li>
-                        ))}
-                      </ul>
-                    </div>
-                  )}
+            {/* Challenge, Solution, Results - New Layout */}
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-8 md:gap-12 mt-16 mb-24">
+              {project.caseStudy.challenge && (
+                <div className={`border-t ${borderColor} pt-6`}>
+                  <h3 className={`text-sm font-normal ${mutedTextColor} mb-4 uppercase tracking-wide`}>Challenge</h3>
+                  <p className={`${secondaryTextColor} font-light leading-relaxed`}>{project.caseStudy.challenge}</p>
                 </div>
-              </div>
+              )}
+              {project.caseStudy.solution && (
+                <div className={`border-t ${borderColor} pt-6`}>
+                  <h3 className={`text-sm font-normal ${mutedTextColor} mb-4 uppercase tracking-wide`}>Solution</h3>
+                  <p className={`${secondaryTextColor} font-light leading-relaxed`}>{project.caseStudy.solution}</p>
+                </div>
+              )}
+              {project.caseStudy.results && project.caseStudy.results.length > 0 && (
+                <div className={`border-t ${borderColor} pt-6`}>
+                  <h3 className={`text-sm font-normal ${mutedTextColor} mb-4 uppercase tracking-wide`}>Results</h3>
+                  <ul className="space-y-2">
+                    {project.caseStudy.results.map((result, index) => (
+                      <li key={index} className="flex items-start space-x-2">
+                        <div className={`w-1.5 h-1.5 ${project.background === 'white' ? 'bg-black' : 'bg-white'} rounded-full mt-2 flex-shrink-0`}></div>
+                        <span className={`${secondaryTextColor} font-light`}>{result}</span>
+                      </li>
+                    ))}
+                  </ul>
+                </div>
+              )}
             </div>
           </div>
 
-          {/* Project Images - Long scroll stacked */}
+          {/* Project Images - Stacked Vertically */}
           {project.caseStudy.images.length > 0 && (
-            <div className="mt-12">
-              <div className="mx-auto" style={{ maxWidth: '1400px' }}>
-                {project.caseStudy.images.map((image, index) => (
-                  <div key={index} className={slug === 'eight-jewelery' ? '' : 'mb-8'}>
-                    <img
-                      src={image}
-                      alt={`${project.title} - Image ${index + 1}`}
-                      className="w-full h-auto object-cover block"
-                      loading="lazy"
-                    />
-                  </div>
-                ))}
-              </div>
+            <div className={`space-y-8 ${isEightJewelery ? 'space-y-0' : ''}`}>
+              {project.caseStudy.images.map((image, index) => (
+                <div key={index} className="relative w-full">
+                  <img
+                    src={image}
+                    alt={`${project.title} - Image ${index + 1}`}
+                    className="w-full h-auto object-cover block"
+                  />
+                </div>
+              ))}
             </div>
           )}
 
           {/* Testimonial */}
           {project.caseStudy.testimonial && (
-            <div className="mt-16 pt-16 border-t border-gray-800 max-w-3xl">
-              <blockquote>
-                <p className="text-xl md:text-2xl text-white font-light leading-relaxed mb-6">
+            <div className={`mt-24 pt-16 border-t ${borderColor}`}>
+              <blockquote className="text-center">
+                <p className={`text-xl md:text-2xl ${textColor} font-light leading-relaxed mb-8 max-w-4xl mx-auto`}>
                   "{project.caseStudy.testimonial.quote}"
                 </p>
-                <div className="text-gray-400">
+                <div className={mutedTextColor}>
                   <p className="font-normal">{project.caseStudy.testimonial.author}</p>
                   <p className="text-sm font-light">{project.caseStudy.testimonial.position}</p>
                 </div>
@@ -157,12 +158,12 @@ const ProjectDetail: React.FC = () => {
           )}
 
           {/* Navigation */}
-          <div className="mt-16 pt-16 border-t border-gray-800">
+          <div className={`mt-16 pt-16 border-t ${borderColor}`}>
             <div className="flex justify-between items-center">
               <button
                 onClick={handleBackClick}
-                className="flex items-center space-x-2 px-8 py-4 border border-white text-white hover:bg-white hover:text-black transition-all duration-300 uppercase"
-                style={{ borderRadius: '7px' }}
+                className={`flex items-center space-x-2 px-8 py-4 border transition-all duration-300 uppercase ${buttonStyle}`}
+                style={{ borderRadius: '2px' }}
               >
                 <ArrowLeft className="h-4 w-4" />
                 <span>Back to Works</span>
@@ -170,8 +171,8 @@ const ProjectDetail: React.FC = () => {
               
               <a
                 href="#contact"
-                className="flex items-center space-x-2 px-8 py-4 bg-white text-black hover:bg-gray-100 transition-all duration-300 uppercase"
-                style={{ borderRadius: '7px' }}
+                className={`flex items-center space-x-2 px-8 py-4 transition-all duration-300 uppercase ${primaryButtonStyle}`}
+                style={{ borderRadius: '2px' }}
               >
                 <span>Start Your Project</span>
                 <ExternalLink className="h-4 w-4" />

@@ -12,6 +12,7 @@ export interface Project {
   tags: string[];
   budget: string;
   featured: boolean;
+  background: 'black' | 'white';
   caseStudy: {
     overview: string;
     challenge: string;
@@ -36,6 +37,7 @@ export interface ProjectJSON {
   tags: string[];
   budget: string;
   featured: boolean;
+  background?: 'black' | 'white';
   intro: {
     photo: string;
     text: string;

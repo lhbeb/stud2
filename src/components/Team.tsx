@@ -1,5 +1,6 @@
 import { Linkedin, Twitter, Github } from 'lucide-react';
 import { useScrollTrigger } from '../hooks/useScrollTrigger';
+import { Link } from 'react-router-dom';
 
 const Team: React.FC = () => {
   const { elementRef, isVisible } = useScrollTrigger();
@@ -141,13 +142,22 @@ const Team: React.FC = () => {
             <p className="text-gray-600 font-light mb-8 max-w-2xl mx-auto">
               We're always looking for talented designers and developers to join our growing team in Casablanca.
             </p>
-            <a
-              href="#contact"
-              className="inline-block px-8 py-4 bg-black text-white text-base font-semibold hover:bg-gray-900 transition-colors duration-200 whitespace-nowrap"
-              style={{ borderRadius: '2px' }}
-            >
-              Get In Touch
-            </a>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
+              <Link
+                to="/about"
+                className="inline-block px-8 py-4 border border-black text-black text-base font-normal hover:bg-black hover:text-white transition-colors duration-200 whitespace-nowrap"
+                style={{ borderRadius: '2px' }}
+              >
+                Learn More About Us
+              </Link>
+              <a
+                href="#contact"
+                className="inline-block px-8 py-4 bg-black text-white text-base font-normal hover:bg-gray-900 transition-colors duration-200 whitespace-nowrap"
+                style={{ borderRadius: '2px' }}
+              >
+                Get In Touch
+              </a>
+            </div>
           </div>
         </div>
       </div>

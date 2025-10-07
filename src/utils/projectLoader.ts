@@ -11,6 +11,7 @@ export interface ProjectJSON {
   tags: string[];
   budget: string;
   featured: boolean;
+  background?: 'black' | 'white';
   intro: {
     photo: string;
     text: string;
@@ -76,6 +77,7 @@ const convertJSONToProject = (jsonProject: ProjectJSON): Project => {
     tags: jsonProject.tags || [],
     budget: jsonProject.budget || '',
     featured: jsonProject.featured || false,
+    background: jsonProject.background || 'black',
     caseStudy: caseStudy
   };
 };
@@ -83,7 +85,7 @@ const convertJSONToProject = (jsonProject: ProjectJSON): Project => {
 // Load a single project by slug
 export const loadProjectBySlug = async (slug: string): Promise<Project | null> => {
   try {
-    const response = await fetch(`/src/projects/${slug}/project.json`);
+    const response = await fetch(`/projects/${slug}/project.json`);
     if (!response.ok) {
       throw new Error(`Project ${slug} not found`);
     }

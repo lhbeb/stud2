@@ -30,7 +30,7 @@ const Navigation: React.FC = () => {
     { name: 'Services', href: '#services' },
     { name: 'Work', href: '#work' },
     { name: 'Process', href: '#process' },
-    { name: 'About', href: '#about' },
+    { name: 'About', href: '/about' },
     { name: 'Contact', href: '#contact' },
   ];
 
@@ -74,19 +74,27 @@ const Navigation: React.FC = () => {
             {/* Desktop Navigation */}
             <div className="hidden md:block ml-auto">
               <div className="flex items-center space-x-12">
-                {navItems.map((item) => (
-                  <a
-                    key={item.name}
-                    href={item.href}
-                    className={`transition-all duration-300 ease-in-out text-sm font-normal uppercase tracking-wide ${
-                      isScrolled 
-                        ? 'text-white hover:text-gray-300' 
-                        : 'text-black hover:text-gray-600'
-                    }`}
-                  >
-                    {item.name}
-                  </a>
-                ))}
+                        {navItems.map((item) => {
+                          const isExternalLink = item.href.startsWith('#');
+                          const LinkComponent = isExternalLink ? 'a' : Link;
+                          const linkProps = isExternalLink 
+                            ? { href: item.href }
+                            : { to: item.href };
+                          
+                          return (
+                            <LinkComponent
+                              key={item.name}
+                              {...linkProps}
+                              className={`transition-all duration-300 ease-in-out text-sm font-normal uppercase tracking-wide ${
+                                isScrolled 
+                                  ? 'text-white hover:text-gray-300' 
+                                  : 'text-black hover:text-gray-600'
+                              }`}
+                            >
+                              {item.name}
+                            </LinkComponent>
+                          );
+                        })}
                 {/* Email Button - Following Style Guide */}
                 <a
                   href="mailto:hello@studioeyn.com"
@@ -130,20 +138,28 @@ const Navigation: React.FC = () => {
             : 'bg-white border-gray-200 mt-20'
         }`}>
           <div className="container-custom flex flex-col items-center justify-center space-y-8 w-full">
-            {navItems.map((item) => (
-              <a
-                key={item.name}
-                href={item.href}
-                className={`block transition-all duration-300 ease-in-out text-xl font-normal text-center uppercase tracking-wide ${
-                  isScrolled 
-                    ? 'text-white hover:text-gray-300' 
-                    : 'text-black hover:text-gray-600'
-                }`}
-                onClick={() => setIsMobileMenuOpen(false)}
-              >
-                {item.name}
-              </a>
-            ))}
+                    {navItems.map((item) => {
+                      const isExternalLink = item.href.startsWith('#');
+                      const LinkComponent = isExternalLink ? 'a' : Link;
+                      const linkProps = isExternalLink 
+                        ? { href: item.href }
+                        : { to: item.href };
+                      
+                      return (
+                        <LinkComponent
+                          key={item.name}
+                          {...linkProps}
+                          className={`block transition-all duration-300 ease-in-out text-xl font-normal text-center uppercase tracking-wide ${
+                            isScrolled 
+                              ? 'text-white hover:text-gray-300' 
+                              : 'text-black hover:text-gray-600'
+                          }`}
+                          onClick={() => setIsMobileMenuOpen(false)}
+                        >
+                          {item.name}
+                        </LinkComponent>
+                      );
+                    })}
             {/* Mobile Email Button - Following Style Guide */}
             <a
               href="mailto:hello@studioeyn.com"

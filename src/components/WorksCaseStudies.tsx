@@ -27,6 +27,16 @@ const WorksCaseStudies: React.FC = () => {
     
     try {
       const allProjects = await loadAllProjects();
+      
+      // Fallback: if no projects loaded, show empty state
+      if (allProjects.length === 0) {
+        console.warn('No projects loaded, showing empty state');
+        setProjects([]);
+        setTotalPages(0);
+        setCurrentPage(0);
+        return;
+      }
+      
       const startIndex = page * projectsPerPage;
       const endIndex = startIndex + projectsPerPage;
       const paginatedProjects = allProjects.slice(startIndex, endIndex);
@@ -36,6 +46,10 @@ const WorksCaseStudies: React.FC = () => {
       setCurrentPage(page);
     } catch (error) {
       console.error('Error loading projects:', error);
+      // Set empty state on error
+      setProjects([]);
+      setTotalPages(0);
+      setCurrentPage(0);
     } finally {
       setIsLoading(false);
       // Delay transition end to allow smooth animation
@@ -72,6 +86,21 @@ const WorksCaseStudies: React.FC = () => {
     );
   }
 
+  if (projects.length === 0) {
+    return (
+      <section className="py-24 bg-black">
+        <div className="container-custom">
+          <div className="text-center">
+            <h2 className="text-4xl md:text-6xl lg:text-7xl font-normal text-white leading-tight uppercase tracking-tight mb-6">
+              Our Works
+            </h2>
+            <p className="text-gray-300">Projects are being updated. Please check back soon.</p>
+          </div>
+        </div>
+      </section>
+    );
+  }
+
   return (
     <section 
       ref={elementRef}
@@ -83,7 +112,6 @@ const WorksCaseStudies: React.FC = () => {
           isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'
         }`}>
           <div className="text-left">
-            <h3 className="text-xs text-gray-500 tracking-widest uppercase mb-2">Selected Works</h3>
             <h2 className="text-4xl md:text-6xl lg:text-7xl font-normal text-white leading-tight uppercase tracking-tight">Our Works</h2>
           </div>
         </div>

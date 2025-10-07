@@ -12,6 +12,7 @@ import SmoothScroll from './components/SmoothScroll';
 import PartnersSection from './components/PartnersSection';
 import ProjectDetail from './components/ProjectDetail';
 import BookCallPage from './components/BookCallPage';
+import AboutPage from './components/AboutPage';
 
 function App() {
   return (
@@ -34,6 +35,7 @@ function App() {
           } />
           <Route path="/projects/:slug" element={<ProjectDetail />} />
           <Route path="/book-call" element={<BookCallPage />} />
+          <Route path="/about" element={<AboutPage />} />
         </Routes>
         <Footer />
       </div>
