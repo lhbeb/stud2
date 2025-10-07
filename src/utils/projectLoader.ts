@@ -1,5 +1,13 @@
 import { Project } from '../types/project';
 
+// Import project JSON files as modules
+import chargerCoffeeData from '../projects/charger-coffee/project.json';
+import originRoastersData from '../projects/origin-roasters/project.json';
+import eightJeweleryData from '../projects/eight-jewelery/project.json';
+import dairumCosmeticsData from '../projects/dairum-cosmetics/project.json';
+import emondFashionData from '../projects/emond-fashion/project.json';
+import binayatRealestateData from '../projects/binayat-realestate/project.json';
+
 // Define the JSON structure for individual project files
 export interface ProjectJSON {
   thumbnail: string;
@@ -78,18 +86,28 @@ const convertJSONToProject = (jsonProject: ProjectJSON): Project => {
     budget: jsonProject.budget || '',
     featured: jsonProject.featured || false,
     background: jsonProject.background || 'black',
+    imageSpacing: jsonProject.imageSpacing || 'normal',
     caseStudy: caseStudy
   };
+};
+
+// Project data mapping
+const projectDataMap: Record<string, ProjectJSON> = {
+  'charger-coffee': chargerCoffeeData,
+  'origin-roasters': originRoastersData,
+  'eight-jewelery': eightJeweleryData,
+  'dairum-cosmetics': dairumCosmeticsData,
+  'emond-fashion': emondFashionData,
+  'binayat-realestate': binayatRealestateData,
 };
 
 // Load a single project by slug
 export const loadProjectBySlug = async (slug: string): Promise<Project | null> => {
   try {
-    const response = await fetch(`/projects/${slug}/project.json`);
-    if (!response.ok) {
+    const jsonProject = projectDataMap[slug];
+    if (!jsonProject) {
       throw new Error(`Project ${slug} not found`);
     }
-    const jsonProject: ProjectJSON = await response.json();
     return convertJSONToProject(jsonProject);
   } catch (error) {
     console.error(`Error loading project ${slug}:`, error);
@@ -97,38 +115,13 @@ export const loadProjectBySlug = async (slug: string): Promise<Project | null> =
   }
 };
 
-// Load all projects by dynamically discovering them
+// Load all projects
 export const loadAllProjects = async (): Promise<Project[]> => {
   try {
-    // Try to load common project slugs and filter out failures
-    // This approach allows for dynamic project discovery
-    const potentialSlugs = [
-      'origin-roasters',
-      'eight-jewelery',
-      'charger-coffee',
-      'dairum-cosmetics',
-      'emond-fashion',
-      'binayat-realestate',
-      'restaurant-chain-rebrand',
-      'luxury-hotel-brand-identity',
-      'fintech-mobile-app',
-      'ecommerce-platform',
-      'healthcare-digital-transformation',
-      'fashion-ecommerce-platform'
-    ];
-
-    const projectPromises = potentialSlugs.map(async (slug) => {
-      try {
-        const project = await loadProjectBySlug(slug);
-        return project;
-      } catch (error) {
-        // Project doesn't exist, return null
-        return null;
-      }
-    });
-
-    const projects = await Promise.all(projectPromises);
-    return projects.filter((project): project is Project => project !== null);
+    const projects = Object.values(projectDataMap).map(jsonProject => 
+      convertJSONToProject(jsonProject)
+    );
+    return projects;
   } catch (error) {
     console.error('Error loading projects:', error);
     return [];

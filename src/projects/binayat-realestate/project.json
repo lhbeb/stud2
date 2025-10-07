@@ -8,8 +8,9 @@
   "tags": ["Real Estate", "Branding", "Property"],
   "budget": "$2,800 - $5,500",
   "featured": true,
+  "background": "black",
   "intro": {
-    "photo": "https://images.pexels.com/photos/1267320/pexels-photo-1267320.jpeg?auto=compress&cs=tinysrgb&w=1200",
+    "photo": "/projects/binayat-realestate/thumbnail.png",
     "text": "Complete brand identity design for a premium real estate company specializing in luxury properties and development projects across the Middle East."
   },
   "content": [

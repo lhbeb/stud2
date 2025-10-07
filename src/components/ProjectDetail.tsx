@@ -11,6 +11,9 @@ const ProjectDetail: React.FC = () => {
   const [isLoading, setIsLoading] = useState(true);
 
   useEffect(() => {
+    // Scroll to top when component mounts
+    window.scrollTo(0, 0);
+    
     if (slug) {
       loadProjectBySlug(slug)
         .then((projectData) => {
@@ -26,6 +29,8 @@ const ProjectDetail: React.FC = () => {
 
   const handleBackClick = () => {
     navigate('/');
+    // Scroll to top when going back to home
+    window.scrollTo(0, 0);
   };
 
   if (isLoading) {
@@ -70,7 +75,7 @@ const ProjectDetail: React.FC = () => {
     ? 'bg-black text-white hover:bg-gray-900'
     : 'bg-white text-black hover:bg-gray-100';
 
-  const isEightJewelery = project.slug === 'eight-jewelery';
+  const isZeroSpacing = project.imageSpacing === 'zero';
 
   return (
     <div className={`min-h-screen ${backgroundColor}`}>
@@ -129,7 +134,7 @@ const ProjectDetail: React.FC = () => {
 
           {/* Project Images - Stacked Vertically */}
           {project.caseStudy.images.length > 0 && (
-            <div className={`space-y-8 ${isEightJewelery ? 'space-y-0' : ''}`}>
+            <div className={`space-y-8 ${isZeroSpacing ? 'space-y-0' : ''}`}>
               {project.caseStudy.images.map((image, index) => (
                 <div key={index} className="relative w-full">
                   <img

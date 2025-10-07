@@ -13,6 +13,7 @@ export interface Project {
   budget: string;
   featured: boolean;
   background: 'black' | 'white';
+  imageSpacing?: 'normal' | 'zero';
   caseStudy: {
     overview: string;
     challenge: string;
@@ -38,6 +39,7 @@ export interface ProjectJSON {
   budget: string;
   featured: boolean;
   background?: 'black' | 'white';
+  imageSpacing?: 'normal' | 'zero';
   intro: {
     photo: string;
     text: string;

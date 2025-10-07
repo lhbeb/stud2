@@ -2,28 +2,28 @@ import { useScrollTrigger } from '../hooks/useScrollTrigger';
 
 const testimonials = [
   {
-    quote: "StudioEyn transformed our brand identity completely. Their strategic approach resulted in a visual identity that perfectly captures our luxury hospitality brand.",
-    name: "Ahmed Al-Rashid",
-    title: "CEO, Luxury Hotels Group",
-    avatar: "https://images.pexels.com/photos/220453/pexels-photo-220453.jpeg?auto=compress&cs=tinysrgb&w=150&h=150&fit=crop&crop=face"
+    quote: "StudioEyn's strategic planning expertise helped us optimize our workforce management and forecasting systems. Their customer service approach and attention to detail made all the difference in our operational efficiency.",
+    name: "Abdullah Benayan",
+    title: "Strategic Planning Manager | Expert in Workforce Management and Forecasting | Customer Service Specialist",
+    avatar: "https://i.ibb.co/FLkxZxsF/ah-banyan.jpg"
   },
   {
-    quote: "Working with StudioEyn on our fintech platform was exceptional. They delivered a user-friendly interface that our customers love, and their Gulf market understanding is impressive.",
-    name: "Fatima Al-Zahra",
-    title: "Product Manager, FinTech Startup",
-    avatar: "https://images.pexels.com/photos/415829/pexels-photo-415829.jpeg?auto=compress&cs=tinysrgb&w=150&h=150&fit=crop&crop=face"
+    quote: "StudioEyn's economic analysis and research approach helped us develop data-driven strategies for our scientific research initiatives. Their expertise in economic modeling and market research provided invaluable insights for our Kuwait Institute projects.",
+    name: "Abdulghaphor Hajjieh",
+    title: "Economist @ Kuwait Institute for Scientific Research",
+    avatar: "https://i.ibb.co/gFdHRTNC/3d1842d8-c586-45a9-931b-c80be4d61548-1000158138.webp"
   },
   {
-    quote: "The e-commerce redesign by StudioEyn increased our conversion rates by 40%. Their UX expertise helped us stand out in the competitive Gulf retail market.",
-    name: "Omar Benali",
-    title: "Marketing Director, Retail Brand",
-    avatar: "https://images.pexels.com/photos/1040880/pexels-photo-1040880.jpeg?auto=compress&cs=tinysrgb&w=150&h=150&fit=crop&crop=face"
+    quote: "StudioEyn's innovative approach and strategic vision helped us establish a strong foundation for oncyber.io. Their expertise in brand development and digital strategy was instrumental in our successful launch and growth in the Web3 space.",
+    name: "Rayan Boutaleb",
+    title: "Founder, oncyber.io",
+    avatar: "https://i.ibb.co/mrynnT9S/1574694752157.jpg"
   },
   {
-    quote: "StudioEyn's strategic brand positioning helped us secure Series A funding. Their comprehensive strategy positioned us perfectly for growth in Qatar's tech ecosystem.",
-    name: "Layla Mansouri",
-    title: "Founder, Tech Startup",
-    avatar: "https://images.pexels.com/photos/774909/pexels-photo-774909.jpeg?auto=compress&cs=tinysrgb&w=150&h=150&fit=crop&crop=face"
+    quote: "StudioEyn's strategic brand positioning and creative excellence helped us establish FranchiseArt as a leading franchise development company. Their comprehensive approach to brand identity and market positioning was instrumental in our rapid expansion across multiple markets.",
+    name: "Yousif AlHarbi",
+    title: "CEO, FranchiseArt",
+    avatar: "https://i.ibb.co/ymFRjFct/1673879629524.jpg"
   },
   {
     quote: "The healthcare platform developed by StudioEyn streamlined our operations significantly. Their development expertise and healthcare workflow understanding is remarkable.",

@@ -1,10 +1,15 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import { useScrollTrigger } from '../hooks/useScrollTrigger';
 import { ArrowLeft, MapPin, Mail, Users, Award, Target } from 'lucide-react';
 import { Link } from 'react-router-dom';
 
 const AboutPage: React.FC = () => {
   const { elementRef, isVisible } = useScrollTrigger();
+
+  useEffect(() => {
+    // Scroll to top when component mounts
+    window.scrollTo(0, 0);
+  }, []);
 
   const values = [
     {

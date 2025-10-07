@@ -8,8 +8,9 @@
   "tags": ["Fashion", "Branding", "Luxury"],
   "budget": "$3,000 - $6,500",
   "featured": true,
+  "background": "black",
   "intro": {
-    "photo": "https://images.pexels.com/photos/1267320/pexels-photo-1267320.jpeg?auto=compress&cs=tinysrgb&w=1200",
+    "photo": "/projects/emond-fashion/thumbnail.png",
     "text": "Complete brand identity design for a luxury fashion brand specializing in contemporary Middle Eastern fashion and ready-to-wear collections."
   },
   "content": [

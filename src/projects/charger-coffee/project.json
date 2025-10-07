@@ -8,8 +8,10 @@
   "tags": ["Coffee", "Branding", "Energy"],
   "budget": "$1,500 - $3,800",
   "featured": true,
+  "background": "white",
+  "imageSpacing": "zero",
   "intro": {
-    "photo": "https://images.pexels.com/photos/1267320/pexels-photo-1267320.jpeg?auto=compress&cs=tinysrgb&w=1200",
+    "photo": "/projects/charger-coffee/img1.gif",
     "text": "Complete brand identity design for a dynamic coffee brand targeting young professionals and energy-conscious consumers."
   },
   "content": [
@@ -27,15 +29,80 @@
     },
     {
       "type": "image",
-      "url": "https://images.pexels.com/photos/1267320/pexels-photo-1267320.jpeg?auto=compress&cs=tinysrgb&w=1200",
+      "url": "/projects/charger-coffee/img2.png",
       "alt": "Charger Coffee Brand Identity",
       "caption": "Main brand identity application"
     },
     {
       "type": "image",
-      "url": "https://images.pexels.com/photos/1640777/pexels-photo-1640777.jpeg?auto=compress&cs=tinysrgb&w=1200",
+      "url": "/projects/charger-coffee/img4.png",
+      "alt": "Coffee Brand Elements",
+      "caption": "Brand elements and typography"
+    },
+    {
+      "type": "image",
+      "url": "/projects/charger-coffee/img5.png",
+      "alt": "Coffee Packaging Design",
+      "caption": "Packaging design and applications"
+    },
+    {
+      "type": "image",
+      "url": "/projects/charger-coffee/img6.png",
+      "alt": "Coffee Brand Collateral",
+      "caption": "Brand collateral and marketing materials"
+    },
+    {
+      "type": "image",
+      "url": "/projects/charger-coffee/img7.png",
       "alt": "Coffee Shop Interior",
       "caption": "Brand application in retail and cafe spaces"
+    },
+    {
+      "type": "image",
+      "url": "/projects/charger-coffee/img8.png",
+      "alt": "Coffee Brand Guidelines",
+      "caption": "Brand guidelines and usage examples"
+    },
+    {
+      "type": "image",
+      "url": "/projects/charger-coffee/img9.png",
+      "alt": "Coffee Digital Applications",
+      "caption": "Digital applications and web presence"
+    },
+    {
+      "type": "image",
+      "url": "/projects/charger-coffee/img10.png",
+      "alt": "Coffee Merchandise",
+      "caption": "Merchandise and promotional items"
+    },
+    {
+      "type": "image",
+      "url": "/projects/charger-coffee/img11.png",
+      "alt": "Coffee Brand System",
+      "caption": "Complete brand system overview"
+    },
+    {
+      "type": "image",
+      "url": "/projects/charger-coffee/img12.png",
+      "alt": "Coffee Final Applications",
+      "caption": "Final brand applications and implementations"
+    },
+    {
+      "type": "image",
+      "url": "/projects/charger-coffee/img13.png",
+      "alt": "Coffee Brand Showcase",
+      "caption": "Brand showcase and portfolio presentation"
     }
-  ]
+  ],
+  "results": [
+    "Increased brand recognition by 150%",
+    "Improved market positioning in competitive coffee market",
+    "Successful expansion to 3 new locations",
+    "Enhanced customer engagement and loyalty"
+  ],
+  "testimonial": {
+    "quote": "StudioEyn transformed our brand completely. The new identity perfectly captures our energy and appeals to our target market. The results speak for themselves.",
+    "author": "Sarah Johnson",
+    "position": "Founder, Charger Coffee"
+  }
 }

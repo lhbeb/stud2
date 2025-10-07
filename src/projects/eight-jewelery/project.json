@@ -8,8 +8,10 @@
   "tags": ["Jewelry", "Branding", "Luxury"],
   "budget": "$2,500 - $5,000",
   "featured": true,
+  "background": "black",
+  "imageSpacing": "zero",
   "intro": {
-    "photo": "https://images.pexels.com/photos/1267320/pexels-photo-1267320.jpeg?auto=compress&cs=tinysrgb&w=1200",
+    "photo": "/projects/eight-jewelery/img1.png",
     "text": "Complete brand identity design for a luxury jewelry brand specializing in contemporary Middle Eastern designs."
   },
   "content": [

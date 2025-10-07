@@ -8,8 +8,10 @@
   "tags": ["Coffee", "Branding", "Artisan"],
   "budget": "$1,800 - $4,200",
   "featured": true,
+  "background": "black",
+  "imageSpacing": "zero",
   "intro": {
-    "photo": "https://images.pexels.com/photos/1267320/pexels-photo-1267320.jpeg?auto=compress&cs=tinysrgb&w=1200",
+    "photo": "/projects/origin-roasters/img1.png",
     "text": "Complete brand identity design for an artisanal coffee roastery specializing in premium Middle Eastern coffee blends."
   },
   "content": [

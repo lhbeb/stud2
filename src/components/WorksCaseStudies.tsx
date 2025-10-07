@@ -59,6 +59,8 @@ const WorksCaseStudies: React.FC = () => {
 
   const handleProjectClick = (slug: string) => {
     navigate(`/projects/${slug}`);
+    // Scroll to top when navigating to project page
+    window.scrollTo(0, 0);
   };
 
   const nextPage = () => {
