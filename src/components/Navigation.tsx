@@ -27,12 +27,25 @@ const Navigation: React.FC = () => {
   }, []);
 
   const navItems = [
-    { name: 'Services', href: '#services' },
     { name: 'Work', href: '#work' },
+    { name: 'Services', href: '#services' },
     { name: 'Process', href: '#process' },
     { name: 'About', href: '/about' },
     { name: 'Contact', href: '#contact' },
   ];
+
+  const handleSectionClick = (e: React.MouseEvent<HTMLAnchorElement>, href: string) => {
+    if (href.startsWith('#')) {
+      e.preventDefault();
+      const element = document.querySelector(href);
+      if (element) {
+        element.scrollIntoView({ 
+          behavior: 'smooth',
+          block: 'start'
+        });
+      }
+    }
+  };
 
   return (
     <>
@@ -96,8 +109,8 @@ const Navigation: React.FC = () => {
                           );
                         })}
                 {/* Email Button - Following Style Guide */}
-                <a
-                  href="mailto:hello@studioeyn.com"
+                <Link
+                  to="/email"
                   className={`flex items-center space-x-3 px-6 py-3 border transition-all duration-300 ease-in-out text-sm font-normal uppercase tracking-wide ${
                     isScrolled 
                       ? 'border-white text-white hover:bg-white hover:text-black' 
@@ -107,7 +120,7 @@ const Navigation: React.FC = () => {
                 >
                   <Mail className="h-4 w-4" />
                   <span>Send a message</span>
-                </a>
+                </Link>
               </div>
             </div>
 
@@ -161,8 +174,8 @@ const Navigation: React.FC = () => {
                       );
                     })}
             {/* Mobile Email Button - Following Style Guide */}
-            <a
-              href="mailto:hello@studioeyn.com"
+            <Link
+              to="/email"
               className={`flex items-center space-x-3 px-8 py-4 border transition-all duration-300 ease-in-out text-base font-normal uppercase tracking-wide mt-6 ${
                 isScrolled 
                   ? 'border-white text-white hover:bg-white hover:text-black' 
@@ -173,7 +186,7 @@ const Navigation: React.FC = () => {
             >
               <Mail className="h-5 w-5" />
               <span>Send a message</span>
-            </a>
+            </Link>
           </div>
         </div>
       )}

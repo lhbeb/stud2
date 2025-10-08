@@ -29,6 +29,12 @@
     },
     {
       "type": "image",
+      "url": "/projects/charger-coffee/img1.gif",
+      "alt": "Charger Coffee Brand Animation",
+      "caption": "Brand identity animation and motion graphics"
+    },
+    {
+      "type": "image",
       "url": "/projects/charger-coffee/img2.png",
       "alt": "Charger Coffee Brand Identity",
       "caption": "Main brand identity application"

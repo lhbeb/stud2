@@ -255,13 +255,13 @@ const AboutPage: React.FC = () => {
               >
                 <span>Book a Call</span>
               </Link>
-              <a
-                href="mailto:hello@studioeyn.com"
+              <Link
+                to="/email"
                 className="inline-flex items-center px-8 py-4 border border-black text-black font-normal hover:bg-black hover:text-white transition-all duration-300 uppercase tracking-wide whitespace-nowrap"
                 style={{ borderRadius: '2px' }}
               >
                 <span>Email Us</span>
-              </a>
+              </Link>
             </div>
           </div>
         </div>

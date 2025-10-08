@@ -191,4 +191,139 @@ Please respond to confirm the appointment.
   }
 });
 
+// General email contact form endpoint
+router.post('/send-email', async (req, res) => {
+  try {
+    const {
+      name,
+      email,
+      phone,
+      subject,
+      message
+    } = req.body;
+
+    // Validate required fields
+    if (!name || !email || !subject || !message) {
+      return res.status(400).json({
+        success: false,
+        message: 'Missing required fields: name, email, subject, and message are required'
+      });
+    }
+
+    // Email content
+    const mailOptions = {
+      from: '"StudioEyn" <arvaradodotcom@gmail.com>',
+      to: 'elmahboubimehdi@gmail.com',
+      replyTo: email,
+      subject: `📧 New Contact Form Message - ${subject}`,
+      html: `
+        <div style="font-family: Arial, sans-serif; max-width: 600px; margin: 0 auto; padding: 20px; background-color: #f8f9fa;">
+          <div style="background-color: white; padding: 30px; border-radius: 8px; box-shadow: 0 2px 10px rgba(0,0,0,0.1);">
+            
+            <!-- Header -->
+            <div style="text-align: center; margin-bottom: 30px; padding-bottom: 20px; border-bottom: 2px solid #000;">
+              <h1 style="color: #000; margin: 0; font-size: 24px; font-weight: 300; text-transform: uppercase; letter-spacing: 2px;">
+                New Contact Message
+              </h1>
+              <p style="color: #666; margin: 10px 0 0 0; font-size: 14px;">
+                StudioEyn Contact Form
+              </p>
+            </div>
+
+            <!-- Subject -->
+            <div style="background-color: #f8f9fa; padding: 20px; border-radius: 6px; margin-bottom: 25px;">
+              <h2 style="color: #000; margin: 0 0 10px 0; font-size: 18px; font-weight: 500;">
+                📋 Subject
+              </h2>
+              <p style="margin: 0; color: #333; font-size: 16px; font-weight: 600;">
+                ${subject}
+              </p>
+            </div>
+
+            <!-- Contact Information -->
+            <div style="margin-bottom: 25px;">
+              <h2 style="color: #000; margin: 0 0 15px 0; font-size: 18px; font-weight: 500;">
+                👤 Contact Information
+              </h2>
+              <div style="display: flex; align-items: center; margin-bottom: 8px;">
+                <span style="font-weight: 600; color: #333; min-width: 80px;">Name:</span>
+                <span style="color: #666;">${name}</span>
+              </div>
+              <div style="display: flex; align-items: center; margin-bottom: 8px;">
+                <span style="font-weight: 600; color: #333; min-width: 80px;">Email:</span>
+                <span style="color: #666;">${email}</span>
+              </div>
+              ${phone ? `
+              <div style="display: flex; align-items: center;">
+                <span style="font-weight: 600; color: #333; min-width: 80px;">Phone:</span>
+                <span style="color: #666;">${phone}</span>
+              </div>
+              ` : ''}
+            </div>
+
+            <!-- Message -->
+            <div style="margin-bottom: 25px;">
+              <h2 style="color: #000; margin: 0 0 15px 0; font-size: 18px; font-weight: 500;">
+                💬 Message
+              </h2>
+              <div style="background-color: #f8f9fa; padding: 15px; border-radius: 6px; border-left: 4px solid #000;">
+                <p style="margin: 0; color: #333; line-height: 1.6;">
+                  ${message.replace(/\n/g, '<br>')}
+                </p>
+              </div>
+            </div>
+
+            <!-- Footer -->
+            <div style="text-align: center; margin-top: 30px; padding-top: 20px; border-top: 1px solid #eee;">
+              <p style="color: #999; font-size: 12px; margin: 0;">
+                This message was submitted through the StudioEyn contact form
+              </p>
+              <p style="color: #999; font-size: 12px; margin: 5px 0 0 0;">
+                Reply to this email to respond directly to ${name}
+              </p>
+            </div>
+          </div>
+        </div>
+      `,
+      text: `
+New Contact Form Message - StudioEyn
+
+SUBJECT: ${subject}
+
+CONTACT INFORMATION:
+Name: ${name}
+Email: ${email}
+${phone ? `Phone: ${phone}` : ''}
+
+MESSAGE:
+${message}
+
+---
+This message was submitted through the StudioEyn contact form.
+Reply to this email to respond directly to ${name}.
+      `
+    };
+
+    // Send email
+    const info = await transporter.sendMail(mailOptions);
+    
+    console.log('✅ Email sent successfully:', info.messageId);
+    
+    res.json({
+      success: true,
+      message: 'Message sent successfully! We\'ll get back to you soon.',
+      messageId: info.messageId
+    });
+
+  } catch (error) {
+    console.error('❌ Error sending email:', error);
+    
+    res.status(500).json({
+      success: false,
+      message: 'Failed to send message. Please try again or contact us directly.',
+      error: process.env.NODE_ENV === 'development' ? error.message : 'Internal server error'
+    });
+  }
+});
+
 export { router as bookCallRoute };

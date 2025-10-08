@@ -13,6 +13,8 @@ import PartnersSection from './components/PartnersSection';
 import ProjectDetail from './components/ProjectDetail';
 import BookCallPage from './components/BookCallPage';
 import AboutPage from './components/AboutPage';
+import EmailPage from './components/EmailPage';
+import WhatsAppButton from './components/WhatsAppButton';
 
 function App() {
   return (
@@ -20,6 +22,7 @@ function App() {
       <div className="min-h-screen bg-white text-black">
         <SmoothScroll />
         <Navigation />
+        <WhatsAppButton />
         <Routes>
           <Route path="/" element={
       <main>
@@ -36,6 +39,7 @@ function App() {
           <Route path="/projects/:slug" element={<ProjectDetail />} />
           <Route path="/book-call" element={<BookCallPage />} />
           <Route path="/about" element={<AboutPage />} />
+          <Route path="/email" element={<EmailPage />} />
         </Routes>
         <Footer />
       </div>

@@ -105,6 +105,7 @@ const WorksCaseStudies: React.FC = () => {
 
   return (
     <section 
+      id="work"
       ref={elementRef}
       className="py-24 bg-black overflow-hidden"
     >

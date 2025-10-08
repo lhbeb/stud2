@@ -11,7 +11,7 @@ const PORT = process.env.PORT || 3001;
 
 // Middleware
 app.use(cors({
-  origin: ['http://localhost:5173', 'http://localhost:3000'], // Vite dev server and other common ports
+  origin: ['http://localhost:5173', 'http://localhost:3000', 'http://localhost:5189', 'http://localhost:5188', 'http://localhost:5187', 'http://localhost:5186', 'http://localhost:5185', 'http://localhost:5184', 'http://localhost:5183', 'http://localhost:5182', 'http://localhost:5181', 'http://localhost:5180'], // Vite dev server and other common ports
   credentials: true
 }));
 app.use(express.json());

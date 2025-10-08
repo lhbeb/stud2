@@ -106,7 +106,7 @@ const CreativeProcessGrid: React.FC = () => {
   const sectionHeightClass = isMobile ? 'h-[60vh]' : 'h-screen';
 
   return (
-    <section className={`w-screen ${sectionHeightClass} flex flex-col items-center justify-center bg-white relative overflow-hidden`}>
+    <section id="process" className={`w-screen ${sectionHeightClass} flex flex-col items-center justify-center bg-white relative overflow-hidden`}>
       <div className="w-full h-full flex flex-row gap-4 items-center justify-center overflow-hidden">
         {colImageSets.map((colImages, colIdx) => {
           // How many images to fill the section?

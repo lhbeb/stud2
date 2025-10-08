@@ -9,8 +9,9 @@
   "budget": "$2,800 - $5,500",
   "featured": true,
   "background": "black",
+  "imageSpacing": "zero",
   "intro": {
-    "photo": "/projects/binayat-realestate/thumbnail.png",
+    "photo": "/projects/binayat-realestate/image1.gif",
     "text": "Complete brand identity design for a premium real estate company specializing in luxury properties and development projects across the Middle East."
   },
   "content": [
@@ -28,15 +29,98 @@
     },
     {
       "type": "image",
-      "url": "https://images.pexels.com/photos/1267320/pexels-photo-1267320.jpeg?auto=compress&cs=tinysrgb&w=1200",
+      "url": "/projects/binayat-realestate/image1.gif",
+      "alt": "Binayat Real Estate Brand Animation",
+      "caption": "Brand identity animation and motion graphics"
+    },
+    {
+      "type": "image",
+      "url": "/projects/binayat-realestate/image2.png",
       "alt": "Binayat Real Estate Brand Identity",
       "caption": "Main brand identity application"
     },
     {
       "type": "image",
-      "url": "https://images.pexels.com/photos/1640777/pexels-photo-1640777.jpeg?auto=compress&cs=tinysrgb&w=1200",
-      "alt": "Real Estate Office",
-      "caption": "Brand application in office and marketing materials"
+      "url": "/projects/binayat-realestate/img3.png",
+      "alt": "Real Estate Brand Elements",
+      "caption": "Brand elements and typography system"
+    },
+    {
+      "type": "image",
+      "url": "/projects/binayat-realestate/img4.png",
+      "alt": "Real Estate Logo Design",
+      "caption": "Logo design and variations"
+    },
+    {
+      "type": "image",
+      "url": "/projects/binayat-realestate/img5.png",
+      "alt": "Real Estate Brand Guidelines",
+      "caption": "Brand guidelines and usage examples"
+    },
+    {
+      "type": "image",
+      "url": "/projects/binayat-realestate/img6.png",
+      "alt": "Real Estate Marketing Materials",
+      "caption": "Marketing materials and collateral"
+    },
+    {
+      "type": "image",
+      "url": "/projects/binayat-realestate/image7.png",
+      "alt": "Real Estate Digital Applications",
+      "caption": "Digital applications and web presence"
+    },
+    {
+      "type": "image",
+      "url": "/projects/binayat-realestate/img8.png",
+      "alt": "Real Estate Office Branding",
+      "caption": "Office branding and interior applications"
+    },
+    {
+      "type": "image",
+      "url": "/projects/binayat-realestate/img9.png",
+      "alt": "Real Estate Signage",
+      "caption": "Signage and outdoor applications"
+    },
+    {
+      "type": "image",
+      "url": "/projects/binayat-realestate/img10.png",
+      "alt": "Real Estate Business Cards",
+      "caption": "Business cards and stationery"
+    },
+    {
+      "type": "image",
+      "url": "/projects/binayat-realestate/img11.png",
+      "alt": "Real Estate Brochures",
+      "caption": "Brochures and marketing materials"
+    },
+    {
+      "type": "image",
+      "url": "/projects/binayat-realestate/img12.png",
+      "alt": "Real Estate Website Design",
+      "caption": "Website design and digital presence"
+    },
+    {
+      "type": "image",
+      "url": "/projects/binayat-realestate/img13.png",
+      "alt": "Real Estate Social Media",
+      "caption": "Social media templates and applications"
+    },
+    {
+      "type": "image",
+      "url": "/projects/binayat-realestate/img14.png",
+      "alt": "Real Estate Brand Showcase",
+      "caption": "Complete brand system showcase"
     }
-  ]
+  ],
+  "results": [
+    "Enhanced brand recognition in competitive real estate market",
+    "Improved client trust and credibility",
+    "Successful expansion to 5 new property developments",
+    "Increased lead generation by 200%"
+  ],
+  "testimonial": {
+    "quote": "StudioEyn created a brand identity that perfectly represents our premium positioning. The new brand has significantly improved our market presence and client acquisition.",
+    "author": "Ahmed Al-Rashid",
+    "position": "CEO, Binayat Real Estate"
+  }
 }

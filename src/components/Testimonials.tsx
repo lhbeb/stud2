@@ -2,40 +2,40 @@ import { useScrollTrigger } from '../hooks/useScrollTrigger';
 
 const testimonials = [
   {
-    quote: "StudioEyn's strategic planning expertise helped us optimize our workforce management and forecasting systems. Their customer service approach and attention to detail made all the difference in our operational efficiency.",
+    quote: "Really impressed with how fast they turned around our rebrand. The logo and visual identity they created actually made sense for our business.",
     name: "Abdullah Benayan",
-    title: "Strategic Planning Manager | Expert in Workforce Management and Forecasting | Customer Service Specialist",
+    title: "Strategic Planning Manager",
     avatar: "https://i.ibb.co/FLkxZxsF/ah-banyan.jpg"
   },
   {
-    quote: "StudioEyn's economic analysis and research approach helped us develop data-driven strategies for our scientific research initiatives. Their expertise in economic modeling and market research provided invaluable insights for our Kuwait Institute projects.",
+    quote: "Professional team that delivered exactly what we needed. Clear communication throughout the project.",
     name: "Abdulghaphor Hajjieh",
     title: "Economist @ Kuwait Institute for Scientific Research",
     avatar: "https://i.ibb.co/gFdHRTNC/3d1842d8-c586-45a9-931b-c80be4d61548-1000158138.webp"
   },
   {
-    quote: "StudioEyn's innovative approach and strategic vision helped us establish a strong foundation for oncyber.io. Their expertise in brand development and digital strategy was instrumental in our successful launch and growth in the Web3 space.",
+    quote: "Helped us launch oncyber with a solid brand foundation. They understood Web3 which was crucial.",
     name: "Rayan Boutaleb",
     title: "Founder, oncyber.io",
     avatar: "https://i.ibb.co/mrynnT9S/1574694752157.jpg"
   },
   {
-    quote: "StudioEyn's strategic brand positioning and creative excellence helped us establish FranchiseArt as a leading franchise development company. Their comprehensive approach to brand identity and market positioning was instrumental in our rapid expansion across multiple markets.",
+    quote: "Great work on our franchise branding. Made it easy to scale across different markets.",
     name: "Yousif AlHarbi",
     title: "CEO, FranchiseArt",
     avatar: "https://i.ibb.co/ymFRjFct/1673879629524.jpg"
   },
   {
-    quote: "The healthcare platform developed by StudioEyn streamlined our operations significantly. Their development expertise and healthcare workflow understanding is remarkable.",
-    name: "Dr. Khalid Al-Mahmoud",
-    title: "Director, Healthcare Group",
-    avatar: "https://images.pexels.com/photos/1040881/pexels-photo-1040881.jpeg?auto=compress&cs=tinysrgb&w=150&h=150&fit=crop&crop=face"
+    quote: "Clean, modern design that elevated our brand. Would work with them again.",
+    name: "Youssef Meskaoui",
+    title: "Founder, grandecharte.co",
+    avatar: "https://i.ibb.co/hx0Rk6Sn/89175967-926607661125082-6144394623272878080-n.jpg"
   },
   {
-    quote: "StudioEyn delivered a complete digital transformation for our real estate portfolio. Their modern approach and attention to detail exceeded our expectations.",
-    name: "Sarah Al-Mansoori",
-    title: "CEO, Emirates Properties",
-    avatar: "https://images.pexels.com/photos/415829/pexels-photo-415829.jpeg?auto=compress&cs=tinysrgb&w=150&h=150&fit=crop&crop=face"
+    quote: "They really got my vision as an artist. The portfolio site they designed perfectly showcases my work.",
+    name: "Jihad Eliassa",
+    title: "Artist, eliassa.com",
+    avatar: "https://i.ibb.co/svSBj8nk/1678787254750.jpg"
   },
 ];
 
@@ -68,7 +68,7 @@ export function Testimonials() {
         <div className="absolute right-0 top-0 w-16 md:w-32 h-full bg-gradient-to-l from-white to-transparent z-10 pointer-events-none" />
         
         <div className="flex animate-scroll hover:pause-animation">
-          {[...testimonials, ...testimonials].map((testimonial, index) => (
+          {[...testimonials, ...testimonials, ...testimonials].map((testimonial, index) => (
             <div
               key={index}
               className="flex-shrink-0 w-full sm:w-80 md:w-96 mx-4 bg-white border border-gray-100 rounded-sm p-8 shadow-sm hover:shadow-md transition-shadow duration-300"

@@ -132,38 +132,33 @@ const ProjectDetail: React.FC = () => {
             </div>
           </div>
 
-          {/* Project Images - Stacked Vertically */}
-          {project.caseStudy.images.length > 0 && (
-            <div className={`space-y-8 ${isZeroSpacing ? 'space-y-0' : ''}`}>
-              {project.caseStudy.images.map((image, index) => (
-                <div key={index} className="relative w-full">
-                  <img
-                    src={image}
-                    alt={`${project.title} - Image ${index + 1}`}
-                    className="w-full h-auto object-cover block"
-                  />
-                </div>
-              ))}
-            </div>
-          )}
+        </div>
+      </div>
 
-          {/* Testimonial */}
-          {project.caseStudy.testimonial && (
-            <div className={`mt-24 pt-16 border-t ${borderColor}`}>
-              <blockquote className="text-center">
-                <p className={`text-xl md:text-2xl ${textColor} font-light leading-relaxed mb-8 max-w-4xl mx-auto`}>
-                  "{project.caseStudy.testimonial.quote}"
-                </p>
-                <div className={mutedTextColor}>
-                  <p className="font-normal">{project.caseStudy.testimonial.author}</p>
-                  <p className="text-sm font-light">{project.caseStudy.testimonial.position}</p>
-                </div>
-              </blockquote>
-            </div>
-          )}
+      {/* Project Images - Full Width on Mobile, Contained on Desktop */}
+      {project.caseStudy.images.length > 0 && (
+        <div className={`${isZeroSpacing ? 'space-y-0' : 'space-y-8'}`}>
+          <div className="md:container-custom md:max-w-[1400px] md:mx-auto md:px-4">
+            {project.caseStudy.images.map((image, index) => (
+              <div key={index} className="relative w-full">
+                <img
+                  src={image}
+                  alt={`${project.title} - Image ${index + 1}`}
+                  className="w-full h-auto object-cover block"
+                />
+              </div>
+            ))}
+          </div>
+        </div>
+      )}
+
+      {/* Testimonial and Navigation - Back in Container */}
+      <div className="pt-16 md:pt-24">
+        <div className="container-custom max-w-[1400px] mx-auto px-4">
+
 
           {/* Navigation */}
-          <div className={`mt-16 pt-16 border-t ${borderColor}`}>
+          <div className={`mt-16 pt-16 pb-16 md:pb-24 border-t ${borderColor}`}>
             <div className="flex justify-between items-center">
               <button
                 onClick={handleBackClick}

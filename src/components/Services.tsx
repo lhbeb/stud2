@@ -1,5 +1,6 @@
 import { ArrowRight } from 'lucide-react';
 import { useScrollTrigger } from '../hooks/useScrollTrigger';
+import { Link } from 'react-router-dom';
 
 const Services: React.FC = () => {
   const { elementRef, isVisible } = useScrollTrigger();
@@ -94,12 +95,6 @@ const Services: React.FC = () => {
                       </div>
                     ))}
                   </div>
-                  
-                  {/* CTA Arrow */}
-                  <div className="flex items-center text-gray-400 group-hover:text-black transition-colors duration-300">
-                    <span className="text-sm font-light mr-2">Explore Service</span>
-                    <ArrowRight className="h-4 w-4 group-hover:translate-x-1 transition-transform duration-300" />
-                  </div>
                 </div>
               </div>
             </div>
@@ -128,13 +123,13 @@ const Services: React.FC = () => {
                 >
                   <span>Book a Call</span>
                 </a>
-                <a
-                  href="mailto:hello@studioeyn.com"
+                <Link
+                  to="/email"
                   className="inline-flex items-center px-8 py-4 border border-white text-white font-normal hover:bg-white hover:text-black transition-all duration-300 uppercase tracking-wide whitespace-nowrap"
                   style={{ borderRadius: '2px' }}
                 >
                   <span>Email Us</span>
-                </a>
+                </Link>
               </div>
             </div>
           </div>
