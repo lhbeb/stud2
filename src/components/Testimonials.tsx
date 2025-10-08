@@ -61,19 +61,19 @@ export function Testimonials() {
       <div className={`relative overflow-hidden transition-all duration-700 ${
         isVisible ? 'opacity-100' : 'opacity-0'
       }`}>
-        <div className="absolute left-0 top-0 w-16 md:w-32 h-full bg-gradient-to-r from-white to-transparent z-10 pointer-events-none" />
-        <div className="absolute right-0 top-0 w-16 md:w-32 h-full bg-gradient-to-l from-white to-transparent z-10 pointer-events-none" />
+        <div className="absolute left-0 top-0 w-8 sm:w-16 md:w-32 h-full bg-gradient-to-r from-white to-transparent z-10 pointer-events-none" />
+        <div className="absolute right-0 top-0 w-8 sm:w-16 md:w-32 h-full bg-gradient-to-l from-white to-transparent z-10 pointer-events-none" />
         
         <div className="flex animate-scroll hover:pause-animation">
           {[...testimonials, ...testimonials, ...testimonials].map((testimonial, index) => (
             <div
               key={index}
-              className="flex-shrink-0 w-full sm:w-80 md:w-96 mx-4 bg-white border border-gray-100 rounded-sm p-8 shadow-sm hover:shadow-md transition-shadow duration-300"
+              className="flex-shrink-0 w-80 sm:w-96 md:w-[28rem] mx-2 sm:mx-4 bg-white border border-gray-100 rounded-sm p-4 sm:p-6 md:p-8 shadow-sm hover:shadow-md transition-shadow duration-300"
             >
               {/* Header with Avatar and Name */}
-              <div className="flex items-center mb-6">
+              <div className="flex items-center mb-4 sm:mb-6">
                 {/* Circular Avatar */}
-                <div className="w-12 h-12 rounded-full overflow-hidden bg-gray-100 flex-shrink-0 mr-4">
+                <div className="w-10 h-10 sm:w-12 sm:h-12 rounded-full overflow-hidden bg-gray-100 flex-shrink-0 mr-3 sm:mr-4">
                   <img
                     src={testimonial.avatar}
                     alt={testimonial.name}
@@ -82,11 +82,11 @@ export function Testimonials() {
                 </div>
                 
                 {/* Name and Title */}
-                <div className="flex-1">
-                  <p className="font-normal text-black text-sm mb-1">
+                <div className="flex-1 min-w-0">
+                  <p className="font-normal text-black text-sm sm:text-base mb-1 truncate">
                     {testimonial.name}
                   </p>
-                  <p className="text-gray-500 text-xs font-light">
+                  <p className="text-gray-500 text-xs sm:text-sm font-light line-clamp-2">
                     {testimonial.title}
                   </p>
                 </div>
@@ -94,7 +94,7 @@ export function Testimonials() {
               
               {/* Testimonial Quote */}
               <div>
-                <p className="text-gray-700 font-light leading-relaxed text-base">
+                <p className="text-gray-700 font-light leading-relaxed text-sm sm:text-base line-clamp-4">
                   "{testimonial.quote}"
                 </p>
               </div>

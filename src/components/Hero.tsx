@@ -40,14 +40,25 @@ const Hero: React.FC = () => {
 
   return (
     <section className="relative w-full bg-white overflow-hidden pt-28 md:pt-14">
-      {/* Mobile: Refactored layout with bigger video and optimized spacing */}
-      <div className="block md:hidden hero-mobile-container w-full max-w-full" style={{
-        height: 'calc(100vh - 112px)', // Available height minus navbar (h-26 = 104px + 8px buffer)
+      {/* Mobile: Video first, then text, then CTA */}
+      <div className="block md:hidden w-full max-w-full" style={{
         paddingTop: '16px',
-        paddingBottom: '32px' // Increased bottom padding to prevent overlap with partners section
+        paddingBottom: '32px'
       }}>
-        {/* Top: Hero text - LEFT ALIGNED WITH LOGO */}
-        <div className="flex-shrink-0 px-8 pb-4">
+        {/* Top: Full-Width Video - Directly below navbar */}
+        <div className="w-full relative mb-6" style={{ height: '50vh', minHeight: '300px' }}>
+          <LazyVideo
+            src={HERO_VIDEO_URL}
+            className="w-full h-full object-cover pointer-events-none"
+            fallbackImage="/fallback.jpeg"
+            priority={true}
+            width={400}
+            height={300}
+          />
+        </div>
+        
+        {/* Middle: Hero text - LEFT ALIGNED WITH LOGO */}
+        <div className="px-8 pb-4">
           <h1 className="font-normal text-black leading-tight text-2xl uppercase tracking-tight animate-slide-up text-left mb-4" style={{ fontWeight: 400, margin: 0 }}>
             <span
               className="inline-block text-black font-mono align-middle w-full whitespace-nowrap"
@@ -64,22 +75,8 @@ const Hero: React.FC = () => {
           </p>
         </div>
         
-        {/* Middle: Full-Width Video */}
-        <div className="flex-1 flex items-center" style={{ minHeight: '400px' }}>
-          <div className="w-full h-full relative">
-            <LazyVideo
-              src={HERO_VIDEO_URL}
-              className="w-full h-full object-cover pointer-events-none"
-              fallbackImage="/fallback.jpeg"
-              priority={true}
-              width={400}
-              height={400}
-            />
-          </div>
-        </div>
-        
         {/* Bottom: CTA button - LEFT ALIGNED WITH LOGO */}
-        <div className="flex-shrink-0 px-8 pt-4">
+        <div className="px-8 pt-4">
           <a
             href="/book-call"
             className="inline-flex items-center px-8 py-4 bg-black text-white text-base font-light uppercase tracking-wide hover:bg-gray-900 transition-colors duration-300 animate-slide-up animation-delay-400"
