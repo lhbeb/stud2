@@ -28,15 +28,63 @@
     },
     {
       "type": "image",
-      "url": "https://images.pexels.com/photos/1267320/pexels-photo-1267320.jpeg?auto=compress&cs=tinysrgb&w=1200",
+      "url": "/projects/dairum-cosmetics/img1.png",
       "alt": "Dairum Cosmetics Brand Identity",
-      "caption": "Main brand identity application"
+      "caption": "Main brand identity and logo design"
     },
     {
       "type": "image",
-      "url": "https://images.pexels.com/photos/1640777/pexels-photo-1640777.jpeg?auto=compress&cs=tinysrgb&w=1200",
-      "alt": "Cosmetics Retail Display",
-      "caption": "Brand application in retail and packaging"
+      "url": "/projects/dairum-cosmetics/IMG2.png",
+      "alt": "Dairum Cosmetics Brand Elements",
+      "caption": "Brand elements and typography system"
+    },
+    {
+      "type": "image",
+      "url": "/projects/dairum-cosmetics/IMG3.png",
+      "alt": "Dairum Cosmetics Color Palette",
+      "caption": "Color palette and visual language"
+    },
+    {
+      "type": "image",
+      "url": "/projects/dairum-cosmetics/img4.png",
+      "alt": "Dairum Cosmetics Packaging Design",
+      "caption": "Packaging design and applications"
+    },
+    {
+      "type": "image",
+      "url": "/projects/dairum-cosmetics/img5.png",
+      "alt": "Dairum Cosmetics Product Photography",
+      "caption": "Product photography and brand application"
+    },
+    {
+      "type": "image",
+      "url": "/projects/dairum-cosmetics/img6.png",
+      "alt": "Dairum Cosmetics Marketing Materials",
+      "caption": "Marketing materials and collateral"
+    },
+    {
+      "type": "image",
+      "url": "/projects/dairum-cosmetics/img7.png",
+      "alt": "Dairum Cosmetics Digital Applications",
+      "caption": "Digital applications and web presence"
+    },
+    {
+      "type": "image",
+      "url": "/projects/dairum-cosmetics/img8.png",
+      "alt": "Dairum Cosmetics Brand Guidelines",
+      "caption": "Brand guidelines and usage examples"
+    },
+    {
+      "type": "image",
+      "url": "/projects/dairum-cosmetics/img9.png",
+      "alt": "Dairum Cosmetics Retail Display",
+      "caption": "Retail display and store applications"
+    },
+    {
+      "type": "image",
+      "url": "/projects/dairum-cosmetics/img10.png",
+      "alt": "Dairum Cosmetics Brand System",
+      "caption": "Complete brand system overview"
     }
   ]
 }

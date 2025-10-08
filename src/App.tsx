@@ -2,6 +2,7 @@ import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import { Suspense, lazy } from 'react';
 import Navigation from './components/Navigation';
 import Hero from './components/Hero';
+import ProjectPreview from './components/ProjectPreview';
 import FeaturedWork from './components/FeaturedWork';
 import WorksCaseStudies from './components/WorksCaseStudies';
 import Services from './components/Services';
@@ -20,6 +21,7 @@ const BookCallPage = lazy(() => import('./components/BookCallPage'));
 const SimpleAboutPage = lazy(() => import('./components/SimpleAboutPage'));
 const CareersPage = lazy(() => import('./components/CareersPage'));
 const EmailPage = lazy(() => import('./components/EmailPage'));
+const NotFoundPage = lazy(() => import('./components/NotFoundPage'));
 
 function App() {
   return (
@@ -33,6 +35,7 @@ function App() {
             <main>
               <Hero />
               <PartnersSection />
+              <ProjectPreview />
               <WorksCaseStudies />
               <Testimonials />
               <Services />
@@ -99,6 +102,19 @@ function App() {
               </div>
             }>
               <EmailPage />
+            </Suspense>
+          } />
+          {/* 404 Catch-all route */}
+          <Route path="*" element={
+            <Suspense fallback={
+              <div className="min-h-screen bg-black flex items-center justify-center">
+                <div className="text-center">
+                  <div className="animate-spin rounded-full h-12 w-12 border-b-2 border-white mx-auto mb-4"></div>
+                  <p className="text-white">Loading...</p>
+                </div>
+              </div>
+            }>
+              <NotFoundPage />
             </Suspense>
           } />
         </Routes>

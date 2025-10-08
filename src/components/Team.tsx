@@ -1,5 +1,6 @@
 import { useScrollTrigger } from '../hooks/useScrollTrigger';
 import { Link } from 'react-router-dom';
+import LazyImage from './LazyImage';
 
 const Team: React.FC = () => {
   const { elementRef, isVisible } = useScrollTrigger();
@@ -8,17 +9,17 @@ const Team: React.FC = () => {
     {
       name: 'ELMehdi EL Mahboubi',
       role: 'Co-Founder, Creative Director',
-      image: 'https://images.pexels.com/photos/1040880/pexels-photo-1040880.jpeg',
+      image: 'https://i.ibb.co/hJxnD9XQ/mehdi.png',
     },
     {
       name: 'Abdeljebbar Bouftih',
-      role: 'Co-Founder, Marketing Specialist',
-      image: 'https://images.pexels.com/photos/1181690/pexels-photo-1181690.jpeg',
+      role: 'Founder, Marketing Expert',
+      image: 'https://i.ibb.co/zhMVDykB/pnggg.png',
     },
     {
       name: 'Walid Azif',
       role: 'Web Dev, Code Ninja',
-      image: 'https://images.pexels.com/photos/1181686/pexels-photo-1181686.jpeg',
+      image: 'https://i.ibb.co/qMgs0GkY/Whats-App-Image-2025-10-08-at-22-11-46-1.jpg',
     },
     {
       name: 'Amine Tair',
@@ -56,11 +57,13 @@ const Team: React.FC = () => {
               className="group relative overflow-hidden transition-all duration-300"
             >
               <div className="relative aspect-[3/4] overflow-hidden bg-gray-900">
-                <img
+                <LazyImage
                   src={member.image}
                   alt={member.name}
                   className="w-full h-full object-cover grayscale group-hover:grayscale-0 group-hover:scale-105 transition-all duration-500"
-                  loading="lazy"
+                  width={400}
+                  height={533}
+                  priority={index < 2}
                 />
                 <div className="absolute inset-0 bg-black/40 group-hover:bg-black/0 transition-colors duration-300"></div>
                 

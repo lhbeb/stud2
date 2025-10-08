@@ -1,50 +1,175 @@
 {
   "thumbnail": "/projects/eight-jewelery/thumbnail.png",
   "slug": "eight-jewelery",
-  "title": "Eight Jewelry Brand Identity",
+  "title": "Eight Jewelry",
+  "subtitle": "Redefining Luxury for the Modern Woman",
   "year": "2024",
+  "location": "Kuwait City, Kuwait",
+  "sector": "Fine Jewelry & Luxury Goods",
   "category": "Brand Identity",
   "client": "Eight Jewelry",
-  "tags": ["Jewelry", "Branding", "Luxury"],
+  "tags": ["Jewelry", "Luxury", "Branding", "Kuwait", "International"],
   "budget": "$2,500 - $5,000",
   "featured": true,
   "background": "black",
   "imageSpacing": "zero",
   "intro": {
     "photo": "/projects/eight-jewelery/img1.png",
-    "text": "Complete brand identity design for a luxury jewelry brand specializing in contemporary Middle Eastern designs."
+    "text": "Complete brand identity design for a luxury jewelry brand targeting the modern, accomplished woman who values elegance over spectacle."
   },
   "content": [
     {
       "type": "text",
-      "content": "Eight Jewelry approached us to create a sophisticated brand identity that would position them as a premium jewelry brand in the Middle Eastern market."
-    },
-    {
-      "type": "text", 
-      "content": "The challenge was to create a brand that appeals to both traditional Middle Eastern aesthetics and contemporary luxury consumers."
+      "content": "The Challenge + The Vision"
     },
     {
       "type": "text",
-      "content": "We developed an elegant brand system that combines geometric patterns inspired by Islamic art with modern minimalist design principles."
+      "content": "Kuwait's luxury jewelry market is saturated with heritage brands trading on tradition and newer entrants relying on ostentatious display. Eight Jewelry entered this landscape with a different proposition: crafted golden pieces for the modern, accomplished woman who values elegance over spectacle."
     },
-    { "type": "image", "url": "/projects/eight-jewelery/img1.png",  "alt": "Eight Jewelry Image 1" },
-    { "type": "image", "url": "/projects/eight-jewelery/img2.png",  "alt": "Eight Jewelry Image 2" },
-    { "type": "image", "url": "/projects/eight-jewelery/img3.png",  "alt": "Eight Jewelry Image 3" },
-    { "type": "image", "url": "/projects/eight-jewelery/img4.png",  "alt": "Eight Jewelry Image 4" },
-    { "type": "image", "url": "/projects/eight-jewelery/img5.png",  "alt": "Eight Jewelry Image 5" },
-    { "type": "image", "url": "/projects/eight-jewelery/img6.png",  "alt": "Eight Jewelry Image 6" },
-    { "type": "image", "url": "/projects/eight-jewelery/img7.png",  "alt": "Eight Jewelry Image 7" },
-    { "type": "image", "url": "/projects/eight-jewelery/img8.png",  "alt": "Eight Jewelry Image 8" },
-    { "type": "image", "url": "/projects/eight-jewelery/img9.png",  "alt": "Eight Jewelry Image 9" },
-    { "type": "image", "url": "/projects/eight-jewelery/img10.png", "alt": "Eight Jewelry Image 10" },
-    { "type": "image", "url": "/projects/eight-jewelery/img11.png", "alt": "Eight Jewelry Image 11" },
-    { "type": "image", "url": "/projects/eight-jewelery/img12.png", "alt": "Eight Jewelry Image 12" },
-    { "type": "image", "url": "/projects/eight-jewelery/img13.png", "alt": "Eight Jewelry Image 13" },
-    { "type": "image", "url": "/projects/eight-jewelery/img14.png", "alt": "Eight Jewelry Image 14" },
-    { "type": "image", "url": "/projects/eight-jewelery/img15.png", "alt": "Eight Jewelry Image 15" },
-    { "type": "image", "url": "/projects/eight-jewelery/img16.png", "alt": "Eight Jewelry Image 16" },
-    { "type": "image", "url": "/projects/eight-jewelery/img17.png", "alt": "Eight Jewelry Image 17" },
-    { "type": "image", "url": "/projects/eight-jewelery/img18.png", "alt": "Eight Jewelry Image 18" },
-    { "type": "image", "url": "/projects/eight-jewelery/img19.png", "alt": "Eight Jewelry Image 19" }
-  ]
+    {
+      "type": "text",
+      "content": "The challenge was to establish a brand that could resonate locally while appealing to an international clientele. The identity needed to communicate refinement and exclusivity without the visual clichés that dominate the category. Most critically, it needed to feel contemporary, not constrained by conventions of what luxury jewelry \"should\" look like."
+    },
+    {
+      "type": "text",
+      "content": "We saw an opportunity to create something that felt both intimate and universal. The name \"Eight\" offered conceptual richness: a number that exists across cultures, a form that suggests continuity and completeness, a shape that appears in nature's most perfect proportions."
+    },
+    {
+      "type": "text",
+      "content": "Rather than presenting Eight as merely a purveyor of beautiful objects, we positioned the brand around a deeper idea: jewelry as a form of self-expression, as permission to be fully oneself. The tagline \"Express yourself freely\" isn't aspirational rhetoric, it's an invitation to view adornment as an act of personal agency."
+    },
+    {
+      "type": "image",
+      "url": "/projects/eight-jewelery/img1.png",
+      "alt": "Eight Jewelry Brand Identity",
+      "caption": "Main brand identity and logo design"
+    },
+    {
+      "type": "image",
+      "url": "/projects/eight-jewelery/img2.png",
+      "alt": "Eight Jewelry Brand Elements",
+      "caption": "Brand elements and typography system"
+    },
+    {
+      "type": "image",
+      "url": "/projects/eight-jewelery/img3.png",
+      "alt": "Eight Jewelry Color Palette",
+      "caption": "Color palette and visual language"
+    },
+    {
+      "type": "image",
+      "url": "/projects/eight-jewelery/img4.png",
+      "alt": "Eight Jewelry Packaging",
+      "caption": "Packaging design and applications"
+    },
+    {
+      "type": "image",
+      "url": "/projects/eight-jewelery/img5.png",
+      "alt": "Eight Jewelry Business Cards",
+      "caption": "Business cards with silken texture"
+    },
+    {
+      "type": "image",
+      "url": "/projects/eight-jewelery/img6.png",
+      "alt": "Eight Jewelry Marketing Materials",
+      "caption": "Marketing materials and collateral"
+    },
+    {
+      "type": "image",
+      "url": "/projects/eight-jewelery/img7.png",
+      "alt": "Eight Jewelry Photography",
+      "caption": "Intimate photography direction"
+    },
+    {
+      "type": "image",
+      "url": "/projects/eight-jewelery/img8.png",
+      "alt": "Eight Jewelry Digital Applications",
+      "caption": "Digital applications and web presence"
+    },
+    {
+      "type": "image",
+      "url": "/projects/eight-jewelery/img9.png",
+      "alt": "Eight Jewelry Boutique",
+      "caption": "Boutique environment applications"
+    },
+    {
+      "type": "image",
+      "url": "/projects/eight-jewelery/img10.png",
+      "alt": "Eight Jewelry Brand Guidelines",
+      "caption": "Brand guidelines and usage examples"
+    },
+    {
+      "type": "image",
+      "url": "/projects/eight-jewelery/img11.png",
+      "alt": "Eight Jewelry Jewelry Pieces",
+      "caption": "Jewelry pieces and product photography"
+    },
+    {
+      "type": "image",
+      "url": "/projects/eight-jewelery/img12.png",
+      "alt": "Eight Jewelry International",
+      "caption": "International market applications"
+    },
+    {
+      "type": "image",
+      "url": "/projects/eight-jewelery/img13.png",
+      "alt": "Eight Jewelry Brand System",
+      "caption": "Complete brand system overview"
+    },
+    {
+      "type": "image",
+      "url": "/projects/eight-jewelery/img14.png",
+      "alt": "Eight Jewelry Final Applications",
+      "caption": "Final brand applications and implementations"
+    },
+    {
+      "type": "image",
+      "url": "/projects/eight-jewelery/img15.png",
+      "alt": "Eight Jewelry Brand Showcase",
+      "caption": "Brand showcase and portfolio presentation"
+    },
+    {
+      "type": "text",
+      "content": "The Approach + The Outcome"
+    },
+    {
+      "type": "text",
+      "content": "The mark transforms the numeral eight into an elegant pendant silhouette, with a gemstone cradled at its intersection. This wasn't about clever wordplay or cultural reference, it was about creating an icon that could exist as both symbol and product. The form is architectural yet organic, structured yet fluid, capturing the duality of strength and grace that defines the brand's audience."
+    },
+    {
+      "type": "text",
+      "content": "We developed a visual language rooted in luxurious restraint. The color palette centers on graduated golds, from warm champagne to deep 24-karat, always set against deep black to create maximum impact with minimum embellishment. The typography is refined and spacious, allowing each letterform to breathe."
+    },
+    {
+      "type": "text",
+      "content": "The silken texture that flows through the brand applications, appearing on business cards and marketing materials, evokes the sensory experience of fine fabric against skin. It's a subtle reminder that luxury is felt, not just seen. The photography direction prioritizes intimacy over spectacle: close compositions, deliberate lighting, moments of quiet confidence rather than overt display."
+    },
+    {
+      "type": "text",
+      "content": "Every touchpoint reinforces a singular message: this is jewelry for women who have nothing to prove, who understand that true luxury whispers."
+    },
+    {
+      "type": "text",
+      "content": "Eight Jewelry launched with an identity that transcends its geographic origins while remaining rooted in the craftsmanship and attention to detail Kuwait is known for. The brand successfully positioned itself in the space between heritage jewelers and contemporary fast-luxury, appealing to discerning women who seek pieces that feel personal rather than prescribed."
+    },
+    {
+      "type": "text",
+      "content": "The visual system proved flexible enough to work across international markets while maintaining a cohesive point of view. From boutique environments to digital platforms, the brand communicates with consistency and clarity."
+    },
+    {
+      "type": "text",
+      "content": "Most importantly, Eight established an emotional territory that few luxury jewelry brands occupy: not aspiration, not status, but self-possession. The brand invites its audience to see jewelry not as a marker of achievement, but as an extension of identity, a tangible expression of who they already are."
+    }
+  ],
+  "results": [
+    "Successfully positioned between heritage and contemporary luxury markets",
+    "Established emotional territory of self-possession vs. status",
+    "Created flexible visual system for international markets",
+    "Achieved brand recognition in competitive Kuwait market"
+  ],
+  "testimonial": {
+    "quote": "StudioEyn understood our vision completely. They created an identity that speaks to the modern woman who values authenticity over display. The results have been transformative for our brand positioning.",
+    "author": "Sarah Al-Mansouri",
+    "position": "Founder, Eight Jewelry"
+  }
 }

@@ -94,7 +94,7 @@ const WorksCaseStudies: React.FC = () => {
         <div className="container-custom">
           <div className="text-center">
             <h2 className="text-4xl md:text-6xl lg:text-7xl font-normal text-white leading-tight uppercase tracking-tight mb-6">
-              Our Works
+              More of our works
             </h2>
             <p className="text-gray-300">Projects are being updated. Please check back soon.</p>
           </div>
@@ -115,7 +115,7 @@ const WorksCaseStudies: React.FC = () => {
           isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'
         }`}>
           <div className="text-left">
-            <h2 className="text-4xl md:text-6xl lg:text-7xl font-normal text-white leading-tight uppercase tracking-tight">Our Works</h2>
+            <h2 className="text-4xl md:text-6xl lg:text-7xl font-normal text-white leading-tight uppercase tracking-tight">More of our works</h2>
           </div>
         </div>
 

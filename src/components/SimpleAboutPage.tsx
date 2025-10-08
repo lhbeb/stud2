@@ -61,7 +61,7 @@ const SimpleAboutPage: React.FC = () => {
               Our Story
             </h2>
             <p className="text-lg text-gray-300 font-light leading-relaxed mb-6">
-              Studio Eyn is a multidisciplinary design practice specializing in transformative brand experiences. Our name, derived from the Arabic word for "eye," reflects our fundamental approach: to see what others overlook, to perceive the essential truth of a brand, and to envision futures that feel both inevitable and extraordinary.
+              Studio Eyn was founded by Abdeljebbar Bouftih and Elmehdi El Mahboubi, two visionaries who recognized the need for brands that transcend conventional boundaries. Our name, derived from the Arabic word for "eye," reflects our fundamental approach: to see what others overlook, to perceive the essential truth of a brand, and to envision futures that feel both inevitable and extraordinary.
             </p>
             <p className="text-lg text-gray-300 font-light leading-relaxed">
               We operate at the intersection of strategy, aesthetics, and cultural resonance, crafting identities that don't just exist in the market, but shape it.
