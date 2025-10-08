@@ -82,7 +82,7 @@ const CareersPage: React.FC = () => {
   return (
     <div className="min-h-screen bg-white">
       {/* Hero Section */}
-      <section className="relative py-20 lg:py-32">
+      <section className="relative pt-32 pb-20 lg:pt-40 lg:pb-32">
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto text-center">
             <h1 className="text-4xl lg:text-6xl font-light text-black mb-6">
@@ -123,13 +123,13 @@ const CareersPage: React.FC = () => {
             
             <div className="space-y-8">
               {/* Senior Brand Designer */}
-              <div className="bg-white p-8 rounded-lg shadow-sm border border-gray-200">
-                <div className="flex flex-col lg:flex-row lg:items-center lg:justify-between mb-4">
-                  <div>
+              <div className="bg-white p-6 sm:p-8 rounded-lg shadow-sm border border-gray-200">
+                <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between mb-4">
+                  <div className="flex-1">
                     <h3 className="text-xl font-medium text-black mb-2">Senior Brand Designer</h3>
                     <p className="text-gray-600">Full-time • Remote/On-site</p>
                   </div>
-                  <span className="inline-block px-3 py-1 bg-black text-white text-sm uppercase tracking-wide mt-2 lg:mt-0" style={{ borderRadius: '2px' }}>
+                  <span className="inline-block px-4 py-2 bg-black text-white text-sm font-medium uppercase tracking-wide mt-3 sm:mt-0 self-start sm:self-center" style={{ borderRadius: '2px' }}>
                     Open
                   </span>
                 </div>
@@ -149,13 +149,13 @@ const CareersPage: React.FC = () => {
               </div>
 
               {/* UI/UX Designer */}
-              <div className="bg-white p-8 rounded-lg shadow-sm border border-gray-200">
-                <div className="flex flex-col lg:flex-row lg:items-center lg:justify-between mb-4">
-                  <div>
+              <div className="bg-white p-6 sm:p-8 rounded-lg shadow-sm border border-gray-200">
+                <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between mb-4">
+                  <div className="flex-1">
                     <h3 className="text-xl font-medium text-black mb-2">UI/UX Designer</h3>
                     <p className="text-gray-600">Full-time • Remote/On-site</p>
                   </div>
-                  <span className="inline-block px-3 py-1 bg-black text-white text-sm uppercase tracking-wide mt-2 lg:mt-0" style={{ borderRadius: '2px' }}>
+                  <span className="inline-block px-4 py-2 bg-black text-white text-sm font-medium uppercase tracking-wide mt-3 sm:mt-0 self-start sm:self-center" style={{ borderRadius: '2px' }}>
                     Open
                   </span>
                 </div>
@@ -175,13 +175,13 @@ const CareersPage: React.FC = () => {
               </div>
 
               {/* Creative Director */}
-              <div className="bg-white p-8 rounded-lg shadow-sm border border-gray-200">
-                <div className="flex flex-col lg:flex-row lg:items-center lg:justify-between mb-4">
-                  <div>
+              <div className="bg-white p-6 sm:p-8 rounded-lg shadow-sm border border-gray-200">
+                <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between mb-4">
+                  <div className="flex-1">
                     <h3 className="text-xl font-medium text-black mb-2">Creative Director</h3>
                     <p className="text-gray-600">Full-time • On-site</p>
                   </div>
-                  <span className="inline-block px-3 py-1 bg-black text-white text-sm uppercase tracking-wide mt-2 lg:mt-0" style={{ borderRadius: '2px' }}>
+                  <span className="inline-block px-4 py-2 bg-black text-white text-sm font-medium uppercase tracking-wide mt-3 sm:mt-0 self-start sm:self-center" style={{ borderRadius: '2px' }}>
                     Open
                   </span>
                 </div>

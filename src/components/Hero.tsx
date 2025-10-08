@@ -59,7 +59,7 @@ const Hero: React.FC = () => {
         
         {/* Middle: Hero text - LEFT ALIGNED WITH LOGO */}
         <div className="px-8 pb-4">
-          <h1 className="font-normal text-black leading-tight text-2xl uppercase tracking-tight animate-slide-up text-left mb-4" style={{ fontWeight: 400, margin: 0 }}>
+          <h1 className="font-normal text-black leading-tight text-2xl uppercase tracking-tight animate-slide-up text-left mb-6" style={{ fontWeight: 400, margin: 0 }}>
             <span
               className="inline-block text-black font-mono align-middle w-full whitespace-nowrap"
               style={{ minWidth: '3ch', display: 'block' }}
@@ -70,13 +70,13 @@ const Hero: React.FC = () => {
             <span className="block w-full whitespace-nowrap">SEE BRANDS.</span>
             <span className="block w-full whitespace-nowrap">WE SHAPE THEM</span>
           </h1>
-          <p className="text-sm text-gray-600 animate-slide-up animation-delay-200 font-light">
+          <p className="text-lg text-gray-600 animate-slide-up animation-delay-200 font-light leading-relaxed">
             Branding Agency, Advanced Design and Marketing Solutions
           </p>
         </div>
         
         {/* Bottom: CTA button - LEFT ALIGNED WITH LOGO */}
-        <div className="px-8 pt-4">
+        <div className="px-8 pt-6">
           <a
             href="/book-call"
             className="inline-flex items-center px-8 py-4 bg-black text-white text-base font-light uppercase tracking-wide hover:bg-gray-900 transition-colors duration-300 animate-slide-up animation-delay-400"
