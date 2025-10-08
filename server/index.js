@@ -10,10 +10,43 @@ const app = express();
 const PORT = process.env.PORT || 3001;
 
 // Middleware
-app.use(cors({
-  origin: ['http://localhost:5173', 'http://localhost:3000', 'http://localhost:5189', 'http://localhost:5188', 'http://localhost:5187', 'http://localhost:5186', 'http://localhost:5185', 'http://localhost:5184', 'http://localhost:5183', 'http://localhost:5182', 'http://localhost:5181', 'http://localhost:5180'], // Vite dev server and other common ports
-  credentials: true
-}));
+// CORS configuration for development
+const corsOptions = {
+  origin: function (origin, callback) {
+    // Allow requests with no origin (like mobile apps or curl requests)
+    if (!origin) return callback(null, true);
+    
+    // Allow all localhost ports for development
+    if (origin.match(/^http:\/\/localhost:\d+$/)) {
+      return callback(null, true);
+    }
+    
+    // Allow specific production domains (add your production domain here)
+    const allowedOrigins = [
+      'https://studioeyn.com',
+      'https://www.studioeyn.com'
+    ];
+    
+    if (allowedOrigins.includes(origin)) {
+      return callback(null, true);
+    }
+    
+    callback(new Error('Not allowed by CORS'));
+  },
+  credentials: true,
+  methods: ['GET', 'POST', 'PUT', 'DELETE', 'OPTIONS'],
+  allowedHeaders: ['Content-Type', 'Authorization', 'X-Requested-With'],
+  optionsSuccessStatus: 200
+};
+
+app.use(cors(corsOptions));
+
+// Debug middleware to log CORS requests
+app.use((req, res, next) => {
+  console.log(`🌐 ${req.method} ${req.path} from ${req.get('Origin') || 'no-origin'}`);
+  next();
+});
+
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 

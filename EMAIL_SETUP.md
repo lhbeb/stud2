@@ -25,7 +25,8 @@ npm run server
 
 The email service is configured to send emails using:
 - **Sender Email**: arvaradodotcom@gmail.com
-- **Recipient Email**: elmahboubimehdi@gmail.com
+- **Recipient Email**: elmahboubimehdi@gmail.com (notification emails)
+- **Public Email**: contact@studioeyn.com (visible on website)
 - **SMTP Service**: Gmail
 - **App Password**: iwar xzav utnb bxyw
 

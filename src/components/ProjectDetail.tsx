@@ -1,8 +1,9 @@
 import React, { useState, useEffect } from 'react';
-import { useParams, useNavigate } from 'react-router-dom';
+import { useParams, useNavigate, Link } from 'react-router-dom';
 import { ArrowLeft, ExternalLink } from 'lucide-react';
 import { loadProjectBySlug } from '../utils/projectLoader';
 import { Project } from '../types/project';
+import LazyImage from './LazyImage';
 
 const ProjectDetail: React.FC = () => {
   const { slug } = useParams<{ slug: string }>();
@@ -102,31 +103,18 @@ const ProjectDetail: React.FC = () => {
               </p>
             )}
 
-            {/* Challenge, Solution, Results - New Layout */}
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-8 md:gap-12 mt-16 mb-24">
+            {/* The Challenge + The Vision - Before Images */}
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-12 mt-16 mb-24">
               {project.caseStudy.challenge && (
                 <div className={`border-t ${borderColor} pt-6`}>
-                  <h3 className={`text-sm font-normal ${mutedTextColor} mb-4 uppercase tracking-wide`}>Challenge</h3>
+                  <h3 className={`text-sm font-normal ${mutedTextColor} mb-4 uppercase tracking-wide`}>The Challenge</h3>
                   <p className={`${secondaryTextColor} font-light leading-relaxed`}>{project.caseStudy.challenge}</p>
                 </div>
               )}
               {project.caseStudy.solution && (
                 <div className={`border-t ${borderColor} pt-6`}>
-                  <h3 className={`text-sm font-normal ${mutedTextColor} mb-4 uppercase tracking-wide`}>Solution</h3>
+                  <h3 className={`text-sm font-normal ${mutedTextColor} mb-4 uppercase tracking-wide`}>The Vision</h3>
                   <p className={`${secondaryTextColor} font-light leading-relaxed`}>{project.caseStudy.solution}</p>
-                </div>
-              )}
-              {project.caseStudy.results && project.caseStudy.results.length > 0 && (
-                <div className={`border-t ${borderColor} pt-6`}>
-                  <h3 className={`text-sm font-normal ${mutedTextColor} mb-4 uppercase tracking-wide`}>Results</h3>
-                  <ul className="space-y-2">
-                    {project.caseStudy.results.map((result, index) => (
-                      <li key={index} className="flex items-start space-x-2">
-                        <div className={`w-1.5 h-1.5 ${project.background === 'white' ? 'bg-black' : 'bg-white'} rounded-full mt-2 flex-shrink-0`}></div>
-                        <span className={`${secondaryTextColor} font-light`}>{result}</span>
-                      </li>
-                    ))}
-                  </ul>
                 </div>
               )}
             </div>
@@ -141,10 +129,12 @@ const ProjectDetail: React.FC = () => {
           <div className="md:container-custom md:max-w-[1400px] md:mx-auto md:px-4">
             {project.caseStudy.images.map((image, index) => (
               <div key={index} className="relative w-full">
-                <img
+                <LazyImage
                   src={image}
                   alt={`${project.title} - Image ${index + 1}`}
                   className="w-full h-auto object-cover block"
+                  width={800}
+                  height={600}
                 />
               </div>
             ))}
@@ -152,10 +142,30 @@ const ProjectDetail: React.FC = () => {
         </div>
       )}
 
-      {/* Testimonial and Navigation - Back in Container */}
+      {/* The Approach + The Outcome - After Images */}
       <div className="pt-16 md:pt-24">
         <div className="container-custom max-w-[1400px] mx-auto px-4">
-
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-12 mb-16">
+            {project.caseStudy.approach && (
+              <div className={`border-t ${borderColor} pt-6`}>
+                <h3 className={`text-sm font-normal ${mutedTextColor} mb-4 uppercase tracking-wide`}>The Approach</h3>
+                <p className={`${secondaryTextColor} font-light leading-relaxed`}>{project.caseStudy.approach}</p>
+              </div>
+            )}
+            {project.caseStudy.results && project.caseStudy.results.length > 0 && (
+              <div className={`border-t ${borderColor} pt-6`}>
+                <h3 className={`text-sm font-normal ${mutedTextColor} mb-4 uppercase tracking-wide`}>The Outcome</h3>
+                <ul className="space-y-2">
+                  {project.caseStudy.results.map((result, index) => (
+                    <li key={index} className="flex items-start space-x-2">
+                      <div className={`w-1.5 h-1.5 ${project.background === 'white' ? 'bg-black' : 'bg-white'} rounded-full mt-2 flex-shrink-0`}></div>
+                      <span className={`${secondaryTextColor} font-light`}>{result}</span>
+                    </li>
+                  ))}
+                </ul>
+              </div>
+            )}
+          </div>
 
           {/* Navigation */}
           <div className={`mt-16 pt-16 pb-16 md:pb-24 border-t ${borderColor}`}>
@@ -169,14 +179,14 @@ const ProjectDetail: React.FC = () => {
                 <span>Back to Works</span>
               </button>
               
-              <a
-                href="#contact"
+              <Link
+                to="/email"
                 className={`flex items-center space-x-2 px-8 py-4 transition-all duration-300 uppercase ${primaryButtonStyle}`}
                 style={{ borderRadius: '2px' }}
               >
                 <span>Start Your Project</span>
                 <ExternalLink className="h-4 w-4" />
-              </a>
+              </Link>
             </div>
           </div>
         </div>

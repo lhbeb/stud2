@@ -6,23 +6,28 @@ const Team: React.FC = () => {
 
   const team = [
     {
-      name: 'Youssef Eyn',
-      role: 'Creative Director',
+      name: 'ELMehdi EL Mahboubi',
+      role: 'Co-Founder, Creative Director',
       image: 'https://images.pexels.com/photos/1040880/pexels-photo-1040880.jpeg',
     },
     {
-      name: 'Amina Benali',
-      role: 'UI/UX Designer',
+      name: 'Abdeljebbar Bouftih',
+      role: 'Co-Founder, Marketing Specialist',
       image: 'https://images.pexels.com/photos/1181690/pexels-photo-1181690.jpeg',
     },
     {
-      name: 'Omar Alaoui',
-      role: 'Full-Stack Developer',
+      name: 'Walid Azif',
+      role: 'Web Dev, Code Ninja',
       image: 'https://images.pexels.com/photos/1181686/pexels-photo-1181686.jpeg',
     },
     {
-      name: 'Laila Mansouri',
+      name: 'Amine Tair',
       role: 'Brand Strategist',
+      image: 'https://images.pexels.com/photos/1181424/pexels-photo-1181424.jpeg',
+    },
+    {
+      name: 'Abderrazak Abde',
+      role: 'UI/UX Designer',
       image: 'https://images.pexels.com/photos/1181424/pexels-photo-1181424.jpeg',
     },
   ];
@@ -42,7 +47,7 @@ const Team: React.FC = () => {
           </h2>
         </div>
 
-        <div className={`grid grid-cols-2 md:grid-cols-4 gap-6 md:gap-8 stagger-children ${
+        <div className={`grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-6 md:gap-8 stagger-children ${
           isVisible ? 'visible' : ''
         }`}>
           {team.map((member, index) => (
@@ -73,36 +78,6 @@ const Team: React.FC = () => {
           ))}
         </div>
 
-        <div className={`mt-16 md:mt-24 pt-12 border-t border-gray-800 transition-all duration-700 ${
-          isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'
-        }`}>
-          <div className="flex flex-col md:flex-row md:items-center md:justify-between gap-6">
-            <div className="text-left">
-              <p className="text-white font-light text-sm md:text-base mb-2">
-                Want to join our team?
-              </p>
-              <p className="text-gray-400 font-light text-xs md:text-sm">
-                We're always looking for talented designers and developers.
-              </p>
-            </div>
-            <div className="flex flex-col sm:flex-row gap-3">
-              <Link
-                to="/about"
-                className="inline-block px-6 py-3 border border-white text-white text-xs font-normal hover:bg-white hover:text-black transition-colors duration-200 whitespace-nowrap uppercase tracking-wide"
-                style={{ borderRadius: '2px' }}
-              >
-                Learn More
-              </Link>
-              <Link
-                to="/email"
-                className="inline-block px-6 py-3 bg-white text-black text-xs font-normal hover:bg-gray-100 transition-colors duration-200 whitespace-nowrap uppercase tracking-wide"
-                style={{ borderRadius: '2px' }}
-              >
-                Get In Touch
-              </Link>
-            </div>
-          </div>
-        </div>
       </div>
     </section>
   );

@@ -62,6 +62,7 @@ const convertJSONToProject = (jsonProject: ProjectJSON): Project => {
     overview: textContent[0] || '',
     challenge: textContent[1] || '',
     solution: textContent[2] || '',
+    approach: textContent[3] || '',
     results: jsonProject.results || [
       'Increased user engagement',
       'Improved conversion rates',

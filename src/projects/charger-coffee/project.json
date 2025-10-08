@@ -1,11 +1,14 @@
 {
   "thumbnail": "/projects/charger-coffee/thumbnail.png",
   "slug": "charger-coffee",
-  "title": "Charger Coffee Brand Identity",
-  "year": "2024",
+  "title": "Charger Coffee",
+  "subtitle": "Energizing Riyadh's Coffee Culture",
+  "year": "2018",
+  "location": "Riyadh, Saudi Arabia",
+  "sector": "Specialty Coffee & Hospitality",
   "category": "Brand Identity",
   "client": "Charger Coffee",
-  "tags": ["Coffee", "Branding", "Energy"],
+  "tags": ["Coffee", "Branding", "Energy", "Saudi Arabia"],
   "budget": "$1,500 - $3,800",
   "featured": true,
   "background": "white",
@@ -17,15 +20,23 @@
   "content": [
     {
       "type": "text",
-      "content": "Charger Coffee approached us to create a bold, energetic brand identity that would appeal to busy professionals and coffee enthusiasts seeking premium quality and convenience."
-    },
-    {
-      "type": "text", 
-      "content": "The challenge was to create a brand that conveys energy and vitality while maintaining the premium quality and sophistication expected in the competitive coffee market."
+      "content": "The Challenge + The Vision"
     },
     {
       "type": "text",
-      "content": "We developed a dynamic brand system that combines bold typography with energetic color palettes, creating a brand that truly embodies the 'charge' concept."
+      "content": "In 2018, Riyadh's coffee scene was experiencing rapid transformation. A new generation of Saudi consumers was seeking experiences that reflected their contemporary lifestyle while honoring cultural identity. Charger Coffee needed to establish itself within this evolving landscape, not as another coffee shop, but as a destination that understood the pace and energy of modern Riyadh."
+    },
+    {
+      "type": "text",
+      "content": "The challenge was twofold: create a brand identity that could compete in an increasingly sophisticated market, and develop a visual language that spoke to young, urban Saudis without relying on tired tropes or Western coffee shop aesthetics."
+    },
+    {
+      "type": "text",
+      "content": "We envisioned Charger as more than a caffeine provider. The name itself became our conceptual foundation: coffee as fuel, as activation, as the catalyst that powers ambition. This wasn't about slow, contemplative coffee rituals. This was about energy, momentum, and the charge that propels you forward."
+    },
+    {
+      "type": "text",
+      "content": "The identity needed to embody velocity and vitality while maintaining the refinement expected of a premium coffee experience. It needed to feel distinctly Saudi, yet unmistakably contemporary."
     },
     {
       "type": "image",
@@ -98,6 +109,34 @@
       "url": "/projects/charger-coffee/img13.png",
       "alt": "Coffee Brand Showcase",
       "caption": "Brand showcase and portfolio presentation"
+    },
+    {
+      "type": "text",
+      "content": "The Approach + The Outcome"
+    },
+    {
+      "type": "text",
+      "content": "Our solution centered on a bold typographic intervention. We rendered \"شارجر\" (Charger) in Arabic script but constructed the letterforms to visually echo Latin typography, creating an immediate bridge between cultures. The lightning bolt isn't merely decorative, it's structural, integrated directly into the Arabic characters to reinforce the concept of electrical charge and instant energy."
+    },
+    {
+      "type": "text",
+      "content": "The color palette is unapologetically optimistic. The golden yellow radiates warmth and vitality, cutting through Riyadh's visual noise with confidence rather than aggression. It's the color of daybreak, of activation, of that first powerful sip."
+    },
+    {
+      "type": "text",
+      "content": "For the packaging system, we developed an architectural line-art pattern that abstracts Riyadh's urban landscape. These illustrations capture the city's geometric modernity, its vertical ambition, its intersection of tradition and progress. The pattern creates visual continuity across all touchpoints while adding a layer of sophistication that elevates the brand beyond typical coffee shop aesthetics."
+    },
+    {
+      "type": "text",
+      "content": "Charger Coffee launched with an identity that felt both familiar and unexpected. The typographic solution became instantly recognizable, while the comprehensive visual system gave the brand flexibility to expand across multiple formats and locations."
+    },
+    {
+      "type": "text",
+      "content": "The brand succeeded in positioning itself within Riyadh's competitive specialty coffee market by owning a distinct emotional territory: coffee as empowerment. Every element, from the electric wordmark to the energetic color palette to the dynamic packaging, reinforced a singular idea: this is where you come to charge up, to fuel your ambitions, to power through your day."
+    },
+    {
+      "type": "text",
+      "content": "In a market crowded with coffee concepts, Charger established clarity through conceptual coherence and visual boldness."
     }
   ],
   "results": [

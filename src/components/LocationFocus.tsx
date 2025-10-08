@@ -37,9 +37,8 @@ const LocationFocus: React.FC = () => {
               isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'
             }`}>
               <p className="text-xl md:text-2xl font-light leading-relaxed text-gray-200 max-w-3xl mx-auto">
-                With studios in <span className="text-white font-normal">Casablanca</span>, 
-                <span className="text-white font-normal"> London</span>, and the 
-                <span className="text-white font-normal"> United States</span>, we specialize in 
+                With studios in <span className="text-white font-normal">Casablanca</span> and 
+                <span className="text-white font-normal"> London</span>, we specialize in 
                 creating exceptional brand experiences for clients across the 
                 <span className="text-white font-normal"> Middle East and Gulf region</span>.
               </p>
@@ -77,7 +76,7 @@ const LocationFocus: React.FC = () => {
                 <div className="text-xs text-gray-400 font-light uppercase tracking-wide">Years</div>
               </div>
               <div className="text-center">
-                <div className="text-2xl md:text-3xl font-light text-white mb-1">3</div>
+                <div className="text-2xl md:text-3xl font-light text-white mb-1">2</div>
                 <div className="text-xs text-gray-400 font-light uppercase tracking-wide">Offices</div>
               </div>
             </div>

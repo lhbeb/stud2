@@ -1,10 +1,11 @@
 import React, { useState, useEffect } from 'react';
 import { Menu, X, Mail } from 'lucide-react';
-import { Link } from 'react-router-dom';
+import { Link, useLocation } from 'react-router-dom';
 
 const Navigation: React.FC = () => {
   const [isScrolled, setIsScrolled] = useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+  const location = useLocation();
 
   useEffect(() => {
     let ticking = false;
@@ -31,12 +32,21 @@ const Navigation: React.FC = () => {
     { name: 'Services', href: '#services' },
     { name: 'Process', href: '#process' },
     { name: 'About', href: '/about' },
+    { name: 'Careers', href: '/careers' },
     { name: 'Contact', href: '#contact' },
   ];
 
   const handleSectionClick = (e: React.MouseEvent<HTMLAnchorElement>, href: string) => {
     if (href.startsWith('#')) {
       e.preventDefault();
+      
+      // If we're not on the home page, navigate to home page with hash
+      if (location.pathname !== '/') {
+        window.location.href = `/${href}`;
+        return;
+      }
+      
+      // If we're on the home page, scroll to the section
       const element = document.querySelector(href);
       if (element) {
         element.scrollIntoView({ 
@@ -74,7 +84,7 @@ const Navigation: React.FC = () => {
                   <img
                     src="/logostudio-inverted.svg"
                     alt="StudioEyn Logo"
-                    className={`absolute top-0 left-0 h-12 w-auto transition-all duration-300 ease-in-out ${
+                    className={`absolute top-0 left-0 h-14 w-auto transition-all duration-300 ease-in-out ${
                       isScrolled 
                         ? 'opacity-100 rotate-0' 
                         : 'opacity-0 -rotate-2'
@@ -88,16 +98,29 @@ const Navigation: React.FC = () => {
             <div className="hidden md:block ml-auto">
               <div className="flex items-center space-x-12">
                         {navItems.map((item) => {
-                          const isExternalLink = item.href.startsWith('#');
-                          const LinkComponent = isExternalLink ? 'a' : Link;
-                          const linkProps = isExternalLink 
-                            ? { href: item.href }
-                            : { to: item.href };
+                          const isHashLink = item.href.startsWith('#');
+                          
+                          if (isHashLink) {
+                            return (
+                              <a
+                                key={item.name}
+                                href={item.href}
+                                onClick={(e) => handleSectionClick(e, item.href)}
+                                className={`transition-all duration-300 ease-in-out text-sm font-normal uppercase tracking-wide ${
+                                  isScrolled 
+                                    ? 'text-white hover:text-gray-300' 
+                                    : 'text-black hover:text-gray-600'
+                                }`}
+                              >
+                                {item.name}
+                              </a>
+                            );
+                          }
                           
                           return (
-                            <LinkComponent
+                            <Link
                               key={item.name}
-                              {...linkProps}
+                              to={item.href}
                               className={`transition-all duration-300 ease-in-out text-sm font-normal uppercase tracking-wide ${
                                 isScrolled 
                                   ? 'text-white hover:text-gray-300' 
@@ -105,7 +128,7 @@ const Navigation: React.FC = () => {
                               }`}
                             >
                               {item.name}
-                            </LinkComponent>
+                            </Link>
                           );
                         })}
                 {/* Email Button - Following Style Guide */}
@@ -152,25 +175,41 @@ const Navigation: React.FC = () => {
         }`}>
           <div className="container-custom flex flex-col items-center justify-center space-y-8 w-full">
                     {navItems.map((item) => {
-                      const isExternalLink = item.href.startsWith('#');
-                      const LinkComponent = isExternalLink ? 'a' : Link;
-                      const linkProps = isExternalLink 
-                        ? { href: item.href }
-                        : { to: item.href };
+                      const isHashLink = item.href.startsWith('#');
+                      
+                      if (isHashLink) {
+                        return (
+                          <a
+                            key={item.name}
+                            href={item.href}
+                            onClick={(e) => {
+                              handleSectionClick(e, item.href);
+                              setIsMobileMenuOpen(false);
+                            }}
+                            className={`block transition-all duration-300 ease-in-out text-xl font-normal text-center uppercase tracking-wide ${
+                              isScrolled 
+                                ? 'text-white hover:text-gray-300' 
+                                : 'text-black hover:text-gray-600'
+                            }`}
+                          >
+                            {item.name}
+                          </a>
+                        );
+                      }
                       
                       return (
-                        <LinkComponent
+                        <Link
                           key={item.name}
-                          {...linkProps}
+                          to={item.href}
+                          onClick={() => setIsMobileMenuOpen(false)}
                           className={`block transition-all duration-300 ease-in-out text-xl font-normal text-center uppercase tracking-wide ${
                             isScrolled 
                               ? 'text-white hover:text-gray-300' 
                               : 'text-black hover:text-gray-600'
                           }`}
-                          onClick={() => setIsMobileMenuOpen(false)}
                         >
                           {item.name}
-                        </LinkComponent>
+                        </Link>
                       );
                     })}
             {/* Mobile Email Button - Following Style Guide */}

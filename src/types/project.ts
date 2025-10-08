@@ -18,6 +18,7 @@ export interface Project {
     overview: string;
     challenge: string;
     solution: string;
+    approach?: string;
     results: string[];
     images: string[];
     testimonial?: {

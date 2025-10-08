@@ -1,5 +1,6 @@
 import React, { useEffect, useRef, useState } from 'react';
 import { gsap } from 'gsap';
+import LazyImage from './LazyImage';
 
 const IMAGE_NUMBERS = Array.from({ length: 24 }, (_, i) => i + 1).filter(n => n !== 9 && n !== 23);
 
@@ -127,14 +128,13 @@ const CreativeProcessGrid: React.FC = () => {
                   className="creative-grid-cell aspect-square w-full mb-4 overflow-hidden shadow bg-gray-100 flex-shrink-0"
                   style={{ margin: 0, padding: 0, borderRadius: 0 }}
                 >
-                  <img
+                  <LazyImage
                     src={img}
                     alt="Creative Process"
                     className="w-full h-full object-cover object-center grayscale"
-                    draggable={false}
-                    loading="lazy"
+                    width={200}
+                    height={200}
                     onError={handleImgError}
-                    style={{ borderRadius: 0 }}
                   />
                 </div>
               ))}

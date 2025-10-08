@@ -1,9 +1,10 @@
-import React, { useState, useEffect, useRef } from 'react';
+import React, { useState, useEffect } from 'react';
 import { ChevronLeft, ChevronRight } from 'lucide-react';
 import { useNavigate } from 'react-router-dom';
 import { useScrollTrigger } from '../hooks/useScrollTrigger';
 import { loadAllProjects } from '../utils/projectLoader';
 import { Project } from '../types/project';
+import LazyImage from './LazyImage';
 
 const WorksCaseStudies: React.FC = () => {
   const { elementRef, isVisible } = useScrollTrigger();
@@ -13,7 +14,6 @@ const WorksCaseStudies: React.FC = () => {
   const [totalPages, setTotalPages] = useState(0);
   const [isLoading, setIsLoading] = useState(true);
   const [isTransitioning, setIsTransitioning] = useState(false);
-  const containerRef = useRef<HTMLDivElement>(null);
 
   const projectsPerPage = 6; // 2x3 grid on desktop, 1x6 on mobile
 
@@ -122,7 +122,6 @@ const WorksCaseStudies: React.FC = () => {
         {/* Projects Grid */}
         <div className="relative">
           <div 
-            ref={containerRef}
             className={`transition-all duration-500 ${
               isTransitioning ? 'opacity-50' : 'opacity-100'
             }`}
@@ -142,11 +141,12 @@ const WorksCaseStudies: React.FC = () => {
                 >
                   {/* Project Image */}
                   <div className="relative aspect-[3/4] overflow-hidden mb-4">
-                    <img
+                    <LazyImage
                       src={project.thumbnailImage}
                       alt={project.title}
                       className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
-                      draggable={false}
+                      width={400}
+                      height={533}
                     />
                     {/* Subtle overlay on hover */}
                     <div className="absolute inset-0 bg-black/0 group-hover:bg-black/10 transition-all duration-500"></div>
@@ -175,11 +175,12 @@ const WorksCaseStudies: React.FC = () => {
                 >
                   {/* Project Image */}
                   <div className="relative aspect-[3/4] overflow-hidden mb-4">
-                    <img
+                    <LazyImage
                       src={project.thumbnailImage}
                       alt={project.title}
                       className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
-                      draggable={false}
+                      width={400}
+                      height={533}
                     />
                     {/* Subtle overlay on hover */}
                     <div className="absolute inset-0 bg-black/0 group-hover:bg-black/10 transition-all duration-500"></div>

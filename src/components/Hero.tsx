@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from "react";
+import LazyVideo from "./LazyVideo";
 
 const HERO_VIDEO_URL =
   "https://player.vimeo.com/video/1124906803?autoplay=1&loop=1&muted=1&controls=0&title=0&byline=0&portrait=0&playsinline=1&autopause=0&badge=0&app_id=58479";
@@ -47,7 +48,7 @@ const Hero: React.FC = () => {
       }}>
         {/* Top: Hero text - LEFT ALIGNED WITH LOGO */}
         <div className="flex-shrink-0 px-8 pb-4">
-          <h1 className="font-normal text-black leading-tight text-2xl uppercase tracking-tight animate-slide-up text-left" style={{ fontWeight: 400, margin: 0 }}>
+          <h1 className="font-normal text-black leading-tight text-2xl uppercase tracking-tight animate-slide-up text-left mb-4" style={{ fontWeight: 400, margin: 0 }}>
             <span
               className="inline-block text-black font-mono align-middle w-full whitespace-nowrap"
               style={{ minWidth: '3ch', display: 'block' }}
@@ -58,25 +59,22 @@ const Hero: React.FC = () => {
             <span className="block w-full whitespace-nowrap">SEE BRANDS.</span>
             <span className="block w-full whitespace-nowrap">WE SHAPE THEM</span>
           </h1>
+          <p className="text-sm text-gray-600 animate-slide-up animation-delay-200 font-light">
+            Branding Agency, Advanced Design and Marketing Solutions
+          </p>
         </div>
         
         {/* Middle: Full-Width Video */}
         <div className="flex-1 flex items-center" style={{ minHeight: '400px' }}>
           <div className="w-full h-full relative">
-            <iframe
+            <LazyVideo
               src={HERO_VIDEO_URL}
-              frameBorder="0"
-              allow="autoplay; fullscreen; picture-in-picture; clipboard-write; encrypted-media; web-share"
-              referrerPolicy="strict-origin-when-cross-origin"
-              allowFullScreen
-              title="STUDIOEYN"
               className="w-full h-full object-cover pointer-events-none"
-              style={{ 
-                zIndex: 1,
-                aspectRatio: '1/1',
-                minHeight: '280px'
-              }}
-            ></iframe>
+              fallbackImage="/fallback.jpeg"
+              priority={true}
+              width={400}
+              height={400}
+            />
           </div>
         </div>
         
@@ -98,10 +96,10 @@ const Hero: React.FC = () => {
         <div className="container-custom h-full">
           <div className="flex items-center h-full">
             {/* Left Column: Text Content */}
-            <div className="w-1/3 pr-8 relative">
-              {/* Main Content */}
-              <div className="relative z-10">
-                <h1 className="text-4xl lg:text-5xl font-normal text-black leading-tight mb-8 animate-slide-up uppercase tracking-tight" style={{ fontWeight: 400 }}>
+            <div className="w-1/3 pr-8 relative flex items-center">
+              {/* Main Content - Centered with video */}
+              <div className="relative z-10 w-full">
+                <h1 className="text-4xl lg:text-5xl font-normal text-black leading-tight mb-6 animate-slide-up uppercase tracking-tight" style={{ fontWeight: 400 }}>
                   <span
                     className="inline-block text-black font-mono align-middle w-full whitespace-nowrap"
                     style={{ minWidth: '3ch', display: 'block' }}
@@ -113,9 +111,13 @@ const Hero: React.FC = () => {
                   <span className="block w-full whitespace-nowrap">WE SHAPE THEM</span>
                 </h1>
                 
+                <p className="text-lg text-gray-600 mb-8 animate-slide-up animation-delay-200 font-light">
+                  Branding Agency, Advanced Design and Marketing Solutions
+                </p>
+                
                 <a
                 href="/book-call"
-                className="inline-flex items-center px-8 py-4 bg-black text-white font-normal hover:bg-gray-900 transition-all duration-300 animate-slide-up animation-delay-200 uppercase mb-12"
+                className="inline-flex items-center px-8 py-4 bg-black text-white font-normal hover:bg-gray-900 transition-all duration-300 animate-slide-up animation-delay-200 uppercase"
                 style={{ borderRadius: '2px' }}
                >
                   <img src="/arrow.svg" alt="" className="h-3 w-3 mr-3" />
@@ -127,28 +129,13 @@ const Hero: React.FC = () => {
             {/* Right Column: Video/Image */}
             <div className="w-2/3 pl-8 flex justify-end">
               <div className="relative w-[840px] h-[672px] rounded-sm overflow-hidden">
-                {/* Video with new aspect ratio */}
-                <iframe
+                <LazyVideo
                   src={DESKTOP_HERO_VIDEO_URL}
-                  frameBorder="0"
-                  allow="autoplay; fullscreen; picture-in-picture; clipboard-write; encrypted-media; web-share"
-                  referrerPolicy="strict-origin-when-cross-origin"
-                  allowFullScreen
-                  title="STUDIOEYN"
                   className="absolute inset-0 w-full h-full object-cover pointer-events-none"
-                  style={{ zIndex: 1 }}
-                ></iframe>
-                
-                {/* Fallback image (hidden when video loads) */}
-                <img
-                  src="/hero-fallback.jpg"
-                  alt="StudioEyn Branding Solutions"
-                  className="absolute inset-0 w-full h-full object-cover"
-                  style={{ zIndex: 0 }}
-                  onError={(e) => {
-                    // Hide fallback if image doesn't exist
-                    (e.currentTarget as HTMLImageElement).style.display = 'none';
-                  }}
+                  fallbackImage="/fallback.jpeg"
+                  priority={true}
+                  width={840}
+                  height={672}
                 />
               </div>
             </div>

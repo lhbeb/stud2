@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
-import { ArrowLeft, Calendar, Clock, User, Mail, Phone, MessageSquare, CheckCircle, Users, Zap, Shield } from 'lucide-react';
+import { ArrowLeft, Calendar, User, Mail, Phone, MessageSquare, Users } from 'lucide-react';
 
 const BookCallPage: React.FC = () => {
   const navigate = useNavigate();
@@ -156,7 +156,12 @@ const BookCallPage: React.FC = () => {
       <div className="min-h-screen bg-white text-black flex items-center justify-center">
         <div className="container-custom text-center">
           <div className="max-w-2xl mx-auto">
-            <CheckCircle className="h-16 w-16 text-green-600 mx-auto mb-6" />
+            <div className="h-16 w-16 bg-black mx-auto mb-6 flex items-center justify-center">
+              <div className="w-8 h-8 border-2 border-white transform rotate-45">
+                <div className="w-2 h-6 bg-white transform -rotate-45 translate-x-1 translate-y-1"></div>
+                <div className="w-4 h-2 bg-white transform -rotate-45 -translate-x-1 translate-y-3"></div>
+              </div>
+            </div>
             <h1 className="text-3xl md:text-4xl font-normal text-black mb-6 uppercase tracking-tight">
               Call Booked Successfully!
             </h1>

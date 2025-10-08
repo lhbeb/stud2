@@ -8,7 +8,7 @@ export default {
         'xs': '475px',
       },
       fontFamily: {
-        sans: ['Helvetica', '-apple-system', 'BlinkMacSystemFont', 'Segoe UI', 'sans-serif'],
+        sans: ['DM Sans', 'Helvetica', '-apple-system', 'BlinkMacSystemFont', 'Segoe UI', 'sans-serif'],
       },
       colors: {
         gray: {

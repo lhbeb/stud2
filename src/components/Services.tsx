@@ -1,4 +1,3 @@
-import { ArrowRight } from 'lucide-react';
 import { useScrollTrigger } from '../hooks/useScrollTrigger';
 import { Link } from 'react-router-dom';
 
@@ -50,7 +49,7 @@ const Services: React.FC = () => {
           isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'
         }`}>
           <h2 className="text-4xl md:text-6xl lg:text-7xl font-normal text-white leading-tight uppercase tracking-tight mb-8">
-            Our Expertise
+            What we do?
           </h2>
           <p className="text-lg md:text-xl text-gray-300 font-light max-w-4xl leading-relaxed">
             Strategic brand and digital design solutions for the Middle East and Gulf region.
@@ -101,39 +100,6 @@ const Services: React.FC = () => {
           ))}
         </div>
 
-        {/* Bottom CTA Section */}
-        <div className={`mt-20 md:mt-28 transition-all duration-700 ${
-          isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'
-        }`}>
-          <div className="border-t border-gray-700 pt-12">
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-12 items-center">
-              <div>
-                <h3 className="text-3xl md:text-4xl font-normal text-white mb-4 uppercase tracking-tight">
-                  Start a project with StudioEyn
-                </h3>
-                <p className="text-gray-300 font-light max-w-xl">
-                  Tell us about your brand or product. We'll propose a clear path forward in 24 hours.
-                </p>
-              </div>
-              <div className="flex md:justify-end gap-4">
-                <a
-                  href="/book-call"
-                  className="inline-flex items-center px-8 py-4 bg-white text-black font-normal hover:bg-gray-100 transition-all duration-300 uppercase tracking-wide whitespace-nowrap"
-                  style={{ borderRadius: '2px' }}
-                >
-                  <span>Book a Call</span>
-                </a>
-                <Link
-                  to="/email"
-                  className="inline-flex items-center px-8 py-4 border border-white text-white font-normal hover:bg-white hover:text-black transition-all duration-300 uppercase tracking-wide whitespace-nowrap"
-                  style={{ borderRadius: '2px' }}
-                >
-                  <span>Email Us</span>
-                </Link>
-              </div>
-            </div>
-          </div>
-        </div>
       </div>
     </section>
   );
