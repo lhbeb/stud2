@@ -101,7 +101,7 @@ const ProjectDetail: React.FC = () => {
           </button>
 
           {/* Project Header */}
-          <div className="mb-16">
+          <div className={project.slug === 'byers-christopher-allen' ? 'mb-8' : 'mb-16'}>
             <h1 className={`text-4xl md:text-6xl lg:text-7xl font-normal ${textColor} leading-tight uppercase tracking-tight mb-4`}>
               {project.title}
             </h1>
@@ -135,7 +135,7 @@ const ProjectDetail: React.FC = () => {
 
       {/* Custom Content for Christopher Project */}
       {project?.slug === 'byers-christopher-allen' && rawProjectData && (
-        <div className="pt-16 md:pt-24">
+        <div className="pt-4">
           <div className="container-custom max-w-[1400px] mx-auto px-4">
             <div className="space-y-8">
               {rawProjectData.content.map((item: any, index: number) => {
