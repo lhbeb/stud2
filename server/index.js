@@ -2,6 +2,7 @@ import express from 'express';
 import cors from 'cors';
 import dotenv from 'dotenv';
 import { bookCallRoute } from './routes/email.js';
+import notifyVisitRoute from './routes/notify-visit.js';
 
 // Load environment variables
 dotenv.config();
@@ -52,6 +53,7 @@ app.use(express.urlencoded({ extended: true }));
 
 // Routes
 app.use('/api', bookCallRoute);
+app.use('/api', notifyVisitRoute);
 
 // Health check endpoint
 app.get('/api/health', (req, res) => {

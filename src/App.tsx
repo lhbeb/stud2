@@ -13,6 +13,7 @@ import SmoothScroll from './components/SmoothScroll';
 import PartnersSection from './components/PartnersSection';
 import WhatsAppButton from './components/WhatsAppButton';
 import SkeletonLoader from './components/SkeletonLoader';
+import VisitNotifier from './components/VisitNotifier';
 
 // Lazy load non-critical components
 const ProjectDetail = lazy(() => import('./components/ProjectDetail'));
@@ -30,6 +31,7 @@ function App() {
         <SmoothScroll />
         <Navigation />
         <WhatsAppButton />
+        <VisitNotifier />
         <Routes>
           <Route path="/" element={
             <main>

@@ -22,6 +22,8 @@ const ProjectDetail: React.FC = () => {
       // Load raw JSON data for Christopher project
       if (slug === 'byers-christopher-allen') {
         setRawProjectData(byersChristopherData);
+        // For Christopher project, we can show content immediately
+        setIsLoading(false);
       }
       
       loadProjectBySlug(slug)
@@ -33,6 +35,8 @@ const ProjectDetail: React.FC = () => {
           console.error('Error loading project:', error);
           setIsLoading(false);
         });
+    } else {
+      setIsLoading(false);
     }
   }, [slug]);
 
@@ -134,7 +138,7 @@ const ProjectDetail: React.FC = () => {
       </div>
 
       {/* Custom Content for Christopher Project */}
-      {project?.slug === 'byers-christopher-allen' && rawProjectData && (
+      {rawProjectData && (
         <div className="pt-4">
           <div className="container-custom max-w-[1400px] mx-auto px-4">
             <div className="space-y-8">
