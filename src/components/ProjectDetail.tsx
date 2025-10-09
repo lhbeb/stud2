@@ -5,18 +5,25 @@ import { loadProjectBySlug } from '../utils/projectLoader';
 import { Project } from '../types/project';
 import LazyImage from './LazyImage';
 import Team from './Team';
+import byersChristopherData from '../projects/byers-christopher-allen/project.json';
 
 const ProjectDetail: React.FC = () => {
   const { slug } = useParams<{ slug: string }>();
   const navigate = useNavigate();
   const [project, setProject] = useState<Project | null>(null);
   const [isLoading, setIsLoading] = useState(true);
+  const [rawProjectData, setRawProjectData] = useState<any>(null);
 
   useEffect(() => {
     // Scroll to top when component mounts
     window.scrollTo(0, 0);
     
     if (slug) {
+      // Load raw JSON data for Christopher project
+      if (slug === 'byers-christopher-allen') {
+        setRawProjectData(byersChristopherData);
+      }
+      
       loadProjectBySlug(slug)
         .then((projectData) => {
           setProject(projectData);
@@ -98,34 +105,75 @@ const ProjectDetail: React.FC = () => {
             <h1 className={`text-4xl md:text-6xl lg:text-7xl font-normal ${textColor} leading-tight uppercase tracking-tight mb-4`}>
               {project.title}
             </h1>
-            {project.caseStudy.overview && (
+            {project.caseStudy.overview && project.slug !== 'byers-christopher-allen' && (
               <p className={`text-lg md:text-xl ${secondaryTextColor} font-light max-w-3xl mb-12`}>
                 {project.caseStudy.overview}
               </p>
             )}
 
             {/* The Challenge + The Vision - Before Images */}
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-12 mt-16 mb-24">
-              {project.caseStudy.challenge && (
-                <div className={`border-t ${borderColor} pt-6`}>
-                  <h3 className={`text-sm font-normal ${mutedTextColor} mb-4 uppercase tracking-wide`}>The Challenge</h3>
-                  <p className={`${secondaryTextColor} font-light leading-relaxed`}>{project.caseStudy.challenge}</p>
-                </div>
-              )}
-              {project.caseStudy.solution && (
-                <div className={`border-t ${borderColor} pt-6`}>
-                  <h3 className={`text-sm font-normal ${mutedTextColor} mb-4 uppercase tracking-wide`}>The Vision</h3>
-                  <p className={`${secondaryTextColor} font-light leading-relaxed`}>{project.caseStudy.solution}</p>
-                </div>
-              )}
-            </div>
+            {project.slug !== 'byers-christopher-allen' && (
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-12 mt-16 mb-24">
+                {project.caseStudy.challenge && (
+                  <div className={`border-t ${borderColor} pt-6`}>
+                    <h3 className={`text-sm font-normal ${mutedTextColor} mb-4 uppercase tracking-wide`}>The Challenge</h3>
+                    <p className={`${secondaryTextColor} font-light leading-relaxed`}>{project.caseStudy.challenge}</p>
+                  </div>
+                )}
+                {project.caseStudy.solution && (
+                  <div className={`border-t ${borderColor} pt-6`}>
+                    <h3 className={`text-sm font-normal ${mutedTextColor} mb-4 uppercase tracking-wide`}>The Vision</h3>
+                    <p className={`${secondaryTextColor} font-light leading-relaxed`}>{project.caseStudy.solution}</p>
+                  </div>
+                )}
+              </div>
+            )}
           </div>
 
         </div>
       </div>
 
+      {/* Custom Content for Christopher Project */}
+      {project?.slug === 'byers-christopher-allen' && rawProjectData && (
+        <div className="pt-16 md:pt-24">
+          <div className="container-custom max-w-[1400px] mx-auto px-4">
+            <div className="space-y-8">
+              {rawProjectData.content.map((item: any, index: number) => {
+                if (item.type === 'text') {
+                  return (
+                    <div key={index} className={`border-t ${borderColor} pt-6`}>
+                      <div className={`${secondaryTextColor} font-light leading-relaxed whitespace-pre-line`}>
+                        {item.content}
+                      </div>
+                    </div>
+                  );
+                } else if (item.type === 'image') {
+                  return (
+                    <div key={index} className="relative w-full">
+                      <LazyImage
+                        src={item.url}
+                        alt={item.alt || `${project.title} - Image ${index + 1}`}
+                        className="w-full h-auto object-cover block"
+                        width={800}
+                        height={600}
+                      />
+                      {item.caption && (
+                        <p className={`text-sm ${mutedTextColor} mt-2 text-center`}>
+                          {item.caption}
+                        </p>
+                      )}
+                    </div>
+                  );
+                }
+                return null;
+              })}
+            </div>
+          </div>
+        </div>
+      )}
+
       {/* Project Images - Full Width on Mobile, Contained on Desktop */}
-      {project.caseStudy.images.length > 0 && (
+      {project.caseStudy.images.length > 0 && project.slug !== 'byers-christopher-allen' && (
         <div className={isZeroSpacing ? 'space-y-0' : 'space-y-8'}>
           <div className="md:container-custom md:max-w-[1400px] md:mx-auto md:px-4">
             {project.caseStudy.images.map((image, index) => (
@@ -147,31 +195,33 @@ const ProjectDetail: React.FC = () => {
       )}
 
       {/* The Approach + The Outcome - After Images */}
-      <div className="pt-16 md:pt-24">
-        <div className="container-custom max-w-[1400px] mx-auto px-4">
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-12 mb-16">
-            {project.caseStudy.approach && (
-              <div className={`border-t ${borderColor} pt-6`}>
-                <h3 className={`text-sm font-normal ${mutedTextColor} mb-4 uppercase tracking-wide`}>The Approach</h3>
-                <p className={`${secondaryTextColor} font-light leading-relaxed`}>{project.caseStudy.approach}</p>
-              </div>
-            )}
-            {project.caseStudy.results && project.caseStudy.results.length > 0 && (
-              <div className={`border-t ${borderColor} pt-6`}>
-                <h3 className={`text-sm font-normal ${mutedTextColor} mb-4 uppercase tracking-wide`}>The Outcome</h3>
-                <ul className="space-y-2">
-                  {project.caseStudy.results.map((result, index) => (
-                    <li key={index} className="flex items-start space-x-2">
-                      <div className={`w-1.5 h-1.5 ${project.background === 'white' ? 'bg-black' : 'bg-white'} rounded-full mt-2 flex-shrink-0`}></div>
-                      <span className={`${secondaryTextColor} font-light`}>{result}</span>
-                    </li>
-                  ))}
-                </ul>
-              </div>
-            )}
+      {project.slug !== 'byers-christopher-allen' && (
+        <div className="pt-16 md:pt-24">
+          <div className="container-custom max-w-[1400px] mx-auto px-4">
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-12 mb-16">
+              {project.caseStudy.approach && (
+                <div className={`border-t ${borderColor} pt-6`}>
+                  <h3 className={`text-sm font-normal ${mutedTextColor} mb-4 uppercase tracking-wide`}>The Approach</h3>
+                  <p className={`${secondaryTextColor} font-light leading-relaxed`}>{project.caseStudy.approach}</p>
+                </div>
+              )}
+              {project.caseStudy.results && project.caseStudy.results.length > 0 && (
+                <div className={`border-t ${borderColor} pt-6`}>
+                  <h3 className={`text-sm font-normal ${mutedTextColor} mb-4 uppercase tracking-wide`}>The Outcome</h3>
+                  <ul className="space-y-2">
+                    {project.caseStudy.results.map((result, index) => (
+                      <li key={index} className="flex items-start space-x-2">
+                        <div className={`w-1.5 h-1.5 ${project.background === 'white' ? 'bg-black' : 'bg-white'} rounded-full mt-2 flex-shrink-0`}></div>
+                        <span className={`${secondaryTextColor} font-light`}>{result}</span>
+                      </li>
+                    ))}
+                  </ul>
+                </div>
+              )}
+            </div>
           </div>
         </div>
-      </div>
+      )}
 
       {/* Navigation */}
       <div className="container-custom max-w-[1400px] mx-auto px-4">

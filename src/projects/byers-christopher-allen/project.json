@@ -2,13 +2,13 @@
   "thumbnail": "/projects/byers-christopher-allen/thumbnail.png",
   "slug": "byers-christopher-allen",
   "title": "Byers Christopher Allen - BUYMEACOFFEE",
-  "subtitle": "Payoneer Verification & Business Launch",
+  "subtitle": "Business Development & Marketing Services",
   "year": "2024",
   "location": "Remote",
   "sector": "Technology & Electronics",
   "category": "Business Development",
   "client": "Christopher Allen",
-  "tags": ["Payoneer", "Verification", "Business Launch", "Tech Components", "Raspberry Pi"],
+  "tags": ["Business Development", "Marketing", "Tech Components", "Raspberry Pi"],
   "budget": "$1,000 - $3,000",
   "featured": false,
   "hidden": true,
@@ -16,7 +16,7 @@
   "imageSpacing": "normal",
   "intro": {
     "photo": "/projects/byers-christopher-allen/thumbnail.png",
-    "text": "Payoneer verification page for Christopher Allen, a client at StudioEyn who specializes in custom Raspberry Pi kits and tech components."
+    "text": "Business development and marketing services for Christopher Allen, a client at StudioEyn who specializes in custom Raspberry Pi kits and tech components."
   },
   "content": [
     {
@@ -26,14 +26,6 @@
     {
       "type": "text",
       "content": "Authorized Representative: Abdeljebbar Bouftih\nEmail: abdeljebbarbouftih@gmail.com\nPosition: Senior Marketing Expert at StudioEyn\n\nChristopher Allen has formally engaged my services as a Senior Marketing Expert at StudioEyn to establish his brand identity and implement comprehensive payment solutions for his technology business. I am fully authorized to receive payments on his behalf for all marketing and business development services rendered."
-    },
-    {
-      "type": "text",
-      "content": "The Challenge"
-    },
-    {
-      "type": "text",
-      "content": "Christopher Allen required comprehensive digital transformation services for his innovative Raspberry Pi and tech component business. His exceptional technical expertise needed to be complemented with professional brand positioning, secure payment infrastructure, and strategic market penetration to reach his target audience of tech enthusiasts and DIY innovators."
     },
     {
       "type": "text",
@@ -60,26 +52,31 @@
       "content": "\"Abdeljebbar's strategic expertise and professional approach have been transformative for my business. His comprehensive digital marketing strategies and business development initiatives have enabled me to establish a strong market presence and reach customers globally. I have full confidence in his capabilities and authorize him to receive payments on my behalf for all marketing services.\" - Christopher Allen, Tech Component Entrepreneur"
     },
     {
+      "type": "text",
+      "content": "Discover Christopher's Store"
+    },
+    {
+      "type": "text",
+      "content": "Visit Christopher's Buy Me a Coffee store to explore his innovative Raspberry Pi kits and tech components: https://buymeacoffee.com/byerschristopherallen"
+    },
+    {
       "type": "image",
       "url": "/projects/byers-christopher-allen/image1.jpg",
-      "alt": "Payoneer Verification Process",
-      "caption": "Payoneer verification setup and business launch process"
+      "alt": "Payoneer Verification Process"
     },
     {
       "type": "image",
       "url": "/projects/byers-christopher-allen/image2.jpg",
-      "alt": "Raspberry Pi Kits and Tech Components",
-      "caption": "Christopher's custom Raspberry Pi kits and tech components"
+      "alt": "Raspberry Pi Kits and Tech Components"
     },
     {
       "type": "image",
       "url": "/projects/byers-christopher-allen/image3.jpg",
-      "alt": "Business Development and Marketing Campaigns",
-      "caption": "Email campaigns and Facebook ads for tech component business"
+      "alt": "Business Development and Marketing Campaigns"
     }
   ],
   "caseStudy": {
-    "overview": "Payoneer verification page for Christopher Allen, showcasing our successful collaboration in launching his custom Raspberry Pi kits and tech components business.",
+    "overview": "Business development and marketing services for Christopher Allen, showcasing our successful collaboration in launching his custom Raspberry Pi kits and tech components business.",
     "challenge": "",
     "solution": "",
     "approach": "",
