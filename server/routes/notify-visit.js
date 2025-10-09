@@ -16,7 +16,7 @@ function countryCodeToFlagEmoji(countryCode) {
     );
 }
 
-router.post('/', async (req, res) => {
+router.post('/notify-visit', async (req, res) => {
   try {
     const { device, deviceType, fingerprint, url } = req.body;
 
