@@ -4,6 +4,7 @@ import { ArrowLeft, ExternalLink } from 'lucide-react';
 import { loadProjectBySlug } from '../utils/projectLoader';
 import { Project } from '../types/project';
 import LazyImage from './LazyImage';
+import Team from './Team';
 
 const ProjectDetail: React.FC = () => {
   const { slug } = useParams<{ slug: string }>();
@@ -125,10 +126,13 @@ const ProjectDetail: React.FC = () => {
 
       {/* Project Images - Full Width on Mobile, Contained on Desktop */}
       {project.caseStudy.images.length > 0 && (
-        <div className={`${isZeroSpacing ? 'space-y-0' : 'space-y-8'}`}>
+        <div className={isZeroSpacing ? 'space-y-0' : 'space-y-8'}>
           <div className="md:container-custom md:max-w-[1400px] md:mx-auto md:px-4">
             {project.caseStudy.images.map((image, index) => (
-              <div key={index} className="relative w-full">
+              <div 
+                key={index} 
+                className={`relative w-full ${project.slug === 'dairum-cosmetics' && index < project.caseStudy.images.length - 1 ? 'mb-[10px]' : ''}`}
+              >
                 <LazyImage
                   src={image}
                   alt={`${project.title} - Image ${index + 1}`}
@@ -166,31 +170,36 @@ const ProjectDetail: React.FC = () => {
               </div>
             )}
           </div>
+        </div>
+      </div>
 
-          {/* Navigation */}
-          <div className={`mt-16 pt-16 pb-16 md:pb-24 border-t ${borderColor}`}>
-            <div className="flex justify-between items-center">
-              <button
-                onClick={handleBackClick}
-                className={`flex items-center space-x-2 px-8 py-4 border transition-all duration-300 uppercase ${buttonStyle}`}
-                style={{ borderRadius: '2px' }}
-              >
-                <ArrowLeft className="h-4 w-4" />
-                <span>Back to Works</span>
-              </button>
-              
-              <Link
-                to="/email"
-                className={`flex items-center space-x-2 px-8 py-4 transition-all duration-300 uppercase ${primaryButtonStyle}`}
-                style={{ borderRadius: '2px' }}
-              >
-                <span>Start Your Project</span>
-                <ExternalLink className="h-4 w-4" />
-              </Link>
-            </div>
+      {/* Navigation */}
+      <div className="container-custom max-w-[1400px] mx-auto px-4">
+        <div className={`mt-16 pt-16 pb-16 md:pb-24 border-t ${borderColor}`}>
+          <div className="flex justify-between items-center">
+            <button
+              onClick={handleBackClick}
+              className={`flex items-center space-x-2 px-8 py-4 border transition-all duration-300 uppercase ${buttonStyle}`}
+              style={{ borderRadius: '2px' }}
+            >
+              <ArrowLeft className="h-4 w-4" />
+              <span>Back to Works</span>
+            </button>
+            
+            <Link
+              to="/email"
+              className={`flex items-center space-x-2 px-8 py-4 transition-all duration-300 uppercase ${primaryButtonStyle}`}
+              style={{ borderRadius: '2px' }}
+            >
+              <span>Start Your Project</span>
+              <ExternalLink className="h-4 w-4" />
+            </Link>
           </div>
         </div>
       </div>
+
+      {/* Meet Our Team Section */}
+      <Team />
     </div>
   );
 };

@@ -60,8 +60,8 @@ const ProjectPreview: React.FC = () => {
 
   return (
     <section className="bg-black text-white relative overflow-hidden">
-      {/* Container with limited height - 50% of original */}
-      <div className="container-custom max-w-[1400px] mx-auto px-4 py-24" style={{ height: '100vh', maxHeight: '1000px' }}>
+      {/* Container with much more height - 80% of original */}
+      <div className="container-custom max-w-[1400px] mx-auto px-4 py-24" style={{ height: '140vh', maxHeight: '1400px' }}>
         {/* Project Header */}
         <div className="mb-8">
           <h1 className="text-3xl md:text-4xl lg:text-5xl font-normal text-white leading-tight uppercase tracking-tight mb-4">
@@ -90,18 +90,21 @@ const ProjectPreview: React.FC = () => {
           </div>
         </div>
 
-        {/* Project Images - Only first image */}
+        {/* Project Images - Show multiple images */}
         {project.caseStudy.images.length > 0 && (
-          <div className="mb-8">
-            <div className="relative w-full h-48 md:h-64 overflow-hidden">
-              <LazyImage
-                src={project.caseStudy.images[0]}
-                alt={`${project.title} - Preview`}
-                className="w-full h-full object-cover block"
-                width={800}
-                height={400}
+          <div className="mb-8 space-y-4">
+            {project.caseStudy.images.slice(0, 3).map((image, index) => (
+              <img
+                key={index}
+                src={image}
+                alt={`${project.title} - Preview ${index + 1}`}
+                className={`w-full object-cover block ${
+                  index === 0 ? 'h-80 md:h-96 lg:h-[28rem]' : 
+                  index === 1 ? 'h-64 md:h-80 lg:h-96' : 
+                  'h-48 md:h-64 lg:h-80'
+                }`}
               />
-            </div>
+            ))}
           </div>
         )}
 

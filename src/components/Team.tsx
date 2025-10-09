@@ -9,27 +9,27 @@ const Team: React.FC = () => {
     {
       name: 'ELMehdi EL Mahboubi',
       role: 'Co-Founder, Creative Director',
-      image: 'https://i.ibb.co/hJxnD9XQ/mehdi.png',
+      image: 'https://i.ibb.co/hR3BVKR7/mehdi.png',
     },
     {
       name: 'Abdeljebbar Bouftih',
       role: 'Founder, Marketing Expert',
-      image: 'https://i.ibb.co/zhMVDykB/pnggg.png',
+      image: 'https://i.ibb.co/c4WJ3Wm/pnggg.png',
     },
     {
       name: 'Walid Azif',
-      role: 'Web Dev, Code Ninja',
-      image: 'https://i.ibb.co/qMgs0GkY/Whats-App-Image-2025-10-08-at-22-11-46-1.jpg',
+      role: 'Web Developer/Code Ninja',
+      image: 'https://i.ibb.co/rhs33JN/walid22.png',
     },
     {
       name: 'Amine Tair',
       role: 'Brand Strategist',
-      image: 'https://images.pexels.com/photos/1181424/pexels-photo-1181424.jpeg',
+      image: 'https://i.ibb.co/sJg8x6SL/Gemini-Generated-Image-m1qh6vm1qh6vm1qh.png',
     },
     {
       name: 'Abderrazak Abde',
       role: 'UI/UX Designer',
-      image: 'https://images.pexels.com/photos/1181424/pexels-photo-1181424.jpeg',
+      image: 'https://i.ibb.co/F4R3W5q4/stop.png',
     },
   ];
 
@@ -79,6 +79,15 @@ const Team: React.FC = () => {
               </div>
             </div>
           ))}
+        </div>
+
+        {/* Team Tagline */}
+        <div className={`mt-16 text-left transition-all duration-700 ${
+          isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'
+        }`}>
+          <p className="text-lg md:text-xl text-gray-300 font-light">
+            — The best out there
+          </p>
         </div>
 
       </div>

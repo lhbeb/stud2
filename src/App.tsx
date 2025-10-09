@@ -2,7 +2,6 @@ import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import { Suspense, lazy } from 'react';
 import Navigation from './components/Navigation';
 import Hero from './components/Hero';
-import ProjectPreview from './components/ProjectPreview';
 import FeaturedWork from './components/FeaturedWork';
 import WorksCaseStudies from './components/WorksCaseStudies';
 import Services from './components/Services';
@@ -35,7 +34,6 @@ function App() {
             <main>
               <Hero />
               <PartnersSection />
-              <ProjectPreview />
               <WorksCaseStudies />
               <Testimonials />
               <Services />

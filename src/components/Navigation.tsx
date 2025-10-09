@@ -68,7 +68,24 @@ const Navigation: React.FC = () => {
           <div className="flex items-center justify-between h-26 md:h-24 lg:h-26">
             {/* Logo */}
             <div className="flex-shrink-0 relative">
-              <Link to="/" className="block">
+              <Link 
+                to="/" 
+                className="block"
+                onClick={(e) => {
+                  // If we're already on the home page, scroll to top
+                  if (location.pathname === '/') {
+                    e.preventDefault();
+                    window.scrollTo({ top: 0, behavior: 'smooth' });
+                  }
+                  // If we're on another page, let the Link handle navigation
+                  // and scroll to top after navigation
+                  else {
+                    setTimeout(() => {
+                      window.scrollTo({ top: 0, behavior: 'smooth' });
+                    }, 100);
+                  }
+                }}
+              >
                 <div className="relative overflow-hidden">
                   {/* Default Logo */}
                   <img
