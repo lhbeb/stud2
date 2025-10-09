@@ -20,8 +20,8 @@ const Footer: React.FC = () => {
     },
     { 
       icon: Twitter, 
-      href: '#', 
-      label: 'Twitter',
+      href: 'https://x.com/studioeiyn', 
+      label: 'X (Twitter)',
       customSvg: false
     },
     { 

@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Send, MapPin, Mail, CheckCircle } from 'lucide-react';
+import { Send, MapPin, Mail, CheckCircle, Twitter, Instagram, Linkedin } from 'lucide-react';
 import { useScrollTrigger } from '../hooks/useScrollTrigger';
 import { Link } from 'react-router-dom';
 
@@ -46,6 +46,24 @@ const Contact: React.FC = () => {
       title: 'Email Us',
       content: 'contact@studioeyn.com',
       description: 'Get in touch for project inquiries'
+    },
+  ];
+
+  const socialLinks = [
+    { 
+      icon: Twitter, 
+      href: 'https://x.com/studioeiyn', 
+      label: 'X (Twitter)'
+    },
+    { 
+      icon: Instagram, 
+      href: 'https://www.instagram.com/studioeiyn/', 
+      label: 'Instagram'
+    },
+    { 
+      icon: Linkedin, 
+      href: 'https://linkedin.com/company/studioeyn', 
+      label: 'LinkedIn'
     },
   ];
 
@@ -120,6 +138,35 @@ const Contact: React.FC = () => {
                   </Link>
                 </div>
               </div>
+            </div>
+          </div>
+        </div>
+
+        {/* Social Media Section */}
+        <div className={`mt-16 pt-16 border-t border-gray-800 transition-all duration-700 ${
+          isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'
+        }`}>
+          <div className="text-center">
+            <h3 className="text-2xl md:text-3xl font-normal text-white mb-8 uppercase tracking-tight">
+              Follow Us
+            </h3>
+            <p className="text-gray-300 font-light mb-8 max-w-2xl mx-auto">
+              Stay connected with our latest work and insights
+            </p>
+            <div className="flex justify-center gap-6">
+              {socialLinks.map((social, index) => (
+                <a
+                  key={index}
+                  href={social.href}
+                  className="group flex items-center justify-center w-12 h-12 border border-gray-600 text-gray-400 hover:text-white hover:border-white transition-all duration-300"
+                  style={{ borderRadius: '2px' }}
+                  aria-label={social.label}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  <social.icon className="h-6 w-6 group-hover:scale-110 transition-transform duration-300" />
+                </a>
+              ))}
             </div>
           </div>
         </div>

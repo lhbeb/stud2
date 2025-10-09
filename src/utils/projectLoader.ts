@@ -7,6 +7,7 @@ import eightJeweleryData from '../projects/eight-jewelery/project.json';
 import dairumCosmeticsData from '../projects/dairum-cosmetics/project.json';
 import emondFashionData from '../projects/emond-fashion/project.json';
 import binayatRealestateData from '../projects/binayat-realestate/project.json';
+import byersChristopherData from '../projects/byers-christopher-allen/project.json';
 
 // Define the JSON structure for individual project files
 export interface ProjectJSON {
@@ -19,6 +20,7 @@ export interface ProjectJSON {
   tags: string[];
   budget: string;
   featured: boolean;
+  hidden?: boolean;
   background?: 'black' | 'white';
   intro: {
     photo: string;
@@ -100,6 +102,7 @@ const projectDataMap: Record<string, ProjectJSON> = {
   'dairum-cosmetics': dairumCosmeticsData,
   'emond-fashion': emondFashionData,
   'binayat-realestate': binayatRealestateData,
+  'byers-christopher-allen': byersChristopherData,
 };
 
 // Load a single project by slug
@@ -116,12 +119,14 @@ export const loadProjectBySlug = async (slug: string): Promise<Project | null> =
   }
 };
 
-// Load all projects
+// Load all projects (excluding hidden ones)
 export const loadAllProjects = async (): Promise<Project[]> => {
   try {
-    const projects = Object.values(projectDataMap).map(jsonProject => 
-      convertJSONToProject(jsonProject)
-    );
+    const projects = Object.values(projectDataMap)
+      .filter(jsonProject => !jsonProject.hidden)
+      .map(jsonProject => 
+        convertJSONToProject(jsonProject)
+      );
     return projects;
   } catch (error) {
     console.error('Error loading projects:', error);
