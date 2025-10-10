@@ -79,15 +79,6 @@ const Footer: React.FC = () => {
                     <div>Casablanca 20190, Morocco</div>
                   </div>
                 </div>
-                <div className="flex items-start space-x-3">
-                  <MapPin className="h-5 w-5 text-gray-400 mt-1 flex-shrink-0" />
-                  <div className="text-gray-300 font-light">
-                    <div className="font-medium text-white mb-1">London Office</div>
-                    <div>STUDIOEYN LTD</div>
-                    <div>14 St Martin's Ct</div>
-                    <div>London WC2N 4AU, UK</div>
-                  </div>
-                </div>
               </div>
             </div>
           </div>

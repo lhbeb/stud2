@@ -2,37 +2,37 @@ import { useScrollTrigger } from '../hooks/useScrollTrigger';
 
 const testimonials = [
   {
-    quote: "Really impressed with how fast they turned around our rebrand. The logo and visual identity they created actually made sense for our business.",
+    quote: "Working with Abdeljebbar and Mehdi was incredibly smooth. They understood our vision from day one and delivered a brand identity that perfectly represents our values. The communication was clear and they always kept us updated on progress.",
     name: "Abdullah Benayan",
     title: "Strategic Planning Manager",
     avatar: "https://i.ibb.co/FLkxZxsF/ah-banyan.jpg"
   },
   {
-    quote: "Professional team that delivered exactly what we needed. Clear communication throughout the project.",
+    quote: "Abdeljebbar's marketing expertise combined with Mehdi's creative direction created something truly special for our research institute. The process was professional and they delivered beyond our expectations.",
     name: "Abdulghaphor Hajjieh",
     title: "Economist @ Kuwait Institute for Scientific Research",
     avatar: "https://i.ibb.co/gFdHRTNC/3d1842d8-c586-45a9-931b-c80be4d61548-1000158138.webp"
   },
   {
-    quote: "Helped us launch oncyber with a solid brand foundation. They understood Web3 which was crucial.",
+    quote: "Mehdi and Abdeljebbar really understood the Web3 space. Their creative approach to our oncyber brand was exactly what we needed. The collaboration was seamless and they delivered on time.",
     name: "Rayan Boutaleb",
     title: "Founder, oncyber.io",
     avatar: "https://i.ibb.co/mrynnT9S/1574694752157.jpg"
   },
   {
-    quote: "Great work on our franchise branding. Made it easy to scale across different markets.",
+    quote: "The team at StudioEyn made our franchise expansion so much easier. Abdeljebbar's strategic thinking and Mehdi's design skills created a cohesive brand that works across all our markets.",
     name: "Yousif AlHarbi",
     title: "CEO, FranchiseArt",
     avatar: "https://i.ibb.co/ymFRjFct/1673879629524.jpg"
   },
   {
-    quote: "Clean, modern design that elevated our brand. Would work with them again.",
+    quote: "Working with Mehdi and Abdeljebbar was a pleasure. They took our ideas and transformed them into something we never imagined possible. The final result exceeded all our expectations.",
     name: "Youssef Meskaoui",
     title: "Founder, grandecharte.co",
     avatar: "https://i.ibb.co/hx0Rk6Sn/89175967-926607661125082-6144394623272878080-n.jpg"
   },
   {
-    quote: "They really got my vision as an artist. The portfolio site they designed perfectly showcases my work.",
+    quote: "As an artist, I needed someone who could understand my creative vision. Mehdi and Abdeljebbar not only understood it but elevated it. The portfolio they created perfectly showcases my work and has brought me new opportunities.",
     name: "Jihad Eliassa",
     title: "Artist, eliassa.com",
     avatar: "https://i.ibb.co/svSBj8nk/1678787254750.jpg"
